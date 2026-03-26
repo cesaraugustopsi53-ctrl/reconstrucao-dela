@@ -207,6 +207,28 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .pq-item p strong{color:var(--rose);font-weight:500;}
 
 /* ════════════════════════════════════════════
+  O QUE VAI VIVER  claro
+════════════════════════════════════════════ */
+.sec-viver{background:var(--light2);padding:88px 0;}
+.viver-intro{margin-bottom:52px;}
+.viver-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:12px;font-weight:700;}
+.viver-intro p{font-size:16px;color:var(--ink60);font-weight:300;line-height:1.8;max-width:480px;}
+.viver-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:0;}
+.viver-bloco h3{
+ font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+ color:var(--rose);margin-bottom:24px;
+}
+.viver-lista{list-style:none;display:flex;flex-direction:column;gap:0;}
+.viver-lista li{
+ font-size:15px;color:var(--ink);line-height:1.75;font-weight:300;
+ padding:14px 0;border-bottom:1px solid var(--light3);
+ display:flex;gap:12px;align-items:flex-start;
+}
+.viver-lista li em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:13px;margin-top:2px;}
+.viver-lista.resultado li{color:var(--ink);font-weight:400;}
+.viver-lista.resultado li em{color:var(--rose);}
+
+/* ════════════════════════════════════════════
   DOR  claro
 ════════════════════════════════════════════ */
 .sec-dor{background:var(--light);padding:80px 0;}
@@ -217,14 +239,18 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .dor-card{
  background:#fff;
  border-top:3px solid var(--rose);
- padding:32px 28px;
+ padding:36px 28px;
 }
-.dor-card p{font-size:16px;color:var(--ink);line-height:1.85;font-weight:300;}
+.dor-card .frase{
+ font-family:'Cormorant Garamond',serif;
+ font-size:clamp(19px,2.5vw,24px);font-weight:600;
+ color:var(--ink);line-height:1.35;margin-bottom:24px;
+}
 .dor-card .msg{
- margin-top:20px;padding:14px 16px;
- border-left:3px solid var(--light3);
- font-size:14px;font-style:italic;color:var(--ink60);line-height:1.65;
- background:var(--light);
+ padding:18px 20px;
+ border-left:3px solid var(--rose);
+ font-size:15px;font-style:italic;color:var(--ink60);line-height:1.7;
+ background:var(--light2);
 }
 
 /* ════════════════════════════════════════════
@@ -455,6 +481,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
   MOBILE
 ════════════════════════════════════════════ */
 @media(max-width:700px){
+ .viver-cols{grid-template-columns:1fr;gap:48px;}
  .dueto-grid{grid-template-columns:1fr;}
  .modulo{grid-template-columns:48px 1fr;}
  .modulo-num{font-size:26px;padding:28px 0;}
@@ -570,27 +597,36 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </section>
 
-<!-- ══ DOR  claro ═════════════════════════ -->
-<section class="sec-dor reveal">
- <div class="wrap">
-  <div class="dor-intro">
-   <span class="label-rose">Você se reconhece aqui?</span>
-   <h2>Se alguma dessas frases doeu, este curso foi feito para você.</h2>
+<!-- ══ O QUE VAI VIVER  claro ════════════ -->
+<section class="sec-viver reveal">
+ <div class="wrap-lg">
+  <div class="viver-intro">
+   <span class="label-rose">Dentro do curso</span>
+   <h2>Psicanálise aplicada para quem precisa se reconstruir, não só se entender.</h2>
    <div class="divider-gold"></div>
-   <p>Ficar ou sair, a única coisa que não pode acontecer é você continuar assim.</p>
   </div>
-  <div class="dor-cards">
-   <div class="dor-card">
-    <p>O perdão saiu da boca. O corpo não perdoou ainda.</p>
-    <div class="msg">"Perdoei, mas não confio mais. O fato dele mexer no celular me incomoda muito."</div>
+  <div class="viver-cols">
+   <div class="viver-bloco">
+    <h3>O que você vai aprender</h3>
+    <ul class="viver-lista">
+     <li><em>✦</em> Como identificar a história que te fez aceitar menos do que merecia desde sempre</li>
+     <li><em>✦</em> Como parar de confundir carência com amor e insegurança com cuidado</li>
+     <li><em>✦</em> Como construir autoestima que não depende da reação dele para existir</li>
+     <li><em>✦</em> Como criar rituais concretos que te devolvem para você mesma no dia a dia</li>
+     <li><em>✦</em> Como reconhecer se o arrependimento dele é genuíno ou medo de perder o controle</li>
+     <li><em>✦</em> Como tomar a decisão de ficar ou ir embora sem culpa e sem precisar de aprovação</li>
+     <li><em>✦</em> Como deixar de viver em função do relacionamento e começar a viver para si mesma</li>
+    </ul>
    </div>
-   <div class="dor-card">
-    <p>Você não fica porque quer. Fica porque não sabe onde começa você sem ele.</p>
-    <div class="msg">"Queria tanto sair dessa dependência... mas não consigo sair."</div>
-   </div>
-   <div class="dor-card">
-    <p>A traição não levou só a confiança nele. Levou a confiança em você mesma.</p>
-    <div class="msg">"Estou muito ferida. Não sei se consigo perdoar. Já fazem 4 meses."</div>
+   <div class="viver-bloco">
+    <h3>Ao final do curso, você vai conseguir</h3>
+    <ul class="viver-lista resultado">
+     <li><em>→</em> Olhar para o que aconteceu sem se culpar por ter ficado tanto tempo</li>
+     <li><em>→</em> Dizer o que precisa sem medo de ser abandonada por isso</li>
+     <li><em>→</em> Ler os sinais que distinguem transformação real de promessa vazia</li>
+     <li><em>→</em> Decidir o futuro do seu relacionamento com clareza, não com ansiedade</li>
+     <li><em>→</em> Sentir que você é suficiente, independente do que ele faça ou deixe de fazer</li>
+    </ul>
    </div>
   </div>
  </div>
@@ -613,6 +649,31 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    </div>
    <div class="depo-card depo-print">
     <img src="dep-3.jpg" alt="Depoimento real">
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ══ DOR  claro ═════════════════════════ -->
+<section class="sec-dor reveal">
+ <div class="wrap">
+  <div class="dor-intro">
+   <span class="label-rose">Reconhece alguma dessas?</span>
+   <h2>A dor que ninguém consegue explicar direito.</h2>
+   <div class="divider-gold"></div>
+  </div>
+  <div class="dor-cards">
+   <div class="dor-card">
+    <div class="frase">O perdão saiu da boca. O corpo não perdoou ainda.</div>
+    <div class="msg">"Perdoei, mas não confio mais. O fato dele mexer no celular me incomoda muito."</div>
+   </div>
+   <div class="dor-card">
+    <div class="frase">Você não fica porque quer. Fica porque não sabe onde começa você sem ele.</div>
+    <div class="msg">"Queria tanto sair dessa dependência... mas não consigo sair."</div>
+   </div>
+   <div class="dor-card">
+    <div class="frase">A traição não levou só a confiança nele. Levou a confiança em você mesma.</div>
+    <div class="msg">"Estou muito ferida. Não sei se consigo perdoar. Já fazem 4 meses."</div>
    </div>
   </div>
  </div>
