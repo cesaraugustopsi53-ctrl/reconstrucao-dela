@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reconstrução Dela — Thaís Ayumi</title>
+<meta name="robots" content="noindex,nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --vinho:    #2a0f18;
+  --vinho2:   #1a0810;
+  --vinho3:   #0d0408;
+  --dourado:  #C9A84C;
+  --dourado2: #e0c070;
+  --creme:    #F5EDE3;
+  --creme2:   rgba(245,237,227,0.75);
+  --creme3:   rgba(245,237,227,0.45);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--vinho3);
+  color:var(--creme);
+  overflow-x:hidden;
+  font-size:17px;
+  line-height:1.8;
+}
+
+/* ── TIPOGRAFIA ── */
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.1;}
+.label{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dourado);display:block;margin-bottom:12px;opacity:.85;}
+.linha-d{width:48px;height:1px;background:var(--dourado);margin:0 auto 36px;opacity:.7;}
+.linha-d.left{margin:0 0 28px;}
+
+/* ── LAYOUT ── */
+.container{max-width:760px;margin:0 auto;padding:0 24px;}
+.sm{max-width:580px;margin:0 auto;padding:0 24px;}
+
+/* ── BOTÃO ── */
+.btn{
+  display:block;
+  background:var(--dourado);
+  color:var(--vinho2);
+  font-family:'Inter',sans-serif;
+  font-size:15px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  padding:20px 40px;
+  text-decoration:none;
+  text-align:center;
+  max-width:520px;
+  margin:0 auto;
+  transition:background .15s;
+}
+.btn:hover{background:var(--dourado2);}
+.btn-sub{font-size:12px;color:var(--creme3);text-align:center;margin-top:10px;letter-spacing:.04em;}
+
+/* ══════════════════════════════════
+   HERO
+══════════════════════════════════ */
+.hero{
+  background:var(--vinho2);
+  padding:0;
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('thais-hero.jpg');
+  background-size:cover;
+  background-position:50% 12%;
+  filter:brightness(.55) saturate(.8);
+}
+.hero-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,
+    rgba(13,4,8,1.0) 0%,
+    rgba(13,4,8,.98) 22%,
+    rgba(13,4,8,.75) 45%,
+    rgba(13,4,8,.15) 65%,
+    transparent 80%
+  );
+}
+.hero-content{
+  position:relative;z-index:10;
+  padding:0 24px 64px;
+  max-width:700px;
+  margin:0 auto;
+  width:100%;
+}
+.hero-tag{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dourado);opacity:.85;margin-bottom:20px;}
+.hero h1{
+  font-size:clamp(38px,7.5vw,72px);
+  font-weight:600;
+  color:var(--creme);
+  margin-bottom:24px;
+  letter-spacing:-.01em;
+}
+.hero h1 em{font-style:italic;color:var(--dourado);}
+.hero-sub{
+  font-size:clamp(16px,2.5vw,19px);
+  color:var(--creme2);
+  font-weight:300;
+  line-height:1.75;
+  max-width:560px;
+  margin-bottom:40px;
+}
+.hero-sub strong{color:var(--creme);font-weight:500;}
+
+/* ══════════════════════════════════
+   DOR
+══════════════════════════════════ */
+.dor{background:var(--vinho3);padding:96px 0;}
+.dor-intro{text-align:center;margin-bottom:64px;}
+.dor-intro h2{font-size:clamp(34px,6vw,58px);color:var(--creme);margin-bottom:16px;}
+.dor-intro p{font-size:18px;color:var(--creme2);font-weight:300;max-width:540px;margin:0 auto;}
+
+.dor-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;}
+.dor-card{
+  background:var(--vinho2);
+  padding:40px 36px;
+  border-top:1px solid rgba(201,168,76,.18);
+}
+.dor-card .icone{font-size:28px;margin-bottom:16px;opacity:.7;}
+.dor-card h3{font-size:22px;color:var(--creme);margin-bottom:12px;font-weight:500;}
+.dor-card p{font-size:15px;color:var(--creme2);line-height:1.7;font-weight:300;}
+.dor-card .caixinha{
+  margin-top:20px;
+  padding:14px 16px;
+  border-left:2px solid rgba(201,168,76,.4);
+  font-size:14px;
+  font-style:italic;
+  color:var(--creme3);
+  line-height:1.6;
+}
+
+/* ══════════════════════════════════
+   SOBRE A THAÍS
+══════════════════════════════════ */
+.sobre{background:var(--vinho2);padding:96px 0;}
+.sobre-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.sobre-foto{position:relative;}
+.sobre-foto img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:50% 15%;
+  filter:brightness(.9) saturate(.85);
+}
+.sobre-foto::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:50%;
+  background:linear-gradient(to top,var(--vinho2),transparent);
+}
+.sobre-texto .label{margin-bottom:12px;}
+.sobre-texto h2{font-size:clamp(30px,5vw,48px);color:var(--creme);margin-bottom:24px;}
+.sobre-texto p{font-size:16px;color:var(--creme2);font-weight:300;line-height:1.85;margin-bottom:18px;}
+.sobre-texto p strong{color:var(--creme);font-weight:500;}
+.sobre-quote{
+  margin-top:28px;
+  padding:20px 24px;
+  border-left:2px solid var(--dourado);
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  font-style:italic;
+  color:var(--dourado);
+  line-height:1.5;
+}
+
+/* ══════════════════════════════════
+   CÉSAR — SEÇÃO
+══════════════════════════════════ */
+.cesar-sec{
+  background:var(--vinho3);
+  padding:96px 0;
+  border-top:1px solid rgba(201,168,76,.1);
+}
+.cesar-inner{display:grid;grid-template-columns:220px 1fr;gap:60px;align-items:start;}
+.cesar-foto{position:relative;}
+.cesar-foto img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:50% 8%;
+  filter:brightness(.85) saturate(.8);
+}
+.cesar-foto .tag-cesar{
+  position:absolute;bottom:20px;left:0;right:0;
+  text-align:center;
+  font-family:'Inter',sans-serif;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--dourado);opacity:.85;
+}
+.cesar-texto .label{margin-bottom:12px;}
+.cesar-texto h2{font-size:clamp(28px,4.5vw,44px);color:var(--creme);margin-bottom:20px;}
+.cesar-texto p{font-size:16px;color:var(--creme2);font-weight:300;line-height:1.85;margin-bottom:16px;}
+.cesar-texto p strong{color:var(--creme);font-weight:500;}
+.cesar-bonus{
+  margin-top:28px;
+  background:var(--vinho2);
+  padding:24px 28px;
+  border-left:2px solid var(--dourado);
+}
+.cesar-bonus .bonus-label{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);margin-bottom:8px;font-family:'Inter',sans-serif;}
+.cesar-bonus h4{font-size:22px;color:var(--creme);margin-bottom:8px;}
+.cesar-bonus p{font-size:14px;color:var(--creme2);font-weight:300;line-height:1.7;margin:0;}
+
+/* ══════════════════════════════════
+   MÉTODO — 3 SEMANAS
+══════════════════════════════════ */
+.metodo{background:var(--vinho2);padding:96px 0;}
+.metodo-intro{text-align:center;margin-bottom:64px;}
+.metodo-intro h2{font-size:clamp(32px,5.5vw,56px);color:var(--creme);margin-bottom:16px;}
+.metodo-intro p{font-size:18px;color:var(--creme2);font-weight:300;max-width:520px;margin:0 auto;}
+
+.semanas{display:flex;flex-direction:column;gap:2px;}
+.semana{
+  display:grid;grid-template-columns:80px 1fr;
+  background:var(--vinho3);
+  overflow:hidden;
+}
+.semana-num{
+  background:var(--dourado);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;
+  color:var(--vinho2);min-height:120px;
+}
+.semana-body{padding:28px 36px;}
+.semana-body .label{margin-bottom:6px;}
+.semana-body h3{font-size:26px;color:var(--creme);margin-bottom:10px;}
+.semana-body p{font-size:15px;color:var(--creme2);font-weight:300;line-height:1.7;}
+
+.bonus-card{
+  margin-top:2px;
+  display:grid;grid-template-columns:80px 1fr;
+  background:rgba(201,168,76,.08);
+  border:1px solid rgba(201,168,76,.25);
+  overflow:hidden;
+}
+.bonus-num{
+  background:rgba(201,168,76,.15);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;
+  color:var(--dourado);min-height:120px;text-align:center;padding:8px;
+  letter-spacing:.05em;
+}
+.bonus-body{padding:28px 36px;}
+.bonus-body .label{margin-bottom:6px;}
+.bonus-body h3{font-size:26px;color:var(--creme);margin-bottom:10px;}
+.bonus-body p{font-size:15px;color:var(--creme2);font-weight:300;line-height:1.7;}
+.bonus-badge{
+  display:inline-block;margin-top:12px;
+  background:rgba(201,168,76,.15);
+  border:1px solid rgba(201,168,76,.4);
+  color:var(--dourado);
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  padding:5px 12px;font-family:'Inter',sans-serif;
+}
+
+/* ══════════════════════════════════
+   DEPOIMENTOS
+══════════════════════════════════ */
+.depo{background:var(--vinho3);padding:96px 0;}
+.depo-intro{text-align:center;margin-bottom:56px;}
+.depo-intro h2{font-size:clamp(30px,5vw,52px);color:var(--creme);}
+
+.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;}
+.depo-card{
+  background:var(--vinho2);
+  padding:32px 28px;
+  border-top:1px solid rgba(201,168,76,.15);
+}
+.depo-estrelas{color:var(--dourado);font-size:14px;letter-spacing:.1em;margin-bottom:14px;}
+.depo-texto{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-style:italic;
+  color:var(--creme2);line-height:1.6;
+  margin-bottom:20px;
+}
+.depo-nome{font-size:13px;font-weight:500;color:var(--dourado);letter-spacing:.08em;text-transform:uppercase;}
+
+/* ══════════════════════════════════
+   OFERTA
+══════════════════════════════════ */
+.oferta{
+  background:var(--vinho2);
+  padding:96px 0;
+  border-top:1px solid rgba(201,168,76,.15);
+  text-align:center;
+}
+.oferta h2{font-size:clamp(32px,5.5vw,58px);color:var(--creme);margin-bottom:16px;}
+.oferta .sub{font-size:18px;color:var(--creme2);font-weight:300;max-width:500px;margin:0 auto 48px;}
+
+.preco-box{
+  max-width:480px;margin:0 auto;
+  background:var(--vinho3);
+  padding:48px 40px;
+  border:1px solid rgba(201,168,76,.2);
+  margin-bottom:32px;
+}
+.preco-de{font-size:16px;color:var(--creme3);text-decoration:line-through;margin-bottom:4px;}
+.preco-por{font-size:14px;color:var(--creme2);margin-bottom:8px;font-weight:300;}
+.preco-val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(52px,9vw,80px);
+  font-weight:600;
+  color:var(--creme);
+  line-height:1;
+  margin-bottom:4px;
+}
+.preco-val span{font-size:28px;vertical-align:top;margin-top:12px;display:inline-block;}
+.preco-parcel{font-size:15px;color:var(--creme2);margin-bottom:36px;font-weight:300;}
+
+.garantia{
+  max-width:480px;margin:24px auto 0;
+  display:flex;gap:16px;align-items:center;
+  background:rgba(201,168,76,.06);
+  padding:20px 24px;
+  border:1px solid rgba(201,168,76,.15);
+}
+.garantia-ico{font-size:32px;opacity:.8;}
+.garantia-txt h4{font-size:16px;color:var(--creme);margin-bottom:4px;font-family:'Cormorant Garamond',serif;}
+.garantia-txt p{font-size:13px;color:var(--creme2);font-weight:300;line-height:1.6;}
+
+/* ══════════════════════════════════
+   FAQ
+══════════════════════════════════ */
+.faq{background:var(--vinho3);padding:96px 0;}
+.faq-intro{text-align:center;margin-bottom:56px;}
+.faq-intro h2{font-size:clamp(30px,5vw,50px);color:var(--creme);}
+
+.faq-item{border-bottom:1px solid rgba(201,168,76,.12);padding:0;}
+.faq-pergunta{
+  width:100%;background:none;border:none;cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;color:var(--creme);
+  text-align:left;gap:16px;
+}
+.faq-pergunta:hover{color:var(--dourado);}
+.faq-pergunta .ico{
+  font-size:20px;color:var(--dourado);flex-shrink:0;
+  transition:transform .25s;font-family:'Inter',sans-serif;font-style:normal;
+}
+.faq-pergunta.open .ico{transform:rotate(45deg);}
+.faq-resposta{
+  display:none;padding:0 0 22px;
+  font-size:16px;color:var(--creme2);font-weight:300;line-height:1.8;
+  max-width:640px;
+}
+.faq-resposta.open{display:block;}
+
+/* ══════════════════════════════════
+   FOOTER CTA
+══════════════════════════════════ */
+.footer-cta{
+  background:var(--vinho2);
+  padding:80px 0;
+  text-align:center;
+  border-top:1px solid rgba(201,168,76,.15);
+}
+.footer-cta p{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4.5vw,44px);font-style:italic;color:var(--creme2);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto;}
+.footer-cta .handle{margin-top:24px;font-size:13px;color:var(--creme3);letter-spacing:.1em;}
+
+/* ══════════════════════════════════
+   RESPONSIVO
+══════════════════════════════════ */
+@media(max-width:700px){
+  .sobre-inner{grid-template-columns:1fr;gap:40px;}
+  .sobre-foto img{aspect-ratio:4/5;}
+  .cesar-inner{grid-template-columns:1fr;gap:32px;}
+  .cesar-foto img{aspect-ratio:4/3;object-position:50% 20%;}
+  .semana{grid-template-columns:56px 1fr;}
+  .semana-num{font-size:32px;}
+  .bonus-card{grid-template-columns:56px 1fr;}
+  .dor-card{padding:28px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero" id="topo">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Thaís Ayumi · Psicanalista</div>
+    <h1>
+      Você foi traída.<br>
+      Está de pé.<br>
+      Mas por dentro,<br>ainda está <em>destruída.</em>
+    </h1>
+    <p class="hero-sub">
+      <strong>Reconstrução Dela</strong> é o método para você recuperar sua identidade,
+      sua autoestima e sua liberdade emocional — independentemente de ficar ou sair.
+    </p>
+    <a href="#oferta" class="btn">Quero me reconstruir</a>
+    <p class="btn-sub">Acesso imediato por 12 meses</p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DOR
+══════════════════════════════════ -->
+<section class="dor">
+  <div class="container">
+    <div class="dor-intro">
+      <span class="label">Você se reconhece aqui?</span>
+      <h2>Isso que você sente tem nome.</h2>
+      <p>Não é fraqueza. É o que a traição faz com uma mulher que não foi preparada para isso.</p>
+    </div>
+
+    <div class="dor-cards">
+      <div class="dor-card">
+        <h3>Você perdoou, mas não confia mais.</h3>
+        <p>Fica de olho no celular. Sente o coração acelerar quando ele chega tarde. Sabe que não aguenta mais viver assim, mas também não sabe como parar.</p>
+        <div class="caixinha">"Perdoei, mas não confio mais. O fato dele mexer no celular me incomoda muito."</div>
+      </div>
+      <div class="dor-card">
+        <h3>Você quer sair, mas não consegue.</h3>
+        <p>Racionalmente você sabe que merece mais. Mas toda vez que pensa em ir, uma força te segura. Medo de ficar sozinha. Medo de ter desperdiçado anos. Medo de começar do zero.</p>
+        <div class="caixinha">"Queria tanto sair dessa dependência... mas não consigo sair."</div>
+      </div>
+      <div class="dor-card">
+        <h3>Você não sabe mais quem você é.</h3>
+        <p>Antes da traição, você tinha certeza de algumas coisas. Sobre você, sobre o casamento, sobre o que merecia. Hoje, até isso sumiu. E essa desorientação assusta mais do que a traição em si.</p>
+        <div class="caixinha">"Estou muito ferida. Não sei se consigo perdoar. Já fazem 4 meses."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SOBRE A THAÍS
+══════════════════════════════════ -->
+<section class="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="sobre-foto">
+        <img src="thais-sobre.jpg" alt="Thaís Ayumi — Psicanalista" loading="lazy">
+      </div>
+      <div class="sobre-texto">
+        <span class="label">Quem é Thaís Ayumi</span>
+        <h2>Ela também já esteve destruída por dentro.</h2>
+        <div class="linha-d left"></div>
+        <p>Thaís Ayumi é psicanalista com mais de <strong>100 mil seguidores</strong> e centenas de mulheres atendidas. Mas antes de tudo isso, ela foi a menina que lanchava sozinha no banheiro da escola todos os dias porque sofria um bullying cabuloso.</p>
+        <p>Essas marcas na autoestima a levaram a entrar num relacionamento extremamente abusivo. Ela era humilhada. Não tinha forças para sair. E nem certeza de que merecia algo melhor.</p>
+        <p>Ela sabe o que é não conseguir se enxergar com clareza. Sabe o que é aceitar migalhas. E sabe exatamente o caminho de volta.</p>
+        <blockquote class="sobre-quote">"Você não nasceu pra se apagar pra ser amada."</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CÉSAR
+══════════════════════════════════ -->
+<section class="cesar-sec">
+  <div class="container">
+    <div class="cesar-inner">
+      <div class="cesar-foto">
+        <img src="cesar-foto.jpg" alt="César Augusto — Psicanalista" loading="lazy">
+        <div class="tag-cesar">César Augusto · @cesaraugustoo_</div>
+      </div>
+      <div class="cesar-texto">
+        <span class="label">Por que César Augusto recomenda</span>
+        <h2>Eu atendo os homens que traíram.<br>Sei o que acontece do outro lado.</h2>
+        <div class="linha-d left"></div>
+        <p>Sou psicanalista especializado em homens que traíram a esposa. <strong>Mais de 80% do meu público no Instagram são mulheres</strong> que foram traídas e me encontraram tentando entender o que aconteceu.</p>
+        <p>Todos os dias recebo centenas de mensagens de mulheres destruídas que não sabem mais quem são, que querem sair mas não conseguem, que perdoaram mas não esqueceram.</p>
+        <p>Quando conheci o trabalho da Thaís, entendi: <strong>esse é o método que eu indicaria para qualquer uma dessas mulheres.</strong></p>
+
+        <div class="cesar-bonus">
+          <div class="bonus-label">Bônus exclusivo</div>
+          <h4>A perspectiva interna do homem que traiu</h4>
+          <p>César grava aulas dentro do curso explicando o que acontecia na cabeça do seu marido, por que homens que amam traem, como identificar arrependimento real e o que você pode ou não fazer agora.</p>
+          <span class="bonus-badge">Em gravação — incluído no seu acesso</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     MÉTODO
+══════════════════════════════════ -->
+<section class="metodo" id="metodo">
+  <div class="container">
+    <div class="metodo-intro">
+      <span class="label">O Método Reconstrução Dela</span>
+      <h2>Três semanas para se tornar inteira de novo.</h2>
+      <p>Um método estruturado, não uma coleção de frases motivacionais. Cada semana tem um objetivo claro.</p>
+    </div>
+
+    <div class="semanas">
+      <div class="semana">
+        <div class="semana-num">1</div>
+        <div class="semana-body">
+          <span class="label">Semana 1</span>
+          <h3>Quebrar as inseguranças na raiz</h3>
+          <p>Você vai entender o que te fazia aceitar menos do que merecia. Quais histórias sobre você mesma te sabotavam. Onde começa o ciclo que você vive repetindo. É aqui que começa a mudança real — não na superfície.</p>
+        </div>
+      </div>
+      <div class="semana">
+        <div class="semana-num">2</div>
+        <div class="semana-body">
+          <span class="label">Semana 2</span>
+          <h3>Construir uma autoestima verdadeiramente forte</h3>
+          <p>Rituais de autocuidado que funcionam. Aprender a se dar o melhor antes de esperar isso do outro. Se tornar a mulher mais segura que você conhece — não como performance, como estrutura interna.</p>
+        </div>
+      </div>
+      <div class="semana">
+        <div class="semana-num">3</div>
+        <div class="semana-body">
+          <span class="label">Semana 3</span>
+          <h3>Libertar-se da dependência emocional</h3>
+          <p>Construir uma vida incrível para si mesma. Se libertar da carência. Parar de tomar decisões baseadas no medo de ficar sozinha. Seja para ficar no casamento com clareza, ou para sair com dignidade.</p>
+        </div>
+      </div>
+
+      <div class="bonus-card">
+        <div class="bonus-num">BÔNUS</div>
+        <div class="bonus-body">
+          <span class="label">Bônus — César Augusto</span>
+          <h3>O que acontecia na cabeça do seu marido</h3>
+          <p>Aulas gravadas por César Augusto, psicanalista especialista em homens que traíram. Você vai entender por que homens que amam traem, o que distingue o arrependimento real da performance, e o que você pode — e não pode — fazer agora.</p>
+          <span class="bonus-badge">Em gravação — incluído no seu acesso</span>
+        </div>
+      </div>
+
+      <div class="bonus-card">
+        <div class="bonus-num">BÔNUS</div>
+        <div class="bonus-body">
+          <span class="label">Bônus — Glow Up</span>
+          <h3>De dentro para fora</h3>
+          <p>Vídeos exclusivos com nutricionista, consultora de imagem e maquiadora. Porque reconstrução é também se olhar no espelho e reconhecer a mulher que você é.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     DEPOIMENTOS
+══════════════════════════════════ -->
+<section class="depo">
+  <div class="container">
+    <div class="depo-intro">
+      <span class="label">Quem já fez</span>
+      <h2>Mulheres que se reconstruíram.</h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <div class="depo-texto">"Resolvi minhas feridas de infância e hoje sou uma mulher muito mais confiante. Só aceito o melhor na minha vida."</div>
+        <div class="depo-nome">Carol</div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <div class="depo-texto">"Aprendi a amar a minha própria companhia. Me libertei do medo de ficar sozinha que me prendia num relacionamento que me destruía."</div>
+        <div class="depo-nome">Giovanna</div>
+      </div>
+      <div class="depo-card">
+        <div class="depo-estrelas">★★★★★</div>
+        <div class="depo-texto">"Superei o complexo de inferioridade que me acompanhava desde sempre. Hoje me reconheço como merecedora de tudo que quero."</div>
+        <div class="depo-nome">Anna</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     OFERTA
+══════════════════════════════════ -->
+<section class="oferta" id="oferta">
+  <div class="container">
+    <span class="label">Sua reconstrução começa agora</span>
+    <h2>O que você vai receber</h2>
+    <p class="sub">Acesso completo ao método + todos os bônus por 12 meses.</p>
+
+    <div class="preco-box">
+      <p class="preco-de">De R$297</p>
+      <p class="preco-por">Por apenas</p>
+      <div class="preco-val"><span>R$</span>197</div>
+      <p class="preco-parcel">ou 12x de R$19,72</p>
+      <a href="LINK_KIWIFY_AQUI" class="btn">Quero me reconstruir agora</a>
+      <p class="btn-sub">Pagamento seguro · Acesso imediato</p>
+    </div>
+
+    <div class="garantia">
+      <div class="garantia-ico">🛡️</div>
+      <div class="garantia-txt">
+        <h4>7 dias de garantia incondicional</h4>
+        <p>Se em 7 dias você não sentir que esse é o caminho certo para você, devolvemos 100% do seu investimento. Sem perguntas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FAQ
+══════════════════════════════════ -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-intro">
+      <span class="label">Dúvidas frequentes</span>
+      <h2>Perguntas que podem estar na sua cabeça.</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta open" onclick="toggleFaq(this)">
+        Esse curso é para mim se eu ainda não sei se vou ficar ou sair?
+        <span class="ico">+</span>
+      </button>
+      <div class="faq-resposta open">
+        <p>Sim. O método foi feito exatamente para essa fase de indefinição. Você não precisa ter tomado uma decisão para começar. Na verdade, você vai conseguir tomar uma decisão com muito mais clareza depois de passar pelo processo — porque a decisão vai vir da sua força, não do seu medo.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Funciona mesmo para quem já foi traída faz muito tempo?
+        <span class="ico">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Sim. O trauma da traição não tem prazo de validade. Muitas alunas entraram no curso anos depois da traição, carregando os mesmos padrões — desconfiança, dependência, autoestima destruída. O método trabalha na raiz, não na data do evento.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Qual o formato do curso?
+        <span class="ico">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Aulas gravadas, acesso pelo celular ou computador, disponíveis por 12 meses. Você assiste no seu ritmo. O método é estruturado em 3 semanas mas você pode repetir quantas vezes quiser.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Quando ficam prontas as aulas do César?
+        <span class="ico">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>As aulas do César estão em gravação e serão liberadas em breve diretamente na sua área de membros. Quem comprar agora recebe automaticamente quando estiverem disponíveis, sem nenhum custo adicional.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
+        E se eu não gostar?
+        <span class="ico">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Você tem 7 dias para pedir reembolso integral, sem precisar justificar. Mas nossa experiência é que quem começa não para — porque os resultados aparecem rápido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER CTA
+══════════════════════════════════ -->
+<section class="footer-cta">
+  <div class="container">
+    <p>"Você não precisa esperar estar pronta para começar a se reconstruir."</p>
+    <a href="#oferta" class="btn" style="margin-bottom:16px;">Quero me reconstruir</a>
+    <p class="btn-sub">Acesso imediato · 7 dias de garantia</p>
+    <p class="handle">@thaisayumi · @cesaraugustoo_</p>
+  </div>
+</section>
+
+<script>
+function toggleFaq(btn){
+  const resp = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-pergunta').forEach(b=>{
+    b.classList.remove('open');
+    b.nextElementSibling.classList.remove('open');
+  });
+  if(!isOpen){ btn.classList.add('open'); resp.classList.add('open'); }
+}
+</script>
+
+</body>
+</html>
