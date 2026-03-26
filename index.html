@@ -114,6 +114,52 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 .hero-sub strong{color:var(--creme);font-weight:500;}
 
 /* ══════════════════════════════════
+   PROVA SOCIAL BAR
+══════════════════════════════════ */
+.prova-bar{
+  background:var(--vinho2);
+  border-top:1px solid rgba(201,168,76,.2);
+  border-bottom:1px solid rgba(201,168,76,.2);
+  padding:40px 24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.prova-item{
+  text-align:center;
+  padding:12px 52px;
+}
+.prova-item strong{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;
+  font-weight:600;
+  color:var(--dourado);
+  line-height:1;
+  margin-bottom:8px;
+  letter-spacing:-.02em;
+}
+.prova-item span{
+  font-size:13px;
+  color:var(--creme2);
+  font-weight:300;
+  letter-spacing:.04em;
+  line-height:1.55;
+}
+.prova-sep{
+  width:1px;
+  height:64px;
+  background:rgba(201,168,76,.2);
+  flex-shrink:0;
+}
+@media(max-width:640px){
+  .prova-bar{gap:0;}
+  .prova-item{padding:16px 28px;}
+  .prova-sep{width:40px;height:1px;}
+}
+
+/* ══════════════════════════════════
    DOR
 ══════════════════════════════════ */
 .dor{background:var(--vinho3);padding:96px 0;}
@@ -393,20 +439,39 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
   <div class="hero-content">
-    <div class="hero-tag">César Augusto e Thaís Ayumi</div>
+    <div class="hero-tag">César Augusto · Psicanalista especialista em homens que traem</div>
     <h1>
-      Você entrou aqui<br>por causa dele.<br>
-      Vai sair<br><em>por você.</em>
+      Eu sei o que se passou<br>
+      na cabeça do homem<br>
+      <em>que te traiu.</em>
     </h1>
     <p class="hero-sub">
-      <strong>Reconstrução Dela</strong> é o curso para você recuperar sua autoestima,
-      se libertar da dependência emocional e voltar a ser inteira.
-      Não para salvar o relacionamento. Para se salvar.
+      Atendo exclusivamente homens que traíram suas esposas. Sei o que eles pensam, o que escondem e o que nunca vão te contar.
+      Junto com a Thaís Ayumi, psicanalista especialista em dependência emocional e autoestima feminina,
+      criamos o método para você entender o que aconteceu e sair dessa história inteira.
     </p>
-    <a href="#oferta" class="btn">Quero me reconstruir</a>
-    <p class="btn-sub">Acesso imediato por 12 meses · Garantia de 7 dias</p>
+    <a href="#oferta" class="btn">Quero entender e me reconstruir →</a>
+    <p class="btn-sub">Acesso imediato por 12 meses · Garantia incondicional de 7 dias</p>
   </div>
 </section>
+
+<!-- PROVA SOCIAL BAR -->
+<div class="prova-bar">
+  <div class="prova-item">
+    <strong>200+</strong>
+    <span>homens que traíram<br>atendidos por César</span>
+  </div>
+  <div class="prova-sep"></div>
+  <div class="prova-item">
+    <strong>200</strong>
+    <span>mulheres na fila de<br>espera da Thaís</span>
+  </div>
+  <div class="prova-sep"></div>
+  <div class="prova-item">
+    <strong>3 semanas</strong>
+    <span>do diagnóstico<br>à liberdade emocional</span>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════
      DOR
@@ -415,8 +480,8 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
   <div class="container">
     <div class="dor-intro">
       <span class="label">Você se reconhece aqui?</span>
-      <h2>A dependência emocional não deixa o casamento sobreviver.</h2>
-      <p>Não porque você é fraca. Mas porque nenhum relacionamento aguenta o peso de uma mulher que depende dele para existir.</p>
+      <h2>A traição mexe com coisas que você nem sabia que estavam lá.</h2>
+      <p>Não é fraqueza. É o que acontece quando ninguém te explica o que realmente foi aquilo, e você fica sozinha tentando entender.</p>
     </div>
 
     <div class="dor-cards">
