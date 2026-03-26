@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saber Amar  César Augusto e Thais Ayumi</title>
+<title>Saber Amar · César Augusto e Thais Ayumi</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -140,25 +140,29 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 }
 
 /* ════════════════════════════════════════════
-  DOR  claro
+  O QUE É  claro
 ════════════════════════════════════════════ */
-.sec-dor{background:var(--light);padding:80px 0;}
-.dor-intro{margin-bottom:48px;}
-.dor-intro h2{font-size:clamp(28px,5vw,46px);color:var(--ink);margin-bottom:16px;font-weight:700;}
-.dor-intro p{font-size:18px;color:var(--ink60);font-weight:300;max-width:500px;line-height:1.8;}
-.dor-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;}
-.dor-card{
+.sec-oque{background:var(--light);padding:88px 0;}
+.oque-intro{margin-bottom:48px;}
+.oque-intro h2{font-size:clamp(28px,5vw,50px);color:var(--ink);margin-bottom:16px;font-weight:700;line-height:1.15;}
+.oque-intro p{font-size:17px;color:var(--ink60);font-weight:300;line-height:1.85;max-width:540px;}
+.oque-beneficios{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:3px;
+ margin-bottom:48px;
+}
+.oque-item{
  background:#fff;
- border-top:3px solid var(--rose);
- padding:32px 28px;
+ padding:28px 28px;
+ display:flex;gap:16px;align-items:flex-start;
 }
-.dor-card p{font-size:16px;color:var(--ink);line-height:1.85;font-weight:300;}
-.dor-card .msg{
- margin-top:20px;padding:14px 16px;
- border-left:3px solid var(--light3);
- font-size:14px;font-style:italic;color:var(--ink60);line-height:1.65;
- background:var(--light);
+.oque-ico{
+ font-size:18px;flex-shrink:0;margin-top:2px;
 }
+.oque-item p{font-size:15px;color:var(--ink);line-height:1.75;font-weight:400;}
+.oque-item p strong{color:var(--rose);font-weight:500;}
+.oque-cta-wrap{text-align:center;}
 
 /* ════════════════════════════════════════════
   PROVA SOCIAL BAR  médio
@@ -178,41 +182,6 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 }
 .prova-item span{font-size:12px;color:var(--creme60);letter-spacing:.05em;line-height:1.5;}
 .prova-sep{width:1px;height:56px;background:rgba(201,168,76,.2);}
-
-/* ════════════════════════════════════════════
-  VSL  escuro
-════════════════════════════════════════════ */
-.sec-vsl{background:var(--dark);padding:72px 24px;}
-.vsl-label{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.65;margin-bottom:20px;display:block;text-align:center;}
-.vsl-box{position:relative;aspect-ratio:16/9;background:#000;border:1px solid rgba(201,168,76,.15);overflow:hidden;max-width:720px;margin:0 auto;}
-.vsl-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-
-/* ════════════════════════════════════════════
-  EPIPHANY  escuro
-════════════════════════════════════════════ */
-.sec-epiphany{
- background:var(--dark2);padding:96px 0;
- border-top:1px solid rgba(201,168,76,.1);
- border-bottom:1px solid rgba(201,168,76,.1);
-}
-.epiphany-body{text-align:center;}
-.epiphany-body h2{font-size:clamp(30px,5vw,52px);color:var(--creme);margin-bottom:28px;}
-.epiphany-body p{font-size:17px;color:var(--creme60);font-weight:300;line-height:1.85;margin-bottom:18px;max-width:520px;margin-left:auto;margin-right:auto;}
-.epiphany-body p strong{color:var(--creme);}
-.epiphany-virada{
- margin:40px auto;max-width:480px;
- padding:28px 36px;
- border-left:2px solid var(--gold);
- background:rgba(201,168,76,.05);
- text-align:left;
-}
-.epiphany-virada .de{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--creme30);margin-bottom:10px;font-family:'Inter',sans-serif;}
-.epiphany-virada .para{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,28px);font-style:italic;color:var(--gold);line-height:1.4;}
-.epiphany-quote{
- font-family:'Cormorant Garamond',serif;
- font-size:clamp(20px,3.5vw,30px);font-style:italic;
- color:var(--creme);line-height:1.45;max-width:540px;margin:0 auto;
-}
 
 /* ════════════════════════════════════════════
   PARA QUEM  claro
@@ -238,70 +207,39 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .pq-item p strong{color:var(--rose);font-weight:500;}
 
 /* ════════════════════════════════════════════
-  OS DOIS  claro com card escuro
+  DOR  claro
 ════════════════════════════════════════════ */
-.sec-dueto{background:var(--light);padding:80px 0;}
-.dueto-intro{text-align:center;margin-bottom:56px;}
-.dueto-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
-.dueto-intro p{font-size:17px;color:var(--ink60);font-weight:300;max-width:540px;margin:0 auto;line-height:1.8;}
-.dueto-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
-.dueto-card{background:var(--dark2);padding:40px 36px;}
-.dueto-card img{
- width:100%;aspect-ratio:4/5;object-fit:cover;
- object-position:50% 12%;
- filter:brightness(.85) saturate(.8);
- margin-bottom:24px;
- display:block;
+.sec-dor{background:var(--light);padding:80px 0;}
+.dor-intro{margin-bottom:48px;}
+.dor-intro h2{font-size:clamp(28px,5vw,46px);color:var(--ink);margin-bottom:16px;font-weight:700;}
+.dor-intro p{font-size:18px;color:var(--ink60);font-weight:300;max-width:500px;line-height:1.8;}
+.dor-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;}
+.dor-card{
+ background:#fff;
+ border-top:3px solid var(--rose);
+ padding:32px 28px;
 }
-.dueto-card .card-label{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:8px;display:block;}
-.dueto-card h3{font-size:22px;color:var(--creme);margin-bottom:12px;font-weight:600;}
-.dueto-card p{font-size:15px;color:var(--creme60);font-weight:300;line-height:1.85;}
-.dueto-card p strong{color:var(--creme);font-weight:400;}
-.sec-casal-foto{position:relative;overflow:hidden;margin-top:3px;}
-.sec-casal-foto img{width:100%;max-height:420px;object-fit:cover;object-position:50% 30%;filter:brightness(.55);display:block;}
-.sec-casal-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px 24px;}
-.sec-casal-overlay p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,36px);font-style:italic;color:var(--creme);text-align:center;max-width:520px;line-height:1.4;}
-.diferencial-box{
- margin-top:3px;
- background:var(--dark3);
- border:1px solid rgba(201,168,76,.2);
- padding:48px 40px;text-align:center;
-}
-.diferencial-box h3{font-size:clamp(22px,3.5vw,34px);color:var(--creme);margin-bottom:16px;}
-.diferencial-box p{font-size:15px;color:var(--creme60);font-weight:300;line-height:1.85;max-width:540px;margin:0 auto 20px;}
-.diferencial-box .gold-line{font-size:16px;color:var(--gold);font-style:italic;font-family:'Cormorant Garamond',serif;font-size:20px;}
-.badge{
- display:inline-block;margin-top:20px;
- font-size:11px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--gold);border:1px solid rgba(201,168,76,.35);
- padding:8px 18px;
+.dor-card p{font-size:16px;color:var(--ink);line-height:1.85;font-weight:300;}
+.dor-card .msg{
+ margin-top:20px;padding:14px 16px;
+ border-left:3px solid var(--light3);
+ font-size:14px;font-style:italic;color:var(--ink60);line-height:1.65;
+ background:var(--light);
 }
 
 /* ════════════════════════════════════════════
-  QUEBRA DE CRENÇAS  claro
+  DEPOIMENTOS  claro quente
 ════════════════════════════════════════════ */
-.sec-crencas{background:var(--light2);padding:80px 0;}
-.crencas-intro{margin-bottom:48px;}
-.crencas-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
-.crencas-intro p{font-size:16px;color:var(--ink60);font-weight:300;line-height:1.8;}
-.crenca-item{
- display:grid;grid-template-columns:56px 1fr;
- background:#fff;margin-bottom:3px;
-}
-.crenca-num{
- background:var(--light3);
- display:flex;align-items:flex-start;justify-content:center;
- padding:36px 0;
- font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:var(--ink30);
-}
-.crenca-corpo{padding:36px 36px;}
-.crenca-corpo .crenca-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink30);margin-bottom:10px;font-family:'Inter',sans-serif;}
-.crenca-corpo h3{font-size:clamp(18px,2.5vw,22px);color:var(--ink);margin-bottom:14px;font-style:italic;font-family:'Cormorant Garamond',serif;}
-.crenca-corpo p{font-size:15px;color:var(--ink60);line-height:1.85;font-weight:300;}
-.crenca-corpo p strong{color:var(--ink);font-weight:500;}
+.sec-depo{background:var(--light2);padding:80px 0;}
+.depo-intro{margin-bottom:48px;}
+.depo-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
+.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3px;}
+.depo-card{background:#fff;padding:32px 28px;}
+.depo-print{padding:0;overflow:hidden;border-radius:4px;}
+.depo-print img{width:100%;display:block;}
 
 /* ════════════════════════════════════════════
-  MÉTODO  claro
+  MÉTODO / MÓDULOS  claro
 ════════════════════════════════════════════ */
 .sec-metodo{background:var(--light);padding:80px 0;}
 .metodo-intro{margin-bottom:56px;}
@@ -340,20 +278,28 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 }
 
 /* ════════════════════════════════════════════
-  DEPOIMENTOS  claro quente
+  DISPOSITIVOS  escuro
 ════════════════════════════════════════════ */
-.sec-depo{background:var(--light2);padding:80px 0;}
-.depo-intro{margin-bottom:48px;}
-.depo-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
-.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3px;}
-.depo-card{background:#fff;padding:32px 28px;}
-.depo-print{padding:0;overflow:hidden;border-radius:4px;}
-.depo-print img{width:100%;display:block;}
-.depo-estrelas{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:16px;}
-.depo-texto{font-size:16px;color:var(--ink);line-height:1.8;font-weight:300;margin-bottom:16px;}
-.depo-texto::before{content:'\201C';}
-.depo-texto::after{content:'\201D';}
-.depo-nome{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink30);font-family:'Inter',sans-serif;}
+.sec-devices{
+ background:var(--dark2);padding:80px 0;
+ border-top:1px solid rgba(201,168,76,.1);
+ border-bottom:1px solid rgba(201,168,76,.1);
+}
+.devices-intro{text-align:center;margin-bottom:52px;}
+.devices-intro h2{font-size:clamp(26px,4vw,42px);color:var(--creme);margin-bottom:12px;}
+.devices-intro p{font-size:15px;color:var(--creme60);font-weight:300;line-height:1.8;max-width:440px;margin:0 auto;}
+.devices-grid{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:3px;
+ max-width:720px;margin:0 auto 48px;
+}
+.device-card{
+ background:rgba(255,255,255,.04);
+ border:1px solid rgba(201,168,76,.12);
+ padding:32px 24px;text-align:center;
+}
+.device-ico{font-size:32px;margin-bottom:14px;display:block;}
+.device-card h4{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--creme);margin-bottom:8px;}
+.device-card p{font-size:13px;color:var(--creme60);font-weight:300;line-height:1.7;}
 
 /* ════════════════════════════════════════════
   OFERTA  escuro
@@ -401,9 +347,34 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .garantia-txt p{font-size:13px;color:var(--creme30);line-height:1.65;font-weight:300;}
 
 /* ════════════════════════════════════════════
+  OS DOIS  claro com card escuro
+════════════════════════════════════════════ */
+.sec-dueto{background:var(--light);padding:80px 0;}
+.dueto-intro{text-align:center;margin-bottom:56px;}
+.dueto-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
+.dueto-intro p{font-size:17px;color:var(--ink60);font-weight:300;max-width:540px;margin:0 auto;line-height:1.8;}
+.dueto-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
+.dueto-card{background:var(--dark2);padding:40px 36px;}
+.dueto-card img{
+ width:100%;aspect-ratio:4/5;object-fit:cover;
+ object-position:50% 12%;
+ filter:brightness(.85) saturate(.8);
+ margin-bottom:24px;
+ display:block;
+}
+.dueto-card .card-label{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:8px;display:block;}
+.dueto-card h3{font-size:22px;color:var(--creme);margin-bottom:12px;font-weight:600;}
+.dueto-card p{font-size:15px;color:var(--creme60);font-weight:300;line-height:1.85;}
+.dueto-card p strong{color:var(--creme);font-weight:400;}
+.sec-casal-foto{position:relative;overflow:hidden;margin-top:3px;}
+.sec-casal-foto img{width:100%;max-height:420px;object-fit:cover;object-position:50% 30%;filter:brightness(.55);display:block;}
+.sec-casal-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px 24px;}
+.sec-casal-overlay p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,36px);font-style:italic;color:var(--creme);text-align:center;max-width:520px;line-height:1.4;}
+
+/* ════════════════════════════════════════════
   FAQ  claro
 ════════════════════════════════════════════ */
-.sec-faq{background:var(--light);padding:96px 0;}
+.sec-faq{background:var(--light2);padding:96px 0;}
 .faq-intro{margin-bottom:48px;}
 .faq-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;}
 .faq-lista{border-top:1px solid var(--light3);}
@@ -440,13 +411,24 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .footer-handles{margin-top:20px;font-size:12px;color:var(--creme30);letter-spacing:.1em;}
 
 /* ════════════════════════════════════════════
+  WHATSAPP FLUTUANTE
+════════════════════════════════════════════ */
+.wpp-float{
+ position:fixed;bottom:24px;right:24px;z-index:999;
+ background:#25D366;color:#fff;
+ width:56px;height:56px;border-radius:50%;
+ display:flex;align-items:center;justify-content:center;
+ text-decoration:none;font-size:26px;
+ box-shadow:0 4px 20px rgba(37,211,102,.4);
+ transition:transform .2s,box-shadow .2s;
+}
+.wpp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.5);}
+
+/* ════════════════════════════════════════════
   MOBILE
 ════════════════════════════════════════════ */
 @media(max-width:700px){
  .dueto-grid{grid-template-columns:1fr;}
- .crenca-item{grid-template-columns:40px 1fr;}
- .crenca-num{font-size:28px;padding:28px 0;}
- .crenca-corpo{padding:28px 20px;}
  .modulo{grid-template-columns:48px 1fr;}
  .modulo-num{font-size:26px;padding:28px 0;}
  .modulo-corpo{padding:24px 20px;}
@@ -456,10 +438,11 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  .preco-val{font-size:60px;}
  .prova-item{padding:12px 20px;}
  .prova-sep{width:40px;height:1px;}
- .diferencial-box{padding:32px 24px;}
  .wrap-lg{padding:0 20px;}
  .depo-grid{grid-template-columns:1fr;}
  .hero-duo-caption strong{font-size:17px;}
+ .oque-beneficios{grid-template-columns:1fr;}
+ .devices-grid{grid-template-columns:1fr;}
 }
 @media(max-width:480px){
  .dor-cards{grid-template-columns:1fr;}
@@ -501,27 +484,44 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </section>
 
-<!-- ══ DOR  claro ═════════════════════════ -->
-<section class="sec-dor reveal">
+<!-- ══ O QUE É  claro ════════════════════ -->
+<section class="sec-oque reveal">
  <div class="wrap">
-  <div class="dor-intro">
-   <span class="label-rose">Você se reconhece aqui?</span>
-   <h2>A traição não dói só uma vez.</h2>
+  <div class="oque-intro">
+   <span class="label-gold">O protocolo</span>
+   <h2>Um método criado pelos dois lados da traição.</h2>
    <div class="divider-gold"></div>
+   <p>Saber Amar é um protocolo de 3 semanas desenvolvido por um casal de psicanalistas. Thais trata mulheres traídas. César atende exclusivamente os homens que traem. Juntos, eles criaram o único método no Brasil que olha para os dois lados ao mesmo tempo.</p>
   </div>
-  <div class="dor-cards">
-   <div class="dor-card">
-    <p>Você disse que perdoa. Mas quando ele pega o celular na mesa, o seu coração acelera. E você fica com raiva de si mesma por não conseguir parar de verificar.</p>
-    <div class="msg">"Perdoei, mas não confio mais. O fato dele mexer no celular me incomoda muito."</div>
+  <div class="oque-beneficios">
+   <div class="oque-item">
+    <span class="oque-ico">✦</span>
+    <p>Entenda o que te fez aceitar menos do que merecia e <strong>quebre o ciclo na raiz.</strong></p>
    </div>
-   <div class="dor-card">
-    <p>Você sabe que deveria ir embora. Mas quando tenta imaginar a vida sem ele, dá um branco. E aí você fica  não porque quer, mas porque não sabe quem você é fora desse relacionamento.</p>
-    <div class="msg">"Queria tanto sair dessa dependência... mas não consigo sair."</div>
+   <div class="oque-item">
+    <span class="oque-ico">✦</span>
+    <p>Construa uma autoestima real  não como performance, mas como <strong>estrutura interna.</strong></p>
    </div>
-   <div class="dor-card">
-    <p>Você perdeu a referência de si mesma. O que você gosta, o que você quer, quem você era antes  parece que essa pessoa foi embora junto com a confiança que você tinha nele.</p>
-    <div class="msg">"Estou muito ferida. Não sei se consigo perdoar. Já fazem 4 meses."</div>
+   <div class="oque-item">
+    <span class="oque-ico">✦</span>
+    <p>Se liberte da dependência emocional e <strong>pare de tomar decisões pelo medo.</strong></p>
    </div>
+   <div class="oque-item">
+    <span class="oque-ico">✦</span>
+    <p>Entenda o que o homem que te traiu nunca consegue dizer  <strong>pela voz de quem os ouve.</strong></p>
+   </div>
+   <div class="oque-item">
+    <span class="oque-ico">✦</span>
+    <p>Tome a decisão mais importante da sua vida  <strong>ficar ou ir embora  com clareza e sem culpa.</strong></p>
+   </div>
+   <div class="oque-item">
+    <span class="oque-ico">✦</span>
+    <p>Se torne uma mulher que nunca mais aceita menos do que merece, <strong>independente do que ele decidir.</strong></p>
+   </div>
+  </div>
+  <div class="oque-cta-wrap">
+   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-light" style="max-width:420px;">Quero começar agora &nbsp;→</a>
+   <p class="btn-note-ink">12x de R$30,72 · Acesso imediato</p>
   </div>
  </div>
 </section>
@@ -544,70 +544,11 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </div>
 
-<!-- ══ EPIPHANY  escuro ════════════════════ -->
-<section class="sec-epiphany reveal">
- <div class="wrap-sm">
-  <div class="epiphany-body">
-   <span class="label-gold">O que ninguém te conta</span>
-   <h2>A pergunta errada<br>te mantém presa.</h2>
-   <div class="divider-gold center"></div>
-   <p>A maioria das mulheres traídas fica meses presa numa única pergunta: <strong>"Fico ou saio?"</strong> Enquanto espera a resposta, congela. Para de viver.</p>
-   <div class="epiphany-virada">
-    <div class="de">A pergunta que liberta</div>
-    <div class="para">"Quem eu quero ser quando sair daqui?"</div>
-   </div>
-   <blockquote class="epiphany-quote">"Uma mulher que aprendeu a se amar não precisa da aprovação de ninguém para ser inteira."</blockquote>
-  </div>
- </div>
-</section>
-
-<!-- ══ OS DOIS  claro + cards escuros ═════ -->
-<section class="sec-dueto reveal">
- <div class="wrap-lg">
-  <div class="dueto-intro">
-   <span class="label-rose">Quem criou esse curso</span>
-   <h2>Um casal de psicanalistas.<br>Os dois lados da traição.</h2>
-   <div class="divider-gold center"></div>
-   <p>César e Thais são casados e psicanalistas. Ele atende exclusivamente os homens que traem. Ela reconstrói as mulheres que foram traídas. Nenhum outro curso no Brasil tem essa combinação.</p>
-  </div>
-
-  <div class="dueto-grid">
-   <div class="dueto-card">
-    <img src="thais-sobre.jpg" alt="Thais Ayumi" style="object-position:50% 15%;">
-    <span class="card-label">Thais Ayumi · @thaisayumi</span>
-    <h3>Especialista em dependência emocional e autoestima feminina</h3>
-    <p>Atende exclusivamente mulheres. 200 na fila de espera. Acompanhou centenas de mulheres paralisadas entre o medo de ficar e o medo de sair. O que ela viu se repetir sempre: <strong>a dor da traição não é sobre ele. É sobre o que você passou a acreditar sobre você mesma depois.</strong></p>
-   </div>
-   <div class="dueto-card">
-    <img src="cesar-foto.jpg" alt="César Augusto">
-    <span class="card-label">César Augusto · @cesaraugustoo_</span>
-    <h3>O psicanalista que atende exclusivamente homens que traem</h3>
-    <p>Eles contam a ele o que não contam a ninguém. Depois de anos ouvindo homens infiéis por dentro, César sabe o que separa arrependimento genuíno de performance. <strong>E sabe, com certeza, o que eles nunca dizem mas você precisa ouvir.</strong></p>
-   </div>
-  </div>
-
-  <div class="sec-casal-foto">
-   <img src="casal-hero.jpg" alt="César e Thais">
-   <div class="sec-casal-overlay">
-    <p>"Dois lados da mesma história. Unidos para que você escreva a sua."</p>
-   </div>
-  </div>
-
-  <div class="diferencial-box reveal">
-   <span class="label-gold">O que nenhum outro curso pode te dar</span>
-   <h3>Você vai ouvir o que os homens que traem nunca conseguem dizer.</h3>
-   <p>Por que homens que amam traem. O que buscavam fora. Como distinguir arrependimento genuíno de performance.</p>
-   <div class="gold-line">Não para perdoá-lo. Para nunca mais se perguntar "o que eu fiz de errado."</div>
-   <span class="badge">Módulos do César em gravação  incluídos no seu acesso</span>
-  </div>
- </div>
-</section>
-
 <!-- ══ PARA QUEM  claro ════════════════════ -->
 <section class="sec-paraquem reveal">
  <div class="wrap">
   <div class="paraquem-intro">
-   <span class="label-rose">Este método é para você se…</span>
+   <span class="label-rose">Este método é para você se...</span>
    <h2>Você está no lugar certo.</h2>
    <div class="divider-gold"></div>
   </div>
@@ -636,50 +577,58 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </section>
 
-<!-- ══ QUEBRA DE CRENÇAS  claro ═══════════ -->
-<section class="sec-crencas reveal">
+<!-- ══ DOR  claro ═════════════════════════ -->
+<section class="sec-dor reveal">
  <div class="wrap">
-  <div class="crencas-intro">
-   <span class="label-rose">Antes de continuar</span>
-   <h2>Três coisas que você acredita  e que precisam ser ditas de forma diferente.</h2>
+  <div class="dor-intro">
+   <span class="label-rose">Você se reconhece aqui?</span>
+   <h2>A traição não dói só uma vez.</h2>
    <div class="divider-gold"></div>
-   <p>Não para diminuir o que você sente. Para que você pare de carregar o que não é seu.</p>
   </div>
-
-  <div class="crenca-item">
-   <div class="crenca-num">1</div>
-   <div class="crenca-corpo">
-    <p class="crenca-label">O que você acredita</p>
-    <h3>"Fui traída porque não fui suficiente."</h3>
-    <p>Em anos atendendo homens infiéis, nunca ouvi um dizer que traiu porque a esposa não era boa o suficiente. O problema estava <strong>neles</strong>. Sempre. <em> César Augusto</em></p>
+  <div class="dor-cards">
+   <div class="dor-card">
+    <p>Você disse que perdoa. Mas quando ele pega o celular na mesa, o seu coração acelera. E você fica com raiva de si mesma por não conseguir parar de verificar.</p>
+    <div class="msg">"Perdoei, mas não confio mais. O fato dele mexer no celular me incomoda muito."</div>
    </div>
-  </div>
-
-  <div class="crenca-item">
-   <div class="crenca-num">2</div>
-   <div class="crenca-corpo">
-    <p class="crenca-label">O que você acredita</p>
-    <h3>"Preciso entender o motivo para fechar esse ciclo."</h3>
-    <p>O que fecha o ciclo é você parar de precisar da resposta <strong>dele</strong> para se sentir inteira. Muitas mulheres esperam anos por uma explicação que o próprio homem não tem.</p>
+   <div class="dor-card">
+    <p>Você sabe que deveria ir embora. Mas quando tenta imaginar a vida sem ele, dá um branco. E aí você fica  não porque quer, mas porque não sabe quem você é fora desse relacionamento.</p>
+    <div class="msg">"Queria tanto sair dessa dependência... mas não consigo sair."</div>
    </div>
-  </div>
-
-  <div class="crenca-item">
-   <div class="crenca-num">3</div>
-   <div class="crenca-corpo">
-    <p class="crenca-label">O que você acredita</p>
-    <h3>"Se eu me reconstruir, ele vai perceber e mudar."</h3>
-    <p>Você não se reconstrói para ele perceber. Você se reconstrói para ser livre. O que vier depois é consequência, <strong>não objetivo.</strong></p>
+   <div class="dor-card">
+    <p>Você perdeu a referência de si mesma. O que você gosta, o que você quer, quem você era antes  parece que essa pessoa foi embora junto com a confiança que você tinha nele.</p>
+    <div class="msg">"Estou muito ferida. Não sei se consigo perdoar. Já fazem 4 meses."</div>
    </div>
   </div>
  </div>
 </section>
 
-<!-- ══ MÉTODO  claro ══════════════════════ -->
+<!-- ══ DEPOIMENTOS  claro quente ══════════ -->
+<section class="sec-depo reveal">
+ <div class="wrap">
+  <div class="depo-intro">
+   <span class="label-rose">Quem já passou por aqui</span>
+   <h2>Mulheres que pararam de se perguntar o que fizeram de errado.</h2>
+   <div class="divider-gold"></div>
+  </div>
+  <div class="depo-grid">
+   <div class="depo-card depo-print">
+    <img src="dep-1.jpg" alt="Depoimento real">
+   </div>
+   <div class="depo-card depo-print">
+    <img src="dep-2.jpg" alt="Depoimento real">
+   </div>
+   <div class="depo-card depo-print">
+    <img src="dep-3.jpg" alt="Depoimento real">
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ══ MÉTODO / MÓDULOS  claro ═══════════ -->
 <section class="sec-metodo reveal" id="metodo">
  <div class="wrap">
   <div class="metodo-intro">
-   <span class="label-rose">O Método Saber Amar</span>
+   <span class="label-rose">O que tem dentro do curso</span>
    <h2>Cinco módulos. Uma mulher que não se perde mais.</h2>
    <div class="divider-gold"></div>
    <p>Independente do que ele decidir. A reconstrução é sua  e começa por dentro.</p>
@@ -715,7 +664,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <div class="modulo-corpo">
      <p class="modulo-tag">Módulo 4 · César Augusto</p>
      <h3>A visão masculina que você nunca teve</h3>
-     <p>O que separa o arrependimento genuíno da culpa que passa. O que ele sente quando vai à terapia. Os sinais que um homem não consegue falsificar. Aulas com quem ouve esses homens por dentro há anos. <span class="badge-light" style="display:inline-block;margin-top:8px;">Em gravação  incluído no acesso</span></p>
+     <p>O que separa o arrependimento genuíno da culpa que passa. O que ele sente quando vai à terapia. Os sinais que um homem não consegue falsificar. Aulas com quem ouve esses homens por dentro há anos. <span style="display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Em gravação · incluído no acesso</span></p>
     </div>
    </div>
    <div class="modulo">
@@ -723,7 +672,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <div class="modulo-corpo">
      <p class="modulo-tag">Módulo 5 · César Augusto</p>
      <h3>Ficar ou ir embora: uma decisão sua</h3>
-     <p>Um guia baseado em psicanálise para você avaliar seu relacionamento com os olhos abertos. Tomar a decisão que consegue sustentar  livre do medo, livre da culpa. Sem pressão para nenhum lado. <span class="badge-light" style="display:inline-block;margin-top:8px;">Em gravação  incluído no acesso</span></p>
+     <p>Um guia baseado em psicanálise para você avaliar seu relacionamento com os olhos abertos. Tomar a decisão que consegue sustentar  livre do medo, livre da culpa. Sem pressão para nenhum lado. <span style="display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Em gravação · incluído no acesso</span></p>
     </div>
    </div>
   </div>
@@ -739,24 +688,34 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </section>
 
-<!-- ══ DEPOIMENTOS  claro quente ══════════ -->
-<section class="sec-depo reveal">
+<!-- ══ DISPOSITIVOS  escuro ══════════════ -->
+<section class="sec-devices reveal">
  <div class="wrap">
-  <div class="depo-intro">
-   <span class="label-rose">Quem já passou por aqui</span>
-   <h2>Mulheres que pararam de se perguntar o que fizeram de errado.</h2>
-   <div class="divider-gold"></div>
+  <div class="devices-intro">
+   <span class="label-gold">Assista quando e onde quiser</span>
+   <h2>Do celular ao computador.<br>No seu ritmo.</h2>
+   <p>Aulas gravadas, disponíveis na plataforma Kiwify. Você decide quando assistir. Não tem prazo, não tem pressão.</p>
   </div>
-  <div class="depo-grid">
-   <div class="depo-card depo-print">
-    <img src="dep-1.jpg" alt="Depoimento real">
+  <div class="devices-grid">
+   <div class="device-card">
+    <span class="device-ico">📱</span>
+    <h4>Celular</h4>
+    <p>Pelo app da Kiwify, disponível para iOS e Android. Assista onde estiver.</p>
    </div>
-   <div class="depo-card depo-print">
-    <img src="dep-2.jpg" alt="Depoimento real">
+   <div class="device-card">
+    <span class="device-ico">💻</span>
+    <h4>Computador</h4>
+    <p>Acesso pelo navegador, sem instalar nada. Tela cheia, qualidade total.</p>
    </div>
-   <div class="depo-card depo-print">
-    <img src="dep-3.jpg" alt="Depoimento real">
+   <div class="device-card">
+    <span class="device-ico">📅</span>
+    <h4>12 meses de acesso</h4>
+    <p>Sem correria. Você tem um ano para assistir e rever quantas vezes quiser.</p>
    </div>
+  </div>
+  <div style="text-align:center;">
+   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:400px;">Quero começar agora &nbsp;→</a>
+   <p class="btn-note">Acesso imediato após o pagamento</p>
   </div>
  </div>
 </section>
@@ -803,6 +762,40 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </section>
 
+<!-- ══ OS DOIS  claro + cards escuros ═════ -->
+<section class="sec-dueto reveal">
+ <div class="wrap-lg">
+  <div class="dueto-intro">
+   <span class="label-rose">Quem criou esse curso</span>
+   <h2>Um casal de psicanalistas.<br>Os dois lados da traição.</h2>
+   <div class="divider-gold center"></div>
+   <p>César e Thais são casados e psicanalistas. Ele atende exclusivamente os homens que traem. Ela reconstrói as mulheres que foram traídas. Nenhum outro curso no Brasil tem essa combinação.</p>
+  </div>
+
+  <div class="dueto-grid">
+   <div class="dueto-card">
+    <img src="thais-sobre.jpg" alt="Thais Ayumi" style="object-position:50% 15%;">
+    <span class="card-label">Thais Ayumi · @thaisayumi</span>
+    <h3>Especialista em dependência emocional e autoestima feminina</h3>
+    <p>Atende exclusivamente mulheres. 200 na fila de espera. Acompanhou centenas de mulheres paralisadas entre o medo de ficar e o medo de sair. O que ela viu se repetir sempre: <strong>a dor da traição não é sobre ele. É sobre o que você passou a acreditar sobre você mesma depois.</strong></p>
+   </div>
+   <div class="dueto-card">
+    <img src="cesar-foto.jpg" alt="César Augusto">
+    <span class="card-label">César Augusto · @cesaraugustoo_</span>
+    <h3>O psicanalista que atende exclusivamente homens que traem</h3>
+    <p>Eles contam a ele o que não contam a ninguém. Depois de anos ouvindo homens infiéis por dentro, César sabe o que separa arrependimento genuíno de performance. <strong>E sabe, com certeza, o que eles nunca dizem mas você precisa ouvir.</strong></p>
+   </div>
+  </div>
+
+  <div class="sec-casal-foto">
+   <img src="casal-hero.jpg" alt="César e Thais">
+   <div class="sec-casal-overlay">
+    <p>"Dois lados da mesma história. Unidos para que você escreva a sua."</p>
+   </div>
+  </div>
+ </div>
+</section>
+
 <!-- ══ FAQ  claro ═════════════════════════ -->
 <section class="sec-faq reveal">
  <div class="wrap">
@@ -829,7 +822,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
      <em class="ico">+</em>
     </button>
     <div class="faq-a">
-     <p>Não  e isso é exatamente o ponto. Reconstrução Dela não toma essa decisão por você nem te pressiona para nenhum lado. O que ele faz é te devolver a clareza e a segurança emocional para que você tome essa decisão a partir de um lugar forte. Muitas mulheres chegam sem saber o que querem. Ao final, sabem. E a decisão que tomam vem delas.</p>
+     <p>Não  e isso é exatamente o ponto. O Saber Amar não toma essa decisão por você nem te pressiona para nenhum lado. O que ele faz é te devolver a clareza e a segurança emocional para que você tome essa decisão a partir de um lugar forte. Muitas mulheres chegam sem saber o que querem. Ao final, sabem. E a decisão que tomam vem delas.</p>
     </div>
    </div>
 
@@ -895,6 +888,11 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  <p class="btn-note">Acesso imediato · 7 dias de garantia</p>
  <p class="footer-handles">@cesaraugustoo_ &nbsp;·&nbsp; @thaisayumi</p>
 </section>
+
+<!-- ══ WHATSAPP FLUTUANTE ═════════════════ -->
+<a href="https://wa.me/5531991550421?text=Oi%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20Saber%20Amar" class="wpp-float" target="_blank" rel="noopener" title="Dúvidas? Fale no WhatsApp">
+ 💬
+</a>
 
 <script>
 // FAQ toggle
