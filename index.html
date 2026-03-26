@@ -239,6 +239,33 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .depo-print img{width:100%;display:block;}
 
 /* ════════════════════════════════════════════
+  IDENTIFICAÇÃO  escuro
+════════════════════════════════════════════ */
+.sec-id{
+ background:var(--dark2);padding:88px 0;
+ border-top:1px solid rgba(201,168,76,.1);
+ border-bottom:1px solid rgba(201,168,76,.1);
+}
+.id-intro{text-align:center;margin-bottom:52px;}
+.id-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--creme);margin-bottom:14px;font-weight:700;}
+.id-intro p{font-size:17px;color:var(--creme60);font-weight:300;line-height:1.8;max-width:480px;margin:0 auto;}
+.id-lista{list-style:none;max-width:640px;margin:0 auto 48px;display:flex;flex-direction:column;gap:3px;}
+.id-item{
+ background:rgba(255,255,255,.04);
+ border-left:2px solid rgba(201,168,76,.3);
+ padding:22px 28px;
+ font-size:16px;color:var(--creme);line-height:1.75;font-weight:300;
+ display:flex;gap:16px;align-items:flex-start;
+}
+.id-item em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:14px;margin-top:3px;}
+.id-fechamento{
+ text-align:center;
+ font-family:'Cormorant Garamond',serif;font-style:italic;
+ font-size:clamp(18px,2.5vw,24px);color:var(--creme60);
+ max-width:480px;margin:0 auto;line-height:1.55;
+}
+
+/* ════════════════════════════════════════════
   MÉTODO / MÓDULOS  claro
 ════════════════════════════════════════════ */
 .sec-metodo{background:var(--light);padding:80px 0;}
@@ -523,6 +550,26 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 </section>
 
 
+<!-- ══ IDENTIFICAÇÃO  escuro ══════════════ -->
+<section class="sec-id reveal">
+ <div class="wrap">
+  <div class="id-intro">
+   <span class="label-gold">Este curso foi feito para você</span>
+   <h2>Não importa se você foi traída.<br>Importa o que você sente quando olha para si mesma.</h2>
+  </div>
+  <ul class="id-lista">
+   <li class="id-item"><em>✦</em> Você já tentou terapia, já leu tudo que existia, já conversou com as amigas certas. E ainda assim acorda sentindo que algo em você não se resolve.</li>
+   <li class="id-item"><em>✦</em> Você não sabe se quer ficar ou sair. Você sabe que não aguenta mais essa dúvida ocupando cada pensamento.</li>
+   <li class="id-item"><em>✦</em> Você nunca foi traída, mas também não se sente valorizada. E nem sabe mais se o problema é ele ou se você simplesmente aceitou menos do que merecia.</li>
+   <li class="id-item"><em>✦</em> Você se perdeu dentro do relacionamento sem perceber. Suas vontades foram ficando para depois. Suas necessidades viraram exagero. Você foi ficando menor.</li>
+   <li class="id-item"><em>✦</em> Você odeia precisar tanto de uma pessoa para se sentir bem. E odeia mais ainda não conseguir parar.</li>
+   <li class="id-item"><em>✦</em> Você é competente, inteligente, funciona bem em todas as outras áreas da vida. E ainda assim nesse relacionamento você se sente frágil de um jeito que não consegue explicar para ninguém.</li>
+   <li class="id-item"><em>✦</em> Você sente que existe uma versão de você que ficou para trás. Antes de ceder tanto. Antes de se acostumar a ficar em segundo lugar.</li>
+  </ul>
+  <p class="id-fechamento">Se você se reconheceu em qualquer uma dessas frases, você não está exagerada. Você está no lugar certo.</p>
+ </div>
+</section>
+
 <!-- ══ DOR  claro ═════════════════════════ -->
 <section class="sec-dor reveal">
  <div class="wrap">
@@ -693,20 +740,20 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <img src="thais-sobre.jpg" alt="Thais Ayumi" style="object-position:50% 15%;">
     <span class="card-label">Thais Ayumi · @thaisayumi</span>
     <h3>Especialista em dependência emocional e autoestima feminina</h3>
-    <p>200 mulheres esperam para ser atendidas por ela. O que ela descobriu em anos de clínica: <strong>a dor da traição não é sobre o que ele fez. É sobre o que você passou a acreditar sobre você mesma depois disso.</strong></p>
+    <p>Ao longo de anos atendendo mulheres, Thais identificou um padrão que se repete com precisão desconcertante: mulheres inteligentes, capazes, com vida construída, que dentro de um relacionamento se tornam irreconhecíveis para si mesmas. O que ela descobriu é que <strong>o problema nunca está no outro. Está na relação que essa mulher tem com ela mesma.</strong> Thais não é especialista em traição. É especialista no que faz uma mulher brilhante aceitar muito menos do que merece, e no caminho de volta até si mesma.</p>
    </div>
    <div class="dueto-card">
     <img src="cesar-foto.jpg" alt="César Augusto">
     <span class="card-label">César Augusto · @cesaraugustoo_</span>
     <h3>O psicanalista que atende exclusivamente homens que traem</h3>
-    <p>Ele ouve o que os homens infiéis nunca dizem para as esposas. Depois de anos dentro da cabeça deles, César sabe distinguir arrependimento real de performance. <strong>E sabe exatamente o que você precisa ouvir.</strong></p>
+    <p>César ouve o que esses homens nunca dizem para as suas esposas. Nas sessões, surgem as motivações reais, os mecanismos que nenhuma mulher consegue enxergar de fora, a diferença entre o arrependimento que transforma e a performance que só protege o ego. <strong>Ele traz para este curso o que normalmente permanece do outro lado de uma porta fechada.</strong></p>
    </div>
   </div>
 
   <div class="sec-casal-foto">
    <img src="casal-hero.jpg" alt="César e Thais">
    <div class="sec-casal-overlay">
-    <p>"Dois lados da mesma história. Unidos para que você escreva a sua."</p>
+    <p>"A perspectiva de quem atende mulheres que se perderam, e a perspectiva de quem atende os homens que contribuíram para isso. Dois lados do mesmo problema. Uma direção só."</p>
    </div>
   </div>
  </div>
