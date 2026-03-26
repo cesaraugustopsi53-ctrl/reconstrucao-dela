@@ -343,6 +343,8 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .depo-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
 .depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3px;}
 .depo-card{background:#fff;padding:32px 28px;}
+.depo-print{padding:0;overflow:hidden;border-radius:4px;}
+.depo-print img{width:100%;display:block;}
 .depo-estrelas{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:16px;}
 .depo-texto{font-size:16px;color:var(--ink);line-height:1.8;font-weight:300;margin-bottom:16px;}
 .depo-texto::before{content:'\201C';}
@@ -732,20 +734,14 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    <div class="divider-gold"></div>
   </div>
   <div class="depo-grid">
-   <div class="depo-card">
-    <div class="depo-estrelas">★★★★★</div>
-    <p class="depo-texto">Descobri a traição em setembro. Passei meses acordando às 3 da manhã revisando tudo. Depois do curso, finalmente entendi que não era sobre mim. Hoje tomo minhas decisões de um lugar que não é o desespero.</p>
-    <p class="depo-nome">Beatriz, 34 anos</p>
+   <div class="depo-card depo-print">
+    <img src="dep-1.jpg" alt="Depoimento real">
    </div>
-   <div class="depo-card">
-    <div class="depo-estrelas">★★★★★</div>
-    <p class="depo-texto">Eu queria sair mas não conseguia. Tinha medo de ficar sozinha e ficava achando que ia mudar. O curso me fez entender que eu estava ficando por medo, não por escolha. Essa diferença mudou tudo.</p>
-    <p class="depo-nome">Camila, 38 anos</p>
+   <div class="depo-card depo-print">
+    <img src="dep-2.jpg" alt="Depoimento real">
    </div>
-   <div class="depo-card">
-    <div class="depo-estrelas">★★★★★</div>
-    <p class="depo-texto">O módulo do César foi o que eu mais precisava e não sabia. Entender o que estava acontecendo dentro dele me libertou de uma culpa que eu carregava sem perceber. Não perdoei o que ele fez. Me perdoei por ter me apagado.</p>
-    <p class="depo-nome">Fernanda, 41 anos</p>
+   <div class="depo-card depo-print">
+    <img src="dep-3.jpg" alt="Depoimento real">
    </div>
   </div>
  </div>
