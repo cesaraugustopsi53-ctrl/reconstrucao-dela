@@ -416,6 +416,71 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 .footer-cta .handle{margin-top:24px;font-size:13px;color:var(--creme3);letter-spacing:.1em;}
 
 /* ══════════════════════════════════
+   ANNOUNCEMENT BAR
+══════════════════════════════════ */
+.top-bar{
+  background:var(--vinho2);
+  border-bottom:1px solid rgba(201,168,76,.2);
+  text-align:center;
+  padding:11px 20px;
+  font-size:13px;
+  letter-spacing:.04em;
+  color:var(--creme2);
+}
+.top-bar strong{color:var(--dourado);font-weight:600;}
+
+/* ══════════════════════════════════
+   VSL
+══════════════════════════════════ */
+.vsl-sec{
+  background:var(--vinho3);
+  padding:72px 24px;
+  text-align:center;
+  border-bottom:1px solid rgba(201,168,76,.1);
+}
+.vsl-wrap{max-width:720px;margin:0 auto;}
+.vsl-label{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--dourado);opacity:.7;margin-bottom:20px;display:block;}
+.vsl-box{
+  position:relative;
+  aspect-ratio:16/9;
+  background:#000;
+  border:1px solid rgba(201,168,76,.2);
+  overflow:hidden;
+}
+.vsl-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+/* ══════════════════════════════════
+   PARA QUEM
+══════════════════════════════════ */
+.paraquem{background:var(--vinho2);padding:96px 0;}
+.paraquem-intro{text-align:center;margin-bottom:52px;}
+.paraquem-intro h2{font-size:clamp(30px,5vw,52px);color:var(--creme);margin-bottom:16px;}
+.paraquem-lista{list-style:none;border-top:1px solid rgba(201,168,76,.1);}
+.paraquem-item{
+  display:flex;align-items:flex-start;gap:20px;
+  padding:22px 0;
+  border-bottom:1px solid rgba(201,168,76,.1);
+  transition:padding-left .2s;
+}
+.paraquem-item:hover{padding-left:6px;}
+.paraquem-check{
+  width:24px;height:24px;flex-shrink:0;margin-top:2px;
+  border-radius:50%;
+  background:rgba(201,168,76,.12);
+  border:1px solid rgba(201,168,76,.4);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;color:var(--dourado);font-weight:700;
+}
+.paraquem-item p{font-size:16px;color:var(--creme2);line-height:1.75;font-weight:300;}
+.paraquem-item p strong{color:var(--creme);font-weight:500;}
+
+/* ══════════════════════════════════
+   REVEAL ANIMATIONS
+══════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ══════════════════════════════════
    RESPONSIVO
 ══════════════════════════════════ */
 @media(max-width:700px){
@@ -431,6 +496,11 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 </style>
 </head>
 <body>
+
+<!-- BAR -->
+<div class="top-bar">
+  <strong>Acesso imediato.</strong> · 12 meses de acesso · Garantia incondicional de 7 dias · Plataforma Kiwify
+</div>
 
 <!-- ══════════════════════════════════
      HERO
@@ -476,9 +546,21 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 </div>
 
 <!-- ══════════════════════════════════
+     VSL
+══════════════════════════════════ -->
+<div class="vsl-sec">
+  <div class="vsl-wrap">
+    <span class="vsl-label">Assista antes de decidir</span>
+    <div class="vsl-box">
+      <iframe src="https://www.youtube.com/embed/LINK_YOUTUBE_AQUI?rel=0&modestbranding=1&color=white" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
      DOR
 ══════════════════════════════════ -->
-<section class="dor">
+<section class="dor reveal">
   <div class="container">
     <div class="dor-intro">
       <span class="label">Você se reconhece aqui?</span>
@@ -503,6 +585,41 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
         <div class="caixinha">"Estou muito ferida. Não sei se consigo perdoar. Já fazem 4 meses."</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PARA QUEM
+══════════════════════════════════ -->
+<section class="paraquem reveal">
+  <div class="container">
+    <div class="paraquem-intro">
+      <span class="label">Este método é para você se…</span>
+      <h2>Você está no lugar certo.</h2>
+      <div class="linha-d"></div>
+    </div>
+    <ul class="paraquem-lista">
+      <li class="paraquem-item">
+        <div class="paraquem-check">✓</div>
+        <p>Você foi traída e não consegue tomar uma decisão com clareza — <strong>o medo dita mais do que a razão.</strong></p>
+      </li>
+      <li class="paraquem-item">
+        <div class="paraquem-check">✓</div>
+        <p>Você quer entender se a mudança dele é real — ou se está sendo <strong>convencida de novo.</strong></p>
+      </li>
+      <li class="paraquem-item">
+        <div class="paraquem-check">✓</div>
+        <p>Você sente que não consegue sair porque depende emocionalmente dele — <strong>e odeia se sentir assim.</strong></p>
+      </li>
+      <li class="paraquem-item">
+        <div class="paraquem-check">✓</div>
+        <p>Você está num relacionamento onde se sente diminuída, colocada em dúvida ou simplesmente <strong>invisível.</strong></p>
+      </li>
+      <li class="paraquem-item">
+        <div class="paraquem-check">✓</div>
+        <p>Você quer se tornar uma mulher que — ficando ou saindo — <strong>nunca mais aceita menos do que merece.</strong></p>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -535,7 +652,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 <!-- ══════════════════════════════════
      SOBRE A THAÍS
 ══════════════════════════════════ -->
-<section class="sobre">
+<section class="sobre reveal">
   <div class="container">
     <div class="sobre-inner">
       <div class="sobre-foto">
@@ -557,7 +674,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 <!-- ══════════════════════════════════
      OS DOIS JUNTOS
 ══════════════════════════════════ -->
-<section class="cesar-sec">
+<section class="cesar-sec reveal">
   <div class="container">
 
     <!-- BLOCO APRESENTAÇÃO CONJUNTA -->
@@ -674,7 +791,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 <!-- ══════════════════════════════════
      MÉTODO
 ══════════════════════════════════ -->
-<section class="metodo" id="metodo">
+<section class="metodo reveal" id="metodo">
   <div class="container">
     <div class="metodo-intro">
       <span class="label">O Método Reconstrução Dela</span>
@@ -708,13 +825,21 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
         </div>
       </div>
 
-      <div class="bonus-card">
-        <div class="bonus-num">BÔNUS</div>
-        <div class="bonus-body">
-          <span class="label">Bônus — César Augusto</span>
-          <h3>O que acontecia na cabeça do seu marido</h3>
-          <p>Aulas gravadas por César Augusto, psicanalista especialista em homens que traíram. Você vai entender por que homens que amam traem, o que distingue o arrependimento real da performance, e o que você pode — e não pode — fazer agora.</p>
-          <span class="bonus-badge">Em gravação — incluído no seu acesso</span>
+      <div class="semana">
+        <div class="semana-num">4</div>
+        <div class="semana-body">
+          <span class="label">Módulo 4 — César Augusto</span>
+          <h3>A visão masculina que você nunca teve</h3>
+          <p>O que separa o arrependimento genuíno da culpa que passa com o tempo. O que ele sente quando vai à terapia. Os sinais que um homem não consegue falsificar. Aulas com quem ouve esses homens por dentro há anos. <span class="bonus-badge" style="display:inline-block;margin-top:8px;">Em gravação — incluído no seu acesso</span></p>
+        </div>
+      </div>
+
+      <div class="semana">
+        <div class="semana-num">5</div>
+        <div class="semana-body">
+          <span class="label">Módulo 5 — César Augusto</span>
+          <h3>Ficar ou ir embora: uma decisão sua</h3>
+          <p>Um guia baseado em psicanálise para você avaliar seu relacionamento com os olhos abertos. Tomar a decisão que consegue sustentar — livre do medo, livre da culpa. Sem pressão para nenhum lado. <span class="bonus-badge" style="display:inline-block;margin-top:8px;">Em gravação — incluído no seu acesso</span></p>
         </div>
       </div>
 
@@ -733,7 +858,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 <!-- ══════════════════════════════════
      DEPOIMENTOS
 ══════════════════════════════════ -->
-<section class="depo">
+<section class="depo reveal">
   <div class="container">
     <div class="depo-intro">
       <span class="label">Quem já fez</span>
@@ -762,7 +887,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 <!-- ══════════════════════════════════
      OFERTA
 ══════════════════════════════════ -->
-<section class="oferta" id="oferta">
+<section class="oferta reveal" id="oferta">
   <div class="container">
     <span class="label">Sua reconstrução começa agora</span>
     <h2>O que você vai receber</h2>
@@ -799,7 +924,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 <!-- ══════════════════════════════════
      FAQ
 ══════════════════════════════════ -->
-<section class="faq">
+<section class="faq reveal">
   <div class="container">
     <div class="faq-intro">
       <span class="label">Dúvidas frequentes</span>
@@ -858,6 +983,16 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 
     <div class="faq-item">
       <button class="faq-pergunta" onclick="toggleFaq(this)">
+        Posso fazer esse curso junto com o meu marido que está fazendo o Reconstrução Masculina?
+        <span class="ico">+</span>
+      </button>
+      <div class="faq-resposta">
+        <p>Sim — e é exatamente isso que vários casais estão fazendo. O Reconstrução Masculina é o método do César para homens que traíram e querem se reconstruir. O Reconstrução Dela é para você. Cada um trabalha o seu lado com um método específico para a sua jornada. Os dois cursos foram criados para se complementar — mas funcionam completamente de forma independente também.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta" onclick="toggleFaq(this)">
         E se eu não gostar?
         <span class="ico">+</span>
       </button>
@@ -882,6 +1017,12 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1
 </section>
 
 <script>
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
 function toggleFaq(btn){
   const resp = btn.nextElementSibling;
   const isOpen = btn.classList.contains('open');
