@@ -30,8 +30,8 @@
 
 /* ── RESET ───────────────────────────────────── */
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;overflow-x:hidden;font-size:16px;line-height:1.8;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Inter',sans-serif;overflow-x:hidden;font-size:16px;line-height:1.8;width:100%;}
 
 /* ── TIPOGRAFIA ─────────────────────────────── */
 h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:600;}
@@ -118,17 +118,17 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  font-family:'Cormorant Garamond',serif;letter-spacing:.02em;
 }
 .hero-duo{
- display:flex;gap:3px;margin-top:48px;max-width:720px;margin-left:auto;margin-right:auto;
+ display:flex;gap:3px;margin-top:48px;width:100%;overflow:hidden;
 }
 .hero-duo img{
- flex:1;width:50%;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%;
+ flex:1;min-width:0;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%;
  display:block;filter:brightness(.92) saturate(.9);
 }
 .hero-duo-caption{
  background:var(--dark2);
  padding:18px 24px;text-align:center;
  border-top:1px solid rgba(201,168,76,.15);
- max-width:720px;margin:0 auto;
+ width:100%;
 }
 .hero-duo-caption strong{
  font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;
@@ -442,20 +442,27 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  .dueto-grid{grid-template-columns:1fr;}
  .crenca-item{grid-template-columns:40px 1fr;}
  .crenca-num{font-size:28px;padding:28px 0;}
- .crenca-corpo{padding:28px 24px;}
+ .crenca-corpo{padding:28px 20px;}
  .modulo{grid-template-columns:48px 1fr;}
  .modulo-num{font-size:26px;padding:28px 0;}
  .modulo-corpo{padding:24px 20px;}
  .bonus-row{grid-template-columns:40px 1fr;}
  .bonus-corpo{padding:24px 20px;}
- .oferta-box{padding:36px 24px;}
+ .oferta-box{padding:32px 20px;}
  .preco-val{font-size:60px;}
- .prova-item{padding:12px 24px;}
+ .prova-item{padding:12px 20px;}
  .prova-sep{width:40px;height:1px;}
+ .diferencial-box{padding:32px 24px;}
+ .wrap-lg{padding:0 20px;}
+ .depo-grid{grid-template-columns:1fr;}
+ .hero-duo-caption strong{font-size:17px;}
 }
 @media(max-width:480px){
  .dor-cards{grid-template-columns:1fr;}
- .hero-body{padding-bottom:52px;}
+ .hero-body{padding:0 20px;}
+ .hero h1{font-size:clamp(32px,9vw,48px);}
+ .prova-bar{flex-direction:column;}
+ .prova-sep{width:40px;height:1px;}
 }
 </style>
 </head>
