@@ -117,10 +117,26 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  color:var(--gold);font-size:clamp(22px,4vw,32px);font-weight:700;
  font-family:'Cormorant Garamond',serif;letter-spacing:.02em;
 }
-.hero-img{
- display:block;width:100%;max-width:640px;margin:48px auto 0;
- object-fit:cover;
+.hero-duo{
+ display:flex;gap:3px;margin-top:48px;max-width:720px;margin-left:auto;margin-right:auto;
+}
+.hero-duo img{
+ flex:1;width:50%;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%;
+ display:block;filter:brightness(.92) saturate(.9);
+}
+.hero-duo-caption{
+ background:var(--dark2);
+ padding:18px 24px;text-align:center;
  border-top:1px solid rgba(201,168,76,.15);
+ max-width:720px;margin:0 auto;
+}
+.hero-duo-caption strong{
+ font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;
+ color:var(--creme);font-weight:400;letter-spacing:.02em;
+}
+.hero-duo-caption span{
+ display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--gold);opacity:.7;margin-top:4px;
 }
 
 /* ════════════════════════════════════════════
@@ -465,7 +481,14 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
   <p class="hero-price"><strong>12x de R$30,72</strong></p>
   <p class="btn-note">Acesso imediato · Garantia incondicional de 7 dias</p>
  </div>
- <img src="casal-hero.jpg" class="hero-img" alt="César Augusto e Thais Ayumi">
+ <div class="hero-duo">
+  <img src="thais-sobre.jpg" alt="Thais Ayumi">
+  <img src="cesar-foto.jpg" alt="César Augusto">
+ </div>
+ <div class="hero-duo-caption">
+  <strong>Thais Ayumi e César Augusto</strong>
+  <span>Casal de psicanalistas</span>
+ </div>
 </section>
 
 <!-- ══ DOR  claro ═════════════════════════ -->
