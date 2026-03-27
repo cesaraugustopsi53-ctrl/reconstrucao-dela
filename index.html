@@ -570,6 +570,12 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  .hero-duo-caption strong{font-size:17px;}
  .oque-beneficios{grid-template-columns:1fr;}
  .devices-grid{grid-template-columns:1fr;}
+ .hero-duo{flex-direction:column;}
+ .hero-duo img{aspect-ratio:16/9;object-position:50% 20%;}
+ .narrativa-quote{padding:16px 20px;}
+ .oferta-stack{overflow-x:hidden;}
+ .oferta-items li{font-size:13px;}
+ .oferta-total{font-size:12px;}
 }
 @media(max-width:480px){
  .dor-cards{grid-template-columns:1fr;}
@@ -577,6 +583,15 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  .hero h1{font-size:clamp(32px,9vw,48px);}
  .prova-bar{flex-direction:column;}
  .prova-sep{width:40px;height:1px;}
+ .sec-narrativa{padding:64px 0;}
+ .id-item{padding:18px 20px;font-size:15px;}
+ .dor-card{padding:28px 20px;}
+ .oferta-box{padding:28px 16px;}
+ .preco-val{font-size:52px;}
+ .dueto-card{padding:28px 20px;}
+ .dueto-card img{aspect-ratio:3/4;}
+ .sec-casal-foto img{max-height:280px;}
+ .sec-casal-overlay p{font-size:clamp(18px,5vw,26px);}
 }
 </style>
 </head>
@@ -592,13 +607,12 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 <section class="hero" id="topo">
  <div class="hero-body">
   <div class="hero-tag">Saber Amar</div>
-  <h1>A traição não quebrou só o casamento.<br><em>Quebrou a forma como você se enxerga.</em></h1>
+  <h1>Se liberte da dependência emocional <em>e reconquiste a sua vida após a traição.</em></h1>
   <p class="hero-sub">
-   Você vai aprender a se reconstruir — não para salvar o casamento,<br>
-   <strong>mas para recuperar a si mesma.</strong>
-   Com o poder de ficar porque quer, ou sair com leveza, não com medo.
+   Você perdoou. O corpo ainda não esqueceu.<br>
+   <strong>Volte a ser você, com ou sem ele.</strong>
   </p>
-  <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:480px;">Quero a minha vida de volta &nbsp;→</a>
+  <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:480px;">Quero a minha liberdade emocional &nbsp;→</a>
   <p class="hero-price"><strong>12x de R$30,72</strong></p>
   <p class="btn-note">Acesso imediato · Garantia incondicional de 7 dias</p>
  </div>
@@ -860,6 +874,10 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    </div>
   </div>
   <p style="margin-top:48px;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,28px);font-style:italic;color:var(--ink);line-height:1.45;text-align:center;max-width:560px;margin-left:auto;margin-right:auto;">O Saber Amar começa onde a dor foi instalada. E te devolve o que foi tirado de você.</p>
+  <div style="margin-top:40px;text-align:center;">
+   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-light" style="max-width:420px;">Quero começar a minha reconstrução &nbsp;→</a>
+   <p class="btn-note-ink" style="margin-top:10px;">12x de R$30,72 · Acesso imediato · Garantia de 7 dias</p>
+  </div>
  </div>
 </section>
 
@@ -940,16 +958,23 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     O que falta é só dar o passo.
    </p>
 
+   <div class="launch-banner">
+    <strong>Preço de lançamento</strong> — válido apenas para esta primeira turma. Quando as vagas fecharem, o valor sobe para R$397.
+   </div>
+
    <div class="oferta-stack">
     <p class="oferta-stack-titulo">O que você recebe</p>
     <ul class="oferta-items">
-     <li>3 módulos com Thais Ayumi — autoestima, dependência emocional, reconstrução</li>
-     <li>2 módulos com César Augusto — o que acontece na cabeça dele e o poder de decisão nas suas mãos</li>
-     <li>Bônus Glow Up: nutricionista, imagem e maquiagem (porque reconstrução é também se ver de outro jeito)</li>
-     <li>12 meses de acesso completo — assista no ritmo que você conseguir</li>
-     <li>Acesso antecipado aos módulos do César assim que ficarem disponíveis</li>
+     <li><span style="flex:1;">Módulos 1, 2 e 3 — Thais Ayumi (autoestima, dependência, reconstrução)</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">R$591</span></li>
+     <li><span style="flex:1;">Módulos 4 e 5 — César Augusto (a cabeça dele + decisão nas suas mãos)</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">R$494</span></li>
+     <li><span style="flex:1;">Bônus Glow Up — nutricionista, imagem e maquiagem</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">R$147</span></li>
+     <li><span style="flex:1;">12 meses de acesso completo</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">incluso</span></li>
     </ul>
-    <p class="oferta-total">Tudo isso por uma única vez</p>
+    <p class="oferta-total">Valor total: <span style="text-decoration:line-through;">R$1.232</span> &nbsp;→&nbsp; apenas R$297</p>
+   </div>
+
+   <div class="ancoragem">
+    Uma sessão com a Thais ou com o César custa R$450. Aqui você tem os dois pelos próximos 12 meses. Por R$297 — uma única vez.
    </div>
 
    <p class="preco-de">De R$397</p>
@@ -957,11 +982,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    <div class="preco-val"><span>R$</span>297</div>
    <p class="preco-parcel">ou 12x de R$30,72 no cartão</p>
 
-   <div class="ancoragem">
-    Uma sessão com a Thais ou com o César custa R$450. Aqui você tem os dois pelos próximos 12 meses. Por R$297 — uma única vez.
-   </div>
-
-   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:100%;">Quero a minha vida de volta &nbsp;→</a>
+   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:100%;">Quero a minha liberdade emocional &nbsp;→</a>
    <p class="btn-note">Pagamento seguro · Acesso imediato · Kiwify</p>
 
    <p class="microcopy">
@@ -1121,7 +1142,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 <section class="sec-footer">
  <blockquote class="footer-quote">"Você não saiu daqui por fraqueza.<br>Você ficou porque aprendeu a acreditar que era o máximo que merecia.<br>Isso vai mudar."</blockquote>
  <p class="footer-autoria">Thais Ayumi e César Augusto</p>
- <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:420px;">Quero a minha vida de volta &nbsp;→</a>
+ <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:420px;">Quero a minha liberdade emocional &nbsp;→</a>
  <p class="btn-note">Acesso imediato · 7 dias de garantia incondicional</p>
  <p class="footer-handles">@thaisayumi &nbsp;·&nbsp; @cesaraugustoo_</p>
 </section>
