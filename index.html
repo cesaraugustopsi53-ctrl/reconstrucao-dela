@@ -101,7 +101,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:20px;
 }
 .hero h1{
- font-size:clamp(38px,7vw,72px);font-weight:700;color:var(--creme);
+ font-size:clamp(34px,6.5vw,66px);font-weight:700;color:var(--creme);
  margin-bottom:20px;letter-spacing:-.02em;line-height:1.1;
 }
 .hero h1 em{font-style:italic;color:var(--gold);}
@@ -165,6 +165,36 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .oque-cta-wrap{text-align:center;}
 
 /* ════════════════════════════════════════════
+  NARRATIVA DIFERENCIAL  escuro
+════════════════════════════════════════════ */
+.sec-narrativa{
+ background:var(--dark2);padding:96px 0;
+ border-top:1px solid rgba(201,168,76,.1);
+ border-bottom:1px solid rgba(201,168,76,.1);
+}
+.narrativa-lead{
+ font-size:clamp(19px,2.8vw,24px);font-weight:300;
+ color:var(--creme);line-height:1.75;margin-bottom:24px;
+}
+.sec-narrativa p{
+ font-size:17px;color:var(--creme60);font-weight:300;
+ line-height:1.85;margin-bottom:20px;max-width:520px;
+}
+.sec-narrativa p strong{color:var(--creme);font-weight:400;}
+.narrativa-quote{
+ border-left:2px solid var(--gold);
+ padding:20px 28px;
+ margin:36px 0;
+ font-family:'Cormorant Garamond',serif;
+ font-size:clamp(22px,3vw,28px);font-style:italic;
+ color:var(--creme);line-height:1.45;
+}
+.narrativa-fechamento{
+ font-size:16px;color:var(--creme60);font-weight:300;
+ font-style:italic;line-height:1.75;
+}
+
+/* ════════════════════════════════════════════
   PROVA SOCIAL BAR  médio
 ════════════════════════════════════════════ */
 .prova-bar{
@@ -207,6 +237,33 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .pq-item p strong{color:var(--rose);font-weight:500;}
 
 /* ════════════════════════════════════════════
+  IDENTIFICAÇÃO  escuro
+════════════════════════════════════════════ */
+.sec-id{
+ background:var(--dark2);padding:88px 0;
+ border-top:1px solid rgba(201,168,76,.1);
+ border-bottom:1px solid rgba(201,168,76,.1);
+}
+.id-intro{text-align:center;margin-bottom:52px;}
+.id-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--creme);margin-bottom:14px;font-weight:700;}
+.id-intro p{font-size:17px;color:var(--creme60);font-weight:300;line-height:1.8;max-width:480px;margin:0 auto;}
+.id-lista{list-style:none;max-width:640px;margin:0 auto 48px;display:flex;flex-direction:column;gap:3px;}
+.id-item{
+ background:rgba(255,255,255,.04);
+ border-left:2px solid rgba(201,168,76,.3);
+ padding:22px 28px;
+ font-size:16px;color:var(--creme);line-height:1.75;font-weight:300;
+ display:flex;gap:16px;align-items:flex-start;
+}
+.id-item em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:14px;margin-top:3px;}
+.id-fechamento{
+ text-align:center;
+ font-family:'Cormorant Garamond',serif;font-style:italic;
+ font-size:clamp(18px,2.5vw,24px);color:var(--creme60);
+ max-width:480px;margin:0 auto;line-height:1.55;
+}
+
+/* ════════════════════════════════════════════
   O QUE VAI VIVER  claro
 ════════════════════════════════════════════ */
 .sec-viver{background:var(--light2);padding:88px 0;}
@@ -218,6 +275,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
  color:var(--rose);margin-bottom:24px;
 }
+.viver-bloco h3.deixa{color:var(--ink30);}
 .viver-lista{list-style:none;display:flex;flex-direction:column;gap:0;}
 .viver-lista li{
  font-size:15px;color:var(--ink);line-height:1.75;font-weight:300;
@@ -225,8 +283,8 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  display:flex;gap:12px;align-items:flex-start;
 }
 .viver-lista li em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:13px;margin-top:2px;}
+.viver-lista li em.x{color:var(--ink30);}
 .viver-lista.resultado li{color:var(--ink);font-weight:400;}
-.viver-lista.resultado li em{color:var(--rose);}
 
 /* ════════════════════════════════════════════
   DOR  claro
@@ -263,33 +321,6 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .depo-card{background:#fff;padding:32px 28px;}
 .depo-print{padding:0;overflow:hidden;border-radius:4px;}
 .depo-print img{width:100%;display:block;}
-
-/* ════════════════════════════════════════════
-  IDENTIFICAÇÃO  escuro
-════════════════════════════════════════════ */
-.sec-id{
- background:var(--dark2);padding:88px 0;
- border-top:1px solid rgba(201,168,76,.1);
- border-bottom:1px solid rgba(201,168,76,.1);
-}
-.id-intro{text-align:center;margin-bottom:52px;}
-.id-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--creme);margin-bottom:14px;font-weight:700;}
-.id-intro p{font-size:17px;color:var(--creme60);font-weight:300;line-height:1.8;max-width:480px;margin:0 auto;}
-.id-lista{list-style:none;max-width:640px;margin:0 auto 48px;display:flex;flex-direction:column;gap:3px;}
-.id-item{
- background:rgba(255,255,255,.04);
- border-left:2px solid rgba(201,168,76,.3);
- padding:22px 28px;
- font-size:16px;color:var(--creme);line-height:1.75;font-weight:300;
- display:flex;gap:16px;align-items:flex-start;
-}
-.id-item em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:14px;margin-top:3px;}
-.id-fechamento{
- text-align:center;
- font-family:'Cormorant Garamond',serif;font-style:italic;
- font-size:clamp(18px,2.5vw,24px);color:var(--creme60);
- max-width:480px;margin:0 auto;line-height:1.55;
-}
 
 /* ════════════════════════════════════════════
   MÉTODO / MÓDULOS  claro
@@ -377,9 +408,22 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .preco-val{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:600;color:var(--creme);line-height:1;}
 .preco-val span{font-size:32px;vertical-align:top;margin-top:16px;display:inline-block;color:var(--gold);}
 .preco-parcel{font-size:14px;color:var(--creme30);margin-top:6px;margin-bottom:36px;}
-.oferta-items{list-style:none;text-align:left;border-top:1px solid rgba(255,255,255,.07);padding-top:28px;margin-bottom:36px;}
+.oferta-stack{
+ text-align:left;border-top:1px solid rgba(255,255,255,.07);
+ padding-top:28px;margin-bottom:8px;
+}
+.oferta-stack-titulo{
+ font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--gold);opacity:.7;margin-bottom:18px;font-family:'Inter',sans-serif;
+}
+.oferta-items{list-style:none;text-align:left;margin-bottom:28px;}
 .oferta-items li{font-size:14px;color:var(--creme60);display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;line-height:1.6;}
 .oferta-items li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;}
+.oferta-total{
+ font-size:12px;color:var(--creme30);text-align:right;
+ border-top:1px solid rgba(255,255,255,.07);padding-top:16px;margin-bottom:28px;
+ font-style:italic;
+}
 .ancoragem{
  margin:20px 0;padding:16px 20px;
  background:rgba(255,255,255,.03);border-left:2px solid rgba(201,168,76,.3);
@@ -464,6 +508,35 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 .footer-handles{margin-top:20px;font-size:12px;color:var(--creme30);letter-spacing:.1em;}
 
 /* ════════════════════════════════════════════
+  FRASES BAR  ticker
+════════════════════════════════════════════ */
+.frases-bar{
+ background:var(--dark3);
+ border-top:1px solid rgba(201,168,76,.12);
+ border-bottom:1px solid rgba(201,168,76,.12);
+ overflow:hidden;
+ padding:14px 0;
+ position:relative;
+}
+.frases-bar::before,.frases-bar::after{
+ content:'';position:absolute;top:0;width:80px;height:100%;z-index:2;
+}
+.frases-bar::before{left:0;background:linear-gradient(to right,var(--dark3),transparent);}
+.frases-bar::after{right:0;background:linear-gradient(to left,var(--dark3),transparent);}
+.frases-track{
+ display:inline-flex;gap:32px;white-space:nowrap;
+ animation:ticker 38s linear infinite;
+}
+.frases-track span{
+ font-size:13px;font-style:italic;color:var(--creme60);letter-spacing:.02em;
+}
+.frases-track .sep{color:var(--gold);font-style:normal;opacity:.5;}
+@keyframes ticker{
+ 0%{transform:translateX(0);}
+ 100%{transform:translateX(-50%);}
+}
+
+/* ════════════════════════════════════════════
   WHATSAPP FLUTUANTE
 ════════════════════════════════════════════ */
 .wpp-float{
@@ -510,16 +583,22 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 <body>
 
 
+<!-- ══ TOP BAR ═══════════════════════════ -->
+<div class="top-bar">
+ Criado por <strong>Thais Ayumi e César Augusto</strong> — os dois lados da traição, dentro do mesmo método. <strong>Existe saída.</strong>
+</div>
+
 <!-- ══ HERO  escuro ═══════════════════════ -->
 <section class="hero" id="topo">
  <div class="hero-body">
   <div class="hero-tag">Saber Amar</div>
-  <h1>Se liberte da dependência emocional <em>e reconquiste a sua vida após a traição.</em></h1>
+  <h1>A traição não quebrou só o casamento.<br><em>Quebrou a forma como você se enxerga.</em></h1>
   <p class="hero-sub">
-   Pare de viver em função do que ele fez.<br>
-   <strong>Volte a ser você, com ou sem ele.</strong>
+   Você vai aprender a se reconstruir — não para salvar o casamento,<br>
+   <strong>mas para recuperar a si mesma.</strong>
+   Com o poder de ficar porque quer, ou sair com leveza, não com medo.
   </p>
-  <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:480px;">Quero a minha liberdade emocional &nbsp;→</a>
+  <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:480px;">Quero a minha vida de volta &nbsp;→</a>
   <p class="hero-price"><strong>12x de R$30,72</strong></p>
   <p class="btn-note">Acesso imediato · Garantia incondicional de 7 dias</p>
  </div>
@@ -529,9 +608,38 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
  <div class="hero-duo-caption">
   <strong>Thais Ayumi e César Augusto</strong>
-  <span>Casal de psicanalistas</span>
+  <span>Casal de psicanalistas · Os dois lados da traição</span>
  </div>
 </section>
+
+<!-- ══ FRASES REAIS (ticker) ═══════════════ -->
+<div class="frases-bar">
+ <div class="frases-track">
+  <span>"Não consigo confiar. Acho que sempre vai fazer algo ruim de novo."</span>
+  <span class="sep">·</span>
+  <span>"Estou com medo de ser tudo mentira de novo."</span>
+  <span class="sep">·</span>
+  <span>"Minha intuição grita aqui dentro que sim aconteceu."</span>
+  <span class="sep">·</span>
+  <span>"Queria tanto sair dessa dependência. Mas não consigo sair."</span>
+  <span class="sep">·</span>
+  <span>"Não sei mais se amo ou se tenho medo de ficar sozinha."</span>
+  <span class="sep">·</span>
+  <span>"Existe esperança?"</span>
+  <span class="sep">·</span>
+  <span>"Não consigo confiar. Acho que sempre vai fazer algo ruim de novo."</span>
+  <span class="sep">·</span>
+  <span>"Estou com medo de ser tudo mentira de novo."</span>
+  <span class="sep">·</span>
+  <span>"Minha intuição grita aqui dentro que sim aconteceu."</span>
+  <span class="sep">·</span>
+  <span>"Queria tanto sair dessa dependência. Mas não consigo sair."</span>
+  <span class="sep">·</span>
+  <span>"Não sei mais se amo ou se tenho medo de ficar sozinha."</span>
+  <span class="sep">·</span>
+  <span>"Existe esperança?"</span>
+ </div>
+</div>
 
 <!-- ══ O QUE É  claro ════════════════════ -->
 <section class="sec-oque reveal">
@@ -540,32 +648,32 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    <span class="label-gold">O protocolo</span>
    <h2>Um método criado pelos dois lados da traição.</h2>
    <div class="divider-gold"></div>
-   <p>Thais reconstrói mulheres. César atende os homens que traem. São casados. É o único curso no Brasil criado pelos dois lados.</p>
+   <p>Thais reconstrói mulheres. César atende os homens que traem. São casados. É o único curso no Brasil criado pelos dois lados — para você sair disso mais inteira do que entrou.</p>
   </div>
   <div class="oque-beneficios">
    <div class="oque-item">
     <span class="oque-ico">✦</span>
-    <p>Parar de checar o celular dele às 2h da manhã.</p>
+    <p>Reconstruir a autoestima que a traição destruiu — sem depender da reação dele para isso.</p>
    </div>
    <div class="oque-item">
     <span class="oque-ico">✦</span>
-    <p>Não precisar mais da aprovação dele para se sentir bem.</p>
+    <p>Parar de checar o celular dele às 2h da manhã e viver no medo do que vai encontrar.</p>
    </div>
    <div class="oque-item">
     <span class="oque-ico">✦</span>
-    <p>Saber com clareza o que ele sente de verdade — pela voz de quem os ouve.</p>
+    <p>Entender, pela voz de quem ouve esses homens, o que ele sente de verdade — para você ter clareza, não para salvar o casamento.</p>
    </div>
    <div class="oque-item">
     <span class="oque-ico">✦</span>
-    <p>Decidir ficar ou ir embora sem culpa e sem medo de errar.</p>
+    <p>Tomar a decisão de ficar ou ir embora a partir de um lugar forte. Não do medo de ficar sozinha.</p>
    </div>
    <div class="oque-item">
     <span class="oque-ico">✦</span>
-    <p>Voltar a ser a mulher que você era antes de se perder aqui.</p>
+    <p>Nunca mais precisar da aprovação dele para se sentir bem consigo mesma.</p>
    </div>
    <div class="oque-item">
     <span class="oque-ico">✦</span>
-    <p>Nunca mais aceitar menos do que merece. De ninguém.</p>
+    <p>Voltar a ser a mulher que você era antes de começar a se perder aqui dentro.</p>
    </div>
   </div>
   <div class="oque-cta-wrap">
@@ -575,20 +683,88 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  </div>
 </section>
 
+<!-- ══ NARRATIVA DIFERENCIAL  escuro ══════ -->
+<section class="sec-narrativa reveal">
+ <div class="wrap-sm">
+  <span class="label-gold">Por que este curso existe</span>
+  <div class="divider-gold"></div>
+  <p class="narrativa-lead">Você mandou caixinha para o César. Ou viu um reels da Thais às 2 da manhã. Ou os dois.</p>
+  <p>E alguma coisa neles falou com você de um jeito que a maioria das pessoas ao redor não consegue.</p>
+  <p>O César ouve o que o seu marido não te conta. O que ele fala quando ninguém está olhando. O arrependimento que é real — e o que é só medo de perder conforto.</p>
+  <p>A Thais ouve você. A que perdoou e ainda sente pavor do toque. A que não consegue sair mesmo querendo. <strong>Mulheres brilhantes que foram ficando menores dentro de relacionamentos que deveriam ser um lar.</strong></p>
+  <blockquote class="narrativa-quote">Ele do outro lado da porta.<br>Ela do seu lado.<br>Pela primeira vez, os dois lados caminhando na mesma direção.</blockquote>
+  <p class="narrativa-fechamento">Não é teoria. É o que funciona. Provado nos dois lados do problema.</p>
+ </div>
+</section>
+
+<!-- ══ PROVA SOCIAL BAR ═══════════════════ -->
+<div class="prova-bar">
+ <div class="prova-item">
+  <strong>2</strong>
+  <span>psicanalistas<br>que se casaram entre si</span>
+ </div>
+ <div class="prova-sep"></div>
+ <div class="prova-item">
+  <strong>+160k</strong>
+  <span>seguidores que<br>acompanham os dois</span>
+ </div>
+ <div class="prova-sep"></div>
+ <div class="prova-item">
+  <strong>5</strong>
+  <span>módulos para<br>reconstruir você</span>
+ </div>
+</div>
+
+<!-- ══ PARA QUEM  claro ════════════════════ -->
+<section class="sec-paraquem reveal">
+ <div class="wrap">
+  <div class="paraquem-intro">
+   <span class="label-rose">Para quem é este curso</span>
+   <h2>Você não precisa ter decidido nada ainda.</h2>
+   <div class="divider-gold"></div>
+  </div>
+  <ul class="paraquem-lista">
+   <li class="pq-item">
+    <span class="pq-check">✦</span>
+    <p>Você descobriu a traição há pouco tempo e ainda está <strong>em transe</strong>, sem saber o que fazer com o que sente.</p>
+   </li>
+   <li class="pq-item">
+    <span class="pq-check">✦</span>
+    <p>Você perdoou, tenta reconstruir, mas <strong>não consegue confiar mais</strong> — e o toque dele ainda te dá pavor.</p>
+   </li>
+   <li class="pq-item">
+    <span class="pq-check">✦</span>
+    <p>Você quer ir embora mas não consegue. Tem filhos, dependência financeira, e <strong>se sente presa sem saída</strong>.</p>
+   </li>
+   <li class="pq-item">
+    <span class="pq-check">✦</span>
+    <p>Ele diz que mudou. E você ainda pensa: <strong>"e se for tudo performance?"</strong> Você não sabe distinguir arrependimento real de quem só tem medo de perder o conforto.</p>
+   </li>
+   <li class="pq-item">
+    <span class="pq-check">✦</span>
+    <p>O problema não foi outra mulher. Foi <strong>a pornografia</strong>. E você se sente sem valor de um jeito que ninguém ao redor entende.</p>
+   </li>
+   <li class="pq-item">
+    <span class="pq-check">✦</span>
+    <p>Você <strong>não sabe mais se ama ou se depende</strong>. E tem medo de que sejam a mesma coisa.</p>
+   </li>
+  </ul>
+ </div>
+</section>
 
 <!-- ══ IDENTIFICAÇÃO  escuro ══════════════ -->
 <section class="sec-id reveal">
  <div class="wrap">
   <div class="id-intro">
-   <span class="label-gold">Este curso foi feito para você</span>
-   <h2>Não importa se você foi traída.<br>Importa o que você sente quando olha para si mesma.</h2>
+   <span class="label-gold">Reconhece essa voz?</span>
+   <h2>Isso não é fraqueza.<br>É o que acontece quando você passou a acreditar que vale menos.</h2>
   </div>
   <ul class="id-lista">
-   <li class="id-item"><em>✦</em> Você não sabe se fica ou sai. Só sabe que não aguenta mais assim.</li>
-   <li class="id-item"><em>✦</em> Você foi ficando menor dentro desse relacionamento. E nem percebeu quando começou.</li>
-   <li class="id-item"><em>✦</em> Você odeia precisar tanto de uma pessoa para se sentir bem. E odeia mais ainda não conseguir parar.</li>
-   <li class="id-item"><em>✦</em> Você funciona bem em tudo. Menos aqui.</li>
-   <li class="id-item"><em>✦</em> Existe uma versão de você que ficou para trás. Você quer ela de volta.</li>
+   <li class="id-item"><em>✦</em> Você perdoou. Mas o toque dele ainda te dá pavor. E não sabe se algum dia vai ser diferente.</li>
+   <li class="id-item"><em>✦</em> Ele pediu perdão. Diz que se arrependeu. E você ainda pensa: <em style="color:var(--gold);font-style:italic;">"Estou com medo de ser tudo mentira de novo."</em></li>
+   <li class="id-item"><em>✦</em> Você funciona. Trabalha, cuida dos filhos, mantém tudo em pé. Mas por dentro: <em style="color:var(--gold);font-style:italic;">"Sofro todos os dias. Não sei mais quem sou fora disso."</em></li>
+   <li class="id-item"><em>✦</em> <em style="color:var(--gold);font-style:italic;">"Queria tanto sair dessa dependência. Mas não consigo sair."</em> Você conhece esse sentimento exatamente.</li>
+   <li class="id-item"><em>✦</em> <em style="color:var(--gold);font-style:italic;">"Não sei mais se amo ou se tenho medo de ficar sozinha."</em> E tem pavor de que sejam a mesma coisa.</li>
   </ul>
   <p class="id-fechamento">Se você se reconheceu em qualquer uma dessas frases, você não está exagerada. Você está no lugar certo.</p>
  </div>
@@ -598,19 +774,29 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 <section class="sec-viver reveal">
  <div class="wrap-lg">
   <div class="viver-intro">
-   <span class="label-rose">Dentro do curso</span>
-   <h2>Um método direto. Para quem quer resultado, não só explicação.</h2>
+   <span class="label-rose">O que muda</span>
+   <h2>Você vai entrar de um jeito e sair de outro.</h2>
    <div class="divider-gold"></div>
   </div>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.8vw,26px);font-style:italic;color:var(--ink);margin-bottom:32px;line-height:1.4;">Ao final do método, você vai:</p>
   <div class="viver-cols">
    <div class="viver-bloco">
+    <h3 class="deixa">Você hoje</h3>
     <ul class="viver-lista">
-     <li><em>✦</em> Entender o que te fez aceitar menos — e nunca mais repetir</li>
-     <li><em>✦</em> Se sentir bem sem precisar que ele faça nada para isso</li>
-     <li><em>✦</em> Saber distinguir arrependimento real de performance</li>
-     <li><em>✦</em> Tomar a decisão de ficar ou sair sem culpa e sem medo</li>
-     <li><em>✦</em> Ser a mulher que você era antes de se perder aqui</li>
+     <li><em class="x">✗</em> Depende da reação dele para se sentir bem ou mal</li>
+     <li><em class="x">✗</em> Checa o celular dele e imagina o pior</li>
+     <li><em class="x">✗</em> Decide a partir do medo de ficar sozinha</li>
+     <li><em class="x">✗</em> Não sabe distinguir arrependimento real de performance</li>
+     <li><em class="x">✗</em> Vive no ciclo de perdoar, desconfiar, sofrer, perdoar de novo</li>
+    </ul>
+   </div>
+   <div class="viver-bloco">
+    <h3>Você depois do Saber Amar</h3>
+    <ul class="viver-lista resultado">
+     <li><em>✦</em> Autoestima que não depende da reação dele para existir</li>
+     <li><em>✦</em> Clareza sobre o que você realmente quer — com ou sem ele</li>
+     <li><em>✦</em> Poder de decisão: ficar porque quer, sair com leveza, não com medo</li>
+     <li><em>✦</em> Sabe o que arrependimento real parece — e o que é só performance</li>
+     <li><em>✦</em> Uma vida que é sua, que não depende da escolha dele</li>
     </ul>
    </div>
   </div>
@@ -665,7 +851,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <div class="msg">"Jamais passaria pela minha cabeça. Ainda estou em transe com isso."</div>
    </div>
    <div class="dor-card">
-    <div class="frase">Ele não te toca. Prefere a tela.</div>
+    <div class="frase">Ele não te toca. Prefere a tela. E você se pergunta o que há de errado com você.</div>
     <div class="msg">"Me sinto sem valor, sem importância. Fui trocada por pornografia. Cinco anos. Me sinto um lixo."</div>
    </div>
    <div class="dor-card">
@@ -673,7 +859,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <div class="msg">"Disse que tive alucinação de tanto pensar. Não aguento mais. Estou tão cansada."</div>
    </div>
   </div>
-  <p style="margin-top:48px;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,28px);font-style:italic;color:var(--ink);line-height:1.45;text-align:center;max-width:560px;margin-left:auto;margin-right:auto;">O Saber Amar é o primeiro passo para você parar de aceitar migalhas e voltar a ser você mesma.</p>
+  <p style="margin-top:48px;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,28px);font-style:italic;color:var(--ink);line-height:1.45;text-align:center;max-width:560px;margin-left:auto;margin-right:auto;">O Saber Amar começa onde a dor foi instalada. E te devolve o que foi tirado de você.</p>
  </div>
 </section>
 
@@ -691,33 +877,33 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    <div class="modulo">
     <div class="modulo-num">1</div>
     <div class="modulo-corpo">
-     <p class="modulo-tag">Semana 1 · Thais Ayumi</p>
+     <p class="modulo-tag">Módulo 1 · Thais Ayumi</p>
      <h3>Quebrar as inseguranças na raiz</h3>
-     <p>Onde começa o ciclo que você vive repetindo. O que te fez aceitar menos do que merecia. A mudança começa aqui.</p>
+     <p>Onde começa o ciclo que você vive repetindo. O que te fez aceitar menos do que merecia. Por que você ficou quando devia ter ido — e o que isso revela sobre você, não sobre ele.</p>
     </div>
    </div>
    <div class="modulo">
     <div class="modulo-num">2</div>
     <div class="modulo-corpo">
-     <p class="modulo-tag">Semana 2 · Thais Ayumi</p>
+     <p class="modulo-tag">Módulo 2 · Thais Ayumi</p>
      <h3>Parar de precisar da validação dele para se sentir bem</h3>
-     <p>Autoestima que não depende da reação dele para existir. Autocuidado real. Segurança que vem de dentro.</p>
+     <p>Autoestima que não depende da reação dele para existir. Autocuidado real. Segurança que vem de dentro — não de um gesto, um pedido de perdão, ou da presença dele.</p>
     </div>
    </div>
    <div class="modulo">
     <div class="modulo-num">3</div>
     <div class="modulo-corpo">
-     <p class="modulo-tag">Semana 3 · Thais Ayumi</p>
+     <p class="modulo-tag">Módulo 3 · Thais Ayumi</p>
      <h3>Sair da dependência. Começar a viver para você</h3>
-     <p>Parar de decidir pelo medo de ficar sozinha. Construir uma vida que seja sua, independente do que ele faça.</p>
+     <p>Parar de decidir pelo medo de ficar sozinha. Construir uma vida que seja sua, independente do que ele faça. Você não foi feita para existir em função de um relacionamento.</p>
     </div>
    </div>
    <div class="modulo">
     <div class="modulo-num">4</div>
     <div class="modulo-corpo">
      <p class="modulo-tag">Módulo 4 · César Augusto</p>
-     <h3>Como saber se ele realmente mudou, ou está comprando tempo</h3>
-     <p>Arrependimento real ou performance. Os sinais que um homem não consegue falsificar. <span style="display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Em gravação · incluído no acesso</span></p>
+     <h3>O que acontece na cabeça de um homem que traiu</h3>
+     <p>Não para que você entenda ele — mas para que você pare de se torturar com perguntas. César atende exclusivamente esses homens. Aqui você aprende a distinguir arrependimento real de performance, para ter clareza e tomar o seu poder de volta. <span style="display:inline-block;margin-top:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Acesso antecipado · incluído no seu plano</span></p>
     </div>
    </div>
    <div class="modulo">
@@ -725,7 +911,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <div class="modulo-corpo">
      <p class="modulo-tag">Módulo 5 · César Augusto</p>
      <h3>Ficar ou ir embora: uma decisão sua</h3>
-     <p>Avaliar o relacionamento com os olhos abertos. Decidir com clareza. Sem culpa, sem pressão para nenhum lado. <span style="display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Em gravação · incluído no acesso</span></p>
+     <p>Avaliar o relacionamento com os olhos abertos. Decidir com clareza — não com culpa, não com pressão, não com medo. A resposta certa é a que vem de você, de um lugar forte. <span style="display:inline-block;margin-top:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Acesso antecipado · incluído no seu plano</span></p>
     </div>
    </div>
   </div>
@@ -734,7 +920,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    <div class="bonus-tag">Bônus</div>
    <div class="bonus-corpo">
     <h3>Glow Up: de dentro para fora</h3>
-    <p>Vídeos exclusivos com nutricionista, consultora de imagem e maquiadora. Porque reconstrução é também se olhar no espelho e reconhecer a mulher que você é  e gostar do que vê.</p>
+    <p>Vídeos exclusivos com nutricionista, consultora de imagem e maquiadora. Porque reconstrução é também se olhar no espelho e reconhecer a mulher que você é — e gostar do que vê.</p>
     <span class="badge-light">Incluído no acesso</span>
    </div>
   </div>
@@ -747,25 +933,40 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
  <div class="wrap">
   <div class="oferta-box">
    <span class="oferta-eyebrow">Saber Amar · Acesso imediato</span>
-   <h2 class="oferta-h2">Comece hoje.<br><em>Sem medo.</em></h2>
+   <h2 class="oferta-h2">Você já sabe que<br><em>precisa disso.</em></h2>
+
+   <p style="font-size:15px;color:var(--creme60);font-weight:300;line-height:1.75;margin-bottom:28px;text-align:left;">
+    Se você chegou até aqui, a decisão já foi tomada lá dentro.<br>
+    O que falta é só dar o passo.
+   </p>
+
+   <div class="oferta-stack">
+    <p class="oferta-stack-titulo">O que você recebe</p>
+    <ul class="oferta-items">
+     <li>3 módulos com Thais Ayumi — autoestima, dependência emocional, reconstrução</li>
+     <li>2 módulos com César Augusto — o que acontece na cabeça dele e o poder de decisão nas suas mãos</li>
+     <li>Bônus Glow Up: nutricionista, imagem e maquiagem (porque reconstrução é também se ver de outro jeito)</li>
+     <li>12 meses de acesso completo — assista no ritmo que você conseguir</li>
+     <li>Acesso antecipado aos módulos do César assim que ficarem disponíveis</li>
+    </ul>
+    <p class="oferta-total">Tudo isso por uma única vez</p>
+   </div>
 
    <p class="preco-de">De R$397</p>
    <p class="preco-por">Por apenas</p>
    <div class="preco-val"><span>R$</span>297</div>
    <p class="preco-parcel">ou 12x de R$30,72 no cartão</p>
 
-   <ul class="oferta-items">
-    <li>5 módulos com Thais Ayumi e César Augusto</li>
-    <li>A visão masculina: o que ele nunca consegue te dizer</li>
-    <li>12 meses de acesso · Bônus Glow Up incluído</li>
-   </ul>
-
    <div class="ancoragem">
-    Uma sessão com a Thais ou com o César custa R$450. Aqui você tem os dois por R$297. Uma vez. 1 ano de acesso.
+    Uma sessão com a Thais ou com o César custa R$450. Aqui você tem os dois pelos próximos 12 meses. Por R$297 — uma única vez.
    </div>
 
-   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:100%;">Quero aprender a me amar de volta &nbsp;→</a>
+   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:100%;">Quero a minha vida de volta &nbsp;→</a>
    <p class="btn-note">Pagamento seguro · Acesso imediato · Kiwify</p>
+
+   <p class="microcopy">
+    Você já ficou tempo demais esperando sentir que estava pronta.<br>Essa espera não te protegeu de nada.
+   </p>
 
    <div class="garantia">
     <div class="garantia-ico">🛡️</div>
@@ -785,7 +986,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
    <span class="label-rose">Quem criou esse curso</span>
    <h2>Um casal de psicanalistas.<br>Os dois lados da traição.</h2>
    <div class="divider-gold center"></div>
-   <p>Ele ouve os homens que traem. Ela reconstrói as mulheres que foram traídas. Nenhum outro curso tem isso.</p>
+   <p>Ele ouve os homens que traem. Ela reconstrói as mulheres que foram traídas. Nenhum outro curso no Brasil tem isso.</p>
   </div>
 
   <div class="dueto-grid">
@@ -793,13 +994,13 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
     <img src="thais-sobre.jpg" alt="Thais Ayumi" style="object-position:50% 15%;">
     <span class="card-label">Thais Ayumi · @thaisayumi</span>
     <h3>Especialista em dependência emocional e autoestima feminina</h3>
-    <p>O que Thais viu se repetir em anos atendendo mulheres: mulheres brilhantes que foram ficando menores dentro de relacionamentos. <strong>O problema nunca está no outro. Está no que essa mulher passou a acreditar sobre si mesma.</strong> Ela é especialista nisso.</p>
+    <p>O que Thais viu se repetir em anos atendendo mulheres: mulheres brilhantes que foram ficando menores dentro de relacionamentos. <strong>O problema nunca está no outro. Está no que essa mulher passou a acreditar sobre si mesma.</strong> Ela é especialista nisso. Com mais de 100 mil seguidoras que acompanham seu trabalho.</p>
    </div>
    <div class="dueto-card">
     <img src="cesar-foto.jpg" alt="César Augusto">
     <span class="card-label">César Augusto · @cesaraugustoo_</span>
     <h3>O psicanalista que atende exclusivamente homens que traem</h3>
-    <p>César ouve o que esses homens nunca dizem para as esposas. Arrependimento real ou performance, ele sabe distinguir. <strong>Ele traz para este curso o que fica do outro lado de uma porta fechada.</strong></p>
+    <p>César ouve o que esses homens nunca dizem para as esposas. O arrependimento que é real — e o que é só medo de perder o conforto. <strong>Ele traz para este curso o que fica do outro lado de uma porta fechada.</strong> Para você ter clareza, não para salvar o casamento.</p>
    </div>
   </div>
 
@@ -828,17 +1029,17 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
      <em class="ico">+</em>
     </button>
     <div class="faq-a open">
-     <p>Foi feito exatamente para essa fase. A decisão vai vir depois, da sua força. Não do seu medo.</p>
+     <p>Foi feito exatamente para essa fase. O curso não te diz o que decidir — te devolve a clareza para decidir a partir de um lugar forte. Muitas mulheres entram sem saber o que querem. Ao final, sabem.</p>
     </div>
    </div>
 
    <div class="faq-item">
     <button class="faq-q" onclick="faq(this)">
-     Esse curso vai me dizer se fico ou saio?
+     O curso vai me dizer se fico ou saio?
      <em class="ico">+</em>
     </button>
     <div class="faq-a">
-     <p>Não. O curso te devolve clareza para decidir a partir de um lugar forte. Muitas chegam sem saber o que querem. Ao final, sabem.</p>
+     <p>Não. E isso é intencional. O Saber Amar não toma decisões por você — te devolve a capacidade de tomar as suas. Você vai sair com mais clareza sobre o que realmente quer, não com uma resposta que veio de fora.</p>
     </div>
    </div>
 
@@ -848,37 +1049,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
      <em class="ico">+</em>
     </button>
     <div class="faq-a">
-     <p>Sim. O trauma não tem prazo de validade. O método trabalha na raiz, não na data do evento.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Qual o formato e como funciona o acesso?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Aulas gravadas, celular ou computador, 12 meses de acesso. Após o pagamento, você recebe tudo por e-mail.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Posso fazer junto com o meu marido que está no Reconstrução Masculina?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Sim. O Reconstrução Masculina é para ele. O Saber Amar é para você. Foram criados para se complementar, mas funcionam de forma independente.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     As aulas do César já estão disponíveis?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Estão em gravação. Quem comprar agora recebe automaticamente quando estiverem disponíveis.</p>
+     <p>Sim. O trauma não tem prazo de validade. O método trabalha na raiz — no que você passou a acreditar sobre si mesma —, não na data do evento.</p>
     </div>
    </div>
 
@@ -894,11 +1065,41 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 
    <div class="faq-item">
     <button class="faq-q" onclick="faq(this)">
-     Ele já fez terapia e curso. Mas não vejo mudança de verdade. Ainda faz sentido para mim?
+     Ele já fez terapia mas não vejo mudança de verdade. Ainda faz sentido para mim?
      <em class="ico">+</em>
     </button>
     <div class="faq-a">
-     <p>Faz. O Saber Amar não é sobre o trabalho dele. É sobre o seu. Você aprende a enxergar com clareza se o que está vendo é mudança real ou performance. E independente da resposta, você sai mais inteira do que entrou.</p>
+     <p>Faz. O Saber Amar não é sobre o trabalho dele — é sobre o seu. Você aprende a enxergar com clareza se o que está vendo é mudança real ou performance. E independente da resposta, você sai mais inteira do que entrou.</p>
+    </div>
+   </div>
+
+   <div class="faq-item">
+    <button class="faq-q" onclick="faq(this)">
+     O problema é vício em pornografia, não traição. Ainda funciona?
+     <em class="ico">+</em>
+    </button>
+    <div class="faq-a">
+     <p>Sim. Muitas mulheres chegam exatamente por isso. Ser preterida por uma tela destrói a autoestima da mesma forma que uma traição. O método trata a raiz: o que você passou a acreditar sobre si mesma. Isso não muda pela causa.</p>
+    </div>
+   </div>
+
+   <div class="faq-item">
+    <button class="faq-q" onclick="faq(this)">
+     Posso fazer junto com o meu marido que está no Reconstrução Masculina?
+     <em class="ico">+</em>
+    </button>
+    <div class="faq-a">
+     <p>Sim. O Reconstrução Masculina é para ele. O Saber Amar é para você. Foram criados para se complementar, mas funcionam de forma independente. Você não precisa que ele faça nada para começar.</p>
+    </div>
+   </div>
+
+   <div class="faq-item">
+    <button class="faq-q" onclick="faq(this)">
+     Qual o formato e como funciona o acesso?
+     <em class="ico">+</em>
+    </button>
+    <div class="faq-a">
+     <p>Aulas em vídeo, disponíveis no celular ou computador, com 12 meses de acesso. Após o pagamento, você recebe tudo por e-mail. Os módulos 4 e 5 do César estão em produção — quem entrar agora recebe automaticamente assim que ficarem disponíveis, sem precisar pagar de novo.</p>
     </div>
    </div>
 
@@ -908,7 +1109,7 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
      <em class="ico">+</em>
     </button>
     <div class="faq-a">
-     <p>7 dias de garantia. Se não for para você, devolvemos 100%. Sem perguntas.</p>
+     <p>7 dias de garantia incondicional. Se não for para você, devolvemos 100%. Sem perguntas, sem burocracia.</p>
     </div>
    </div>
 
@@ -918,11 +1119,11 @@ h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:6
 
 <!-- ══ FOOTER CTA  escuro ══════════════════ -->
 <section class="sec-footer">
- <blockquote class="footer-quote">"Você não precisa esperar estar pronta para aprender a se amar de volta."</blockquote>
- <p class="footer-autoria">César Augusto e Thais Ayumi</p>
- <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:400px;">Quero aprender a me amar de volta &nbsp;→</a>
- <p class="btn-note">Acesso imediato · 7 dias de garantia</p>
- <p class="footer-handles">@cesaraugustoo_ &nbsp;·&nbsp; @thaisayumi</p>
+ <blockquote class="footer-quote">"Você não saiu daqui por fraqueza.<br>Você ficou porque aprendeu a acreditar que era o máximo que merecia.<br>Isso vai mudar."</blockquote>
+ <p class="footer-autoria">Thais Ayumi e César Augusto</p>
+ <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:420px;">Quero a minha vida de volta &nbsp;→</a>
+ <p class="btn-note">Acesso imediato · 7 dias de garantia incondicional</p>
+ <p class="footer-handles">@thaisayumi &nbsp;·&nbsp; @cesaraugustoo_</p>
 </section>
 
 
