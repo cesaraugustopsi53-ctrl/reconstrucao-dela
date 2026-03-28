@@ -3,1125 +3,1212 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saber Amar · César Augusto e Thais Ayumi</title>
-<meta name="robots" content="noindex,nofollow">
+<title>Saber Amar — César Augusto & Thais Ayumi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ─────────────────────────────────── */
 :root {
- --dark:  #0d0408;
- --dark2:  #1a0810;
- --dark3:  #2a1018;
- --light:  #FAF6F2;
- --light2: #F2EAE0;
- --light3: #EDE0D4;
- --gold:  #C9A84C;
- --gold2:  #e0c070;
- --creme:  #F5EDE3;
- --creme60: rgba(245,237,227,.6);
- --creme30: rgba(245,237,227,.3);
- --ink:   #1C1008;
- --ink60:  rgba(28,16,8,.6);
- --ink30:  rgba(28,16,8,.3);
- --rose:  #7A1E2E;
+  --off-white: #FDF8F4;
+  --warm-bg: #F9F2EB;
+  --dark: #1A100C;
+  --dark2: #241810;
+  --rose-deep: #8B2E35;
+  --rose: #B84C55;
+  --rose-light: #D4828A;
+  --rose-pale: #F2DDE0;
+  --gold: #C4935A;
+  --gold-light: #E8C99A;
+  --text: #2A1F18;
+  --muted: #7A6458;
+  --border: rgba(139,46,53,0.15);
 }
 
-/* ── RESET ───────────────────────────────────── */
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;overflow-x:hidden;}
-body{font-family:'Inter',sans-serif;overflow-x:hidden;font-size:16px;line-height:1.8;width:100%;}
-
-/* ── TIPOGRAFIA ─────────────────────────────── */
-h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.1;font-weight:600;}
-.serif{font-family:'Cormorant Garamond',serif;}
-
-/* ── LAYOUT ─────────────────────────────────── */
-.wrap{max-width:720px;margin:0 auto;padding:0 24px;}
-.wrap-sm{max-width:560px;margin:0 auto;padding:0 24px;}
-.wrap-lg{max-width:960px;margin:0 auto;padding:0 24px;}
-
-/* ── BUTTONS ─────────────────────────────────── */
-.btn-dark{
- display:block;width:100%;max-width:540px;margin:0 auto;
- background:var(--gold);color:var(--dark);
- font-family:'Inter',sans-serif;font-size:14px;font-weight:600;
- letter-spacing:.12em;text-transform:uppercase;
- padding:22px 36px;text-decoration:none;text-align:center;
- transition:background .15s,transform .15s;
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:'Lato',sans-serif;
+  background:var(--off-white);
+  color:var(--text);
+  overflow-x:hidden;
 }
-.btn-dark:hover{background:var(--gold2);transform:translateY(-1px);}
-.btn-light{
- display:block;width:100%;max-width:540px;margin:0 auto;
- background:var(--dark2);color:var(--creme);
- font-family:'Inter',sans-serif;font-size:14px;font-weight:600;
- letter-spacing:.12em;text-transform:uppercase;
- padding:22px 36px;text-decoration:none;text-align:center;
- transition:background .15s,transform .15s;
+
+/* ── BAR ── */
+.bar{
+  background:var(--dark);
+  color:rgba(253,248,244,0.7);
+  text-align:center;
+  padding:10px 20px;
+  font-size:12px;
+  letter-spacing:1px;
 }
-.btn-light:hover{background:var(--dark3);transform:translateY(-1px);}
-.btn-note{font-size:12px;color:var(--creme30);text-align:center;margin-top:10px;letter-spacing:.04em;}
-.btn-note-ink{font-size:12px;color:var(--ink30);text-align:center;margin-top:10px;letter-spacing:.04em;}
+.bar strong{ color:var(--gold-light); font-weight:700; }
 
-/* ── LABELS ─────────────────────────────────── */
-.label-gold{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px;}
-.label-rose{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose);display:block;margin-bottom:14px;}
-.divider-gold{width:40px;height:1px;background:var(--gold);opacity:.5;margin:0 0 28px;}
-.divider-gold.center{margin:0 auto 28px;}
-
-/* ── REVEAL ─────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-
-/* ════════════════════════════════════════════
-  TOP BAR
-════════════════════════════════════════════ */
-.top-bar{
- background:var(--dark3);
- border-bottom:1px solid rgba(201,168,76,.15);
- text-align:center;padding:10px 20px;
- font-size:12px;letter-spacing:.06em;color:var(--creme60);
-}
-.top-bar strong{color:var(--gold);font-weight:600;}
-
-/* ════════════════════════════════════════════
-  HERO  escuro, foto abaixo
-════════════════════════════════════════════ */
+/* ── HERO ── */
 .hero{
- background:var(--dark);
- padding:72px 0 0;
+  background:var(--dark);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:80px 24px 72px;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
 }
-.hero-body{
- padding:0 24px;max-width:640px;margin:0 auto;width:100%;
- text-align:center;
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 15% 0%, rgba(139,46,53,0.4) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 100%, rgba(196,147,90,0.12) 0%, transparent 50%);
+  pointer-events:none;
 }
-.hero-tag{
- font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.26em;
- text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:20px;
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
 }
-.hero h1{
- font-size:clamp(34px,6.5vw,66px);font-weight:700;color:var(--creme);
- margin-bottom:20px;letter-spacing:-.02em;line-height:1.1;
+.hero-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(139,46,53,0.25);
+  border:1px solid rgba(139,46,53,0.45);
+  border-radius:2px;
+  padding:7px 20px;
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--rose-light);
+  margin-bottom:44px;
+  position:relative;
+  z-index:1;
 }
-.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-eyebrow::before{
+  content:'';
+  width:6px; height:6px;
+  border-radius:50%;
+  background:var(--rose-light);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{
+  0%,100%{ opacity:1; transform:scale(1); }
+  50%{ opacity:0.3; transform:scale(0.6); }
+}
+.hero-headline{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(40px,7vw,80px);
+  font-weight:900;
+  line-height:1.05;
+  color:#fff;
+  max-width:860px;
+  position:relative;
+  z-index:1;
+}
+.hero-headline em{
+  font-style:italic;
+  color:var(--rose-light);
+  display:block;
+}
+.hero-headline .gold{
+  color:var(--gold-light);
+  font-style:normal;
+}
+.hero-divider{
+  width:52px; height:2px;
+  background:linear-gradient(to right, var(--rose), var(--gold));
+  margin:40px auto;
+  position:relative;
+  z-index:1;
+}
 .hero-sub{
- font-size:clamp(16px,2.2vw,19px);color:var(--creme60);font-weight:300;
- line-height:1.8;max-width:520px;margin:0 auto 36px;
+  font-size:clamp(16px,2.2vw,20px);
+  font-weight:300;
+  line-height:1.85;
+  color:rgba(253,248,244,0.65);
+  max-width:580px;
+  position:relative;
+  z-index:1;
+  margin-bottom:52px;
 }
-.hero-sub strong{color:var(--creme);font-weight:500;}
-.hero-price{
- margin-top:16px;margin-bottom:6px;
+.hero-sub strong{
+  color:var(--gold-light);
+  font-weight:700;
 }
-.hero-price strong{
- color:var(--gold);font-size:clamp(22px,4vw,32px);font-weight:700;
- font-family:'Cormorant Garamond',serif;letter-spacing:.02em;
+.btn-hero{
+  display:inline-block;
+  background:var(--rose-deep);
+  color:#fff;
+  font-family:'Lato',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:20px 56px;
+  text-decoration:none;
+  border-radius:2px;
+  transition:all 0.25s;
+  position:relative;
+  z-index:1;
+  box-shadow:0 8px 32px rgba(139,46,53,0.35);
 }
-.hero-duo{
- display:flex;gap:3px;margin-top:48px;width:100%;overflow:hidden;
+.btn-hero:hover{
+  background:var(--rose);
+  transform:translateY(-3px);
+  box-shadow:0 16px 48px rgba(139,46,53,0.5);
 }
-.hero-duo img{
- flex:1 1 0%;width:0;min-width:0;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%;
- display:block;filter:brightness(.92) saturate(.9);
-}
-.hero-duo-caption{
- background:var(--dark2);
- padding:18px 24px;text-align:center;
- border-top:1px solid rgba(201,168,76,.15);
- width:100%;
-}
-.hero-duo-caption strong{
- font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;
- color:var(--creme);font-weight:400;letter-spacing:.02em;
-}
-.hero-duo-caption span{
- display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
- color:var(--gold);opacity:.7;margin-top:4px;
-}
-
-/* ════════════════════════════════════════════
-  O QUE É  claro
-════════════════════════════════════════════ */
-.sec-oque{background:var(--light);padding:88px 0;}
-.oque-intro{margin-bottom:48px;}
-.oque-intro h2{font-size:clamp(28px,5vw,50px);color:var(--ink);margin-bottom:16px;font-weight:700;line-height:1.15;}
-.oque-intro p{font-size:17px;color:var(--ink60);font-weight:300;line-height:1.85;max-width:540px;}
-.oque-beneficios{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:3px;
- margin-bottom:48px;
-}
-.oque-item{
- background:#fff;
- padding:28px 28px;
- display:flex;gap:16px;align-items:flex-start;
-}
-.oque-ico{
- font-size:18px;flex-shrink:0;margin-top:2px;
-}
-.oque-item p{font-size:15px;color:var(--ink);line-height:1.75;font-weight:400;}
-.oque-item p strong{color:var(--rose);font-weight:500;}
-.oque-cta-wrap{text-align:center;}
-
-/* ════════════════════════════════════════════
-  NARRATIVA DIFERENCIAL  escuro
-════════════════════════════════════════════ */
-.sec-narrativa{
- background:var(--dark2);padding:96px 0;
- border-top:1px solid rgba(201,168,76,.1);
- border-bottom:1px solid rgba(201,168,76,.1);
-}
-.narrativa-lead{
- font-size:clamp(19px,2.8vw,24px);font-weight:300;
- color:var(--creme);line-height:1.75;margin-bottom:24px;
-}
-.sec-narrativa p{
- font-size:17px;color:var(--creme60);font-weight:300;
- line-height:1.85;margin-bottom:20px;max-width:520px;
-}
-.sec-narrativa p strong{color:var(--creme);font-weight:400;}
-.narrativa-quote{
- border-left:2px solid var(--gold);
- padding:20px 28px;
- margin:36px 0;
- font-family:'Cormorant Garamond',serif;
- font-size:clamp(22px,3vw,28px);font-style:italic;
- color:var(--creme);line-height:1.45;
-}
-.narrativa-fechamento{
- font-size:16px;color:var(--creme60);font-weight:300;
- font-style:italic;line-height:1.75;
+.hero-note{
+  font-size:12px;
+  color:rgba(253,248,244,0.25);
+  margin-top:16px;
+  position:relative;
+  z-index:1;
+  letter-spacing:1px;
 }
 
-/* ════════════════════════════════════════════
-  PROVA SOCIAL BAR  médio
-════════════════════════════════════════════ */
-.prova-bar{
- background:var(--dark2);
- border-top:1px solid rgba(201,168,76,.15);
- border-bottom:1px solid rgba(201,168,76,.15);
- padding:40px 24px;
- display:flex;justify-content:center;align-items:center;flex-wrap:wrap;
+/* ── VSL ── */
+.vsl-wrap{
+  background:var(--dark2);
+  padding:64px 24px;
 }
-.prova-item{text-align:center;padding:12px 48px;}
-.prova-item strong{
- display:block;font-family:'Cormorant Garamond',serif;
- font-size:48px;font-weight:600;color:var(--gold);
- line-height:1;margin-bottom:6px;
+.vsl-inner{
+  max-width:780px;
+  margin:0 auto;
 }
-.prova-item span{font-size:12px;color:var(--creme60);letter-spacing:.05em;line-height:1.5;}
-.prova-sep{width:1px;height:56px;background:rgba(201,168,76,.2);}
-
-/* ════════════════════════════════════════════
-  PARA QUEM  claro
-════════════════════════════════════════════ */
-.sec-paraquem{background:var(--light2);padding:80px 0;}
-.paraquem-intro{margin-bottom:48px;}
-.paraquem-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:16px;font-weight:700;}
-.paraquem-lista{list-style:none;border-top:1px solid var(--light3);}
-.pq-item{
- display:flex;gap:18px;align-items:flex-start;
- padding:20px 0;border-bottom:1px solid var(--light3);
- transition:padding-left .2s;
+.vsl-box{
+  background:#000;
+  border:1px solid rgba(139,46,53,0.35);
+  border-radius:3px;
+  aspect-ratio:16/9;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
 }
-.pq-item:hover{padding-left:6px;}
-.pq-check{
- width:22px;height:22px;flex-shrink:0;margin-top:3px;
- border-radius:50%;background:rgba(201,168,76,.15);
- border:1px solid rgba(201,168,76,.5);
- display:flex;align-items:center;justify-content:center;
- font-size:11px;color:var(--gold);font-weight:700;
+.vsl-box::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 50% 50%, rgba(139,46,53,0.18) 0%, transparent 65%);
 }
-.pq-item p{font-size:16px;color:var(--ink);line-height:1.75;font-weight:400;}
-.pq-item p strong{color:var(--rose);font-weight:500;}
-
-/* ════════════════════════════════════════════
-  IDENTIFICAÇÃO  escuro
-════════════════════════════════════════════ */
-.sec-id{
- background:var(--dark2);padding:88px 0;
- border-top:1px solid rgba(201,168,76,.1);
- border-bottom:1px solid rgba(201,168,76,.1);
+.vsl-play{
+  width:76px; height:76px;
+  border-radius:50%;
+  background:var(--rose-deep);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:1;
+  box-shadow:0 0 0 14px rgba(139,46,53,0.18), 0 0 0 28px rgba(139,46,53,0.08);
+  transition:transform 0.25s;
 }
-.id-intro{text-align:center;margin-bottom:52px;}
-.id-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--creme);margin-bottom:14px;font-weight:700;}
-.id-intro p{font-size:17px;color:var(--creme60);font-weight:300;line-height:1.8;max-width:480px;margin:0 auto;}
-.id-lista{list-style:none;max-width:640px;margin:0 auto 48px;display:flex;flex-direction:column;gap:3px;}
-.id-item{
- background:rgba(255,255,255,.04);
- border-left:2px solid rgba(201,168,76,.3);
- padding:22px 28px;
- font-size:16px;color:var(--creme);line-height:1.75;font-weight:300;
- display:flex;gap:16px;align-items:flex-start;
+.vsl-box:hover .vsl-play{ transform:scale(1.08); }
+.vsl-play::after{
+  content:'';
+  width:0; height:0;
+  border-style:solid;
+  border-width:13px 0 13px 23px;
+  border-color:transparent transparent transparent #fff;
+  margin-left:5px;
 }
-.id-item em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:14px;margin-top:3px;}
-.id-quote{display:block;color:var(--gold);font-style:italic;margin-top:8px;font-size:15px;line-height:1.55;font-weight:300;}
-.id-fechamento{
- text-align:center;
- font-family:'Cormorant Garamond',serif;font-style:italic;
- font-size:clamp(18px,2.5vw,24px);color:var(--creme60);
- max-width:480px;margin:0 auto;line-height:1.55;
+.vsl-caption{
+  font-size:12px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(253,248,244,0.35);
+  position:relative;
+  z-index:1;
 }
 
-/* ════════════════════════════════════════════
-  O QUE VAI VIVER  claro
-════════════════════════════════════════════ */
-.sec-viver{background:var(--light2);padding:88px 0;}
-.viver-intro{margin-bottom:52px;}
-.viver-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:12px;font-weight:700;}
-.viver-intro p{font-size:16px;color:var(--ink60);font-weight:300;line-height:1.8;max-width:480px;}
-.viver-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:0;}
-.viver-bloco h3{
- font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
- color:var(--rose);margin-bottom:24px;
-}
-.viver-bloco h3.deixa{color:var(--ink30);}
-.viver-lista{list-style:none;display:flex;flex-direction:column;gap:0;}
-.viver-lista li{
- font-size:15px;color:var(--ink);line-height:1.75;font-weight:300;
- padding:14px 0;border-bottom:1px solid var(--light3);
- display:flex;gap:12px;align-items:flex-start;
-}
-.viver-lista li em{color:var(--gold);font-style:normal;flex-shrink:0;font-size:13px;margin-top:2px;}
-.viver-lista li em.x{color:var(--ink30);}
-.viver-lista.resultado li{color:var(--ink);font-weight:400;}
+/* ── SECTIONS ── */
+section{ padding:96px 24px; }
+.container{ max-width:700px; margin:0 auto; }
+.container-wide{ max-width:960px; margin:0 auto; }
 
-/* ════════════════════════════════════════════
-  DOR  claro
-════════════════════════════════════════════ */
-.sec-dor{background:var(--light);padding:80px 0;}
-.dor-intro{margin-bottom:48px;}
-.dor-intro h2{font-size:clamp(28px,5vw,46px);color:var(--ink);margin-bottom:16px;font-weight:700;}
-.dor-intro p{font-size:18px;color:var(--ink60);font-weight:300;max-width:500px;line-height:1.8;}
-.dor-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;}
-.dor-card{
- background:#fff;
- border-top:3px solid var(--rose);
- padding:36px 28px;
+.s-label{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--rose);
+  margin-bottom:20px;
+  display:block;
 }
-.dor-card .frase{
- font-family:'Cormorant Garamond',serif;
- font-size:clamp(19px,2.5vw,24px);font-weight:600;
- color:var(--ink);line-height:1.35;margin-bottom:24px;
+.s-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,50px);
+  font-weight:700;
+  line-height:1.15;
+  color:var(--dark);
+  margin-bottom:36px;
 }
-.dor-card .msg{
- padding:18px 20px;
- border-left:3px solid var(--rose);
- font-size:15px;font-style:italic;color:var(--ink60);line-height:1.7;
- background:var(--light2);
-}
+.s-title em{ font-style:italic; color:var(--rose); }
+.s-title-white{ color:#fff; }
+.s-title-white em{ color:var(--rose-light); }
 
-/* ════════════════════════════════════════════
-  DEPOIMENTOS  claro quente
-════════════════════════════════════════════ */
-.sec-depo{background:var(--light2);padding:80px 0;}
-.depo-intro{margin-bottom:48px;}
-.depo-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
-.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:3px;}
-.depo-card{background:#fff;padding:32px 28px;}
-.depo-print{padding:0;overflow:hidden;border-radius:4px;}
-.depo-print img{width:100%;display:block;}
-
-/* ════════════════════════════════════════════
-  MÉTODO / MÓDULOS  claro
-════════════════════════════════════════════ */
-.sec-metodo{background:var(--light);padding:80px 0;}
-.metodo-intro{margin-bottom:56px;}
-.metodo-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
-.metodo-intro p{font-size:16px;color:var(--ink60);font-weight:300;max-width:480px;line-height:1.8;}
-.modulos{display:flex;flex-direction:column;gap:3px;}
-.modulo{display:grid;grid-template-columns:64px 1fr;background:#fff;}
-.modulo-num{
- background:var(--light2);
- display:flex;align-items:flex-start;justify-content:center;
- padding:36px 0;
- font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--ink30);
- transition:background .2s;
+/* ── VIRADA ── */
+.sec-virada{
+  background:var(--dark);
+  padding:80px 24px;
+  position:relative;
+  overflow:hidden;
 }
-.modulo:hover .modulo-num{background:var(--dark2);}
-.modulo:hover .modulo-num{color:var(--gold);}
-.modulo-corpo{padding:32px 36px;border-bottom:1px solid var(--light3);}
-.modulo-tag{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;font-family:'Inter',sans-serif;}
-.modulo h3{font-size:clamp(18px,2.5vw,22px);color:var(--ink);margin-bottom:10px;}
-.modulo p{font-size:15px;color:var(--ink60);line-height:1.8;font-weight:300;}
-.bonus-row{display:grid;grid-template-columns:64px 1fr;background:var(--dark2);margin-top:3px;}
-.bonus-tag{
- background:var(--gold);
- display:flex;align-items:flex-start;justify-content:center;
- padding:36px 0;
- font-family:'Inter',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;
- color:var(--dark);font-weight:700;writing-mode:vertical-rl;transform:rotate(180deg);
+.sec-virada::before{
+  content:'';
+  position:absolute;
+  top:-60px; left:-60px;
+  width:300px; height:300px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(139,46,53,0.2) 0%, transparent 70%);
+  pointer-events:none;
 }
-.bonus-corpo{padding:32px 36px;}
-.bonus-corpo h3{font-size:clamp(18px,2.5vw,22px);color:var(--creme);margin-bottom:10px;}
-.bonus-corpo p{font-size:14px;color:var(--creme60);line-height:1.8;font-weight:300;}
-.bonus-corpo .badge-light{
- display:inline-block;margin-top:14px;
- font-size:10px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;
+.virada-inner{
+  max-width:720px;
+  margin:0 auto;
+}
+.virada-before{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  border-left:3px solid var(--muted);
+  padding:24px 28px;
+  margin-bottom:3px;
+}
+.virada-before p{
+  font-size:15px;
+  line-height:1.75;
+  color:rgba(253,248,244,0.4);
+  font-style:italic;
+}
+.virada-before .label{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(253,248,244,0.2);
+  margin-bottom:10px;
+  display:block;
+}
+.virada-after{
+  background:rgba(139,46,53,0.15);
+  border:1px solid rgba(139,46,53,0.4);
+  border-left:3px solid var(--rose);
+  padding:24px 28px;
+  margin-bottom:48px;
+}
+.virada-after p{
+  font-size:15px;
+  line-height:1.75;
+  color:rgba(253,248,244,0.85);
+}
+.virada-after .label{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--rose-light);
+  margin-bottom:10px;
+  display:block;
+}
+.virada-after p strong{
+  color:#fff;
+  font-weight:700;
 }
 
-/* ════════════════════════════════════════════
-  DISPOSITIVOS  escuro
-════════════════════════════════════════════ */
-.sec-devices{
- background:var(--dark2);padding:80px 0;
- border-top:1px solid rgba(201,168,76,.1);
- border-bottom:1px solid rgba(201,168,76,.1);
+/* ── DOR ── */
+.sec-dor{ background:var(--warm-bg); }
+.dor-intro{
+  font-size:17px;
+  font-weight:300;
+  line-height:1.9;
+  color:var(--muted);
+  margin-bottom:48px;
+  padding-left:24px;
+  border-left:3px solid var(--rose);
 }
-.devices-intro{text-align:center;margin-bottom:52px;}
-.devices-intro h2{font-size:clamp(26px,4vw,42px);color:var(--creme);margin-bottom:12px;}
-.devices-intro p{font-size:15px;color:var(--creme60);font-weight:300;line-height:1.8;max-width:440px;margin:0 auto;}
-.devices-grid{
- display:grid;grid-template-columns:repeat(3,1fr);gap:3px;
- max-width:720px;margin:0 auto 48px;
+.dor-intro strong{ color:var(--dark); font-weight:700; }
+.dor-grid{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
 }
-.device-card{
- background:rgba(255,255,255,.04);
- border:1px solid rgba(201,168,76,.12);
- padding:32px 24px;text-align:center;
+.dor-item{
+  background:#fff;
+  border:1px solid var(--border);
+  border-left:4px solid var(--rose-pale);
+  padding:22px 28px;
+  transition:border-left-color 0.2s, transform 0.2s;
 }
-.device-ico{font-size:32px;margin-bottom:14px;display:block;}
-.device-card h4{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--creme);margin-bottom:8px;}
-.device-card p{font-size:13px;color:var(--creme60);font-weight:300;line-height:1.7;}
+.dor-item:hover{
+  border-left-color:var(--rose);
+  transform:translateX(4px);
+}
+.dor-item p{
+  font-size:15px;
+  line-height:1.75;
+  color:var(--text);
+}
+.dor-item p strong{ color:var(--rose-deep); font-weight:700; }
 
-/* ════════════════════════════════════════════
-  OFERTA  escuro
-════════════════════════════════════════════ */
-.sec-oferta{background:var(--dark);padding:96px 0;}
+/* ── TRANSFORMAÇÃO ── */
+.sec-transform{ background:#fff; }
+.transform-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3px;
+  margin-top:8px;
+}
+@media(max-width:600px){ .transform-grid{ grid-template-columns:1fr; } }
+.transform-card{
+  padding:32px 28px;
+  border:1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+}
+.transform-card::before{
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:3px;
+  background:var(--rose-pale);
+  transition:background 0.25s;
+}
+.transform-card:hover::before{ background:var(--rose); }
+.transform-num{
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+  font-weight:900;
+  color:var(--rose-pale);
+  line-height:1;
+  margin-bottom:12px;
+  transition:color 0.25s;
+}
+.transform-card:hover .transform-num{ color:var(--rose-light); }
+.transform-title{
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--dark);
+  margin-bottom:10px;
+  line-height:1.3;
+}
+.transform-desc{
+  font-size:14px;
+  line-height:1.8;
+  color:var(--muted);
+}
+
+/* ── CAIXINHAS ── */
+.sec-vozes{ background:var(--warm-bg); }
+.vozes-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:8px;
+}
+@media(max-width:600px){ .vozes-grid{ grid-template-columns:1fr; } }
+.voz-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:18px 20px;
+}
+.voz-handle{
+  font-size:11px;
+  font-weight:700;
+  color:var(--rose);
+  letter-spacing:0.5px;
+  margin-bottom:8px;
+}
+.voz-text{
+  font-size:14px;
+  line-height:1.7;
+  color:var(--text);
+  font-style:italic;
+}
+
+/* ── DIFERENCIAL ── */
+.sec-diff{
+  background:var(--dark);
+  position:relative;
+  overflow:hidden;
+}
+.sec-diff::after{
+  content:'';
+  position:absolute;
+  bottom:-100px; right:-100px;
+  width:400px; height:400px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(196,147,90,0.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+.diff-text{
+  font-size:17px;
+  font-weight:300;
+  line-height:1.9;
+  color:rgba(253,248,244,0.6);
+  margin-bottom:20px;
+}
+.diff-text strong{ color:var(--gold-light); font-weight:700; }
+.diff-quote{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(18px,2.5vw,24px);
+  font-style:italic;
+  color:#fff;
+  border-left:3px solid var(--rose);
+  padding:22px 28px;
+  margin:40px 0;
+  background:rgba(139,46,53,0.1);
+  line-height:1.55;
+}
+.diff-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3px;
+  margin-top:52px;
+}
+@media(max-width:600px){ .diff-cards{ grid-template-columns:1fr; } }
+.diff-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:36px 32px;
+}
+.diff-card-name{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:4px;
+}
+.diff-card-role{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--rose-light);
+  margin-bottom:20px;
+  padding-bottom:20px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.diff-card p{ font-size:14px; line-height:1.85; color:rgba(253,248,244,0.5); }
+.diff-card p strong{ color:var(--gold-light); font-weight:700; }
+
+/* ── MÓDULOS ── */
+.sec-mod{ background:var(--off-white); }
+.mod-grid{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.mod-item{
+  border:1px solid var(--border);
+  overflow:hidden;
+  transition:border-color 0.25s;
+  display:flex;
+}
+.mod-item:hover{ border-color:var(--rose-light); }
+.mod-num{
+  background:var(--rose-pale);
+  color:var(--rose-deep);
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  font-weight:900;
+  width:64px;
+  min-width:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background 0.25s;
+}
+.mod-item:hover .mod-num{ background:var(--rose-light); color:#fff; }
+.mod-body{ padding:24px 28px; }
+.mod-tag{
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--rose);
+  font-weight:700;
+  margin-bottom:8px;
+}
+.mod-title{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  font-weight:700;
+  color:var(--dark);
+  margin-bottom:10px;
+  line-height:1.3;
+}
+.mod-desc{ font-size:14px; line-height:1.8; color:var(--muted); }
+
+/* ── BONUS ── */
+.sec-bonus{ background:var(--dark2); }
+.bonus-box{
+  border:1px solid rgba(196,147,90,0.3);
+  padding:40px 36px;
+  display:flex;
+  gap:28px;
+  align-items:flex-start;
+}
+@media(max-width:560px){ .bonus-box{ flex-direction:column; } }
+.bonus-badge{
+  background:var(--gold);
+  color:var(--dark);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:8px 14px;
+  border-radius:2px;
+  flex-shrink:0;
+  white-space:nowrap;
+}
+.bonus-content h3{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  font-weight:700;
+  color:var(--gold-light);
+  margin-bottom:12px;
+}
+.bonus-content p{ font-size:14px; line-height:1.8; color:rgba(253,248,244,0.55); }
+
+/* ── MENTORES ── */
+.sec-ment{ background:var(--dark); }
+.ment-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3px;
+  margin-top:52px;
+}
+@media(max-width:600px){ .ment-grid{ grid-template-columns:1fr; } }
+.ment-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:40px 36px;
+}
+.ment-name{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:4px;
+}
+.ment-role{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--rose-light);
+  margin-bottom:24px;
+  padding-bottom:24px;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.ment-bio{ font-size:15px; line-height:1.9; color:rgba(253,248,244,0.55); }
+.ment-bio strong{ color:#fff; font-weight:700; }
+
+/* ── OFERTA ── */
+.sec-oferta{
+  background:var(--dark);
+  position:relative;
+  overflow:hidden;
+}
+.sec-oferta::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(139,46,53,0.3) 0%, transparent 55%);
+  pointer-events:none;
+}
 .oferta-box{
- background:rgba(255,255,255,.03);
- border:1px solid rgba(201,168,76,.2);
- padding:56px 52px;max-width:580px;margin:0 auto;text-align:center;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(139,46,53,0.4);
+  padding:56px 52px;
+  max-width:600px;
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+  text-align:center;
 }
-.oferta-eyebrow{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:20px;display:block;}
-.oferta-h2{font-size:clamp(28px,4.5vw,44px);color:var(--creme);margin-bottom:12px;}
-.oferta-h2 em{font-style:italic;color:var(--gold);}
-.launch-banner{
- background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);
- padding:14px 20px;margin:20px 0 32px;
- font-size:13px;color:var(--creme60);font-weight:300;line-height:1.6;
+@media(max-width:540px){ .oferta-box{ padding:36px 20px; } }
+.oferta-label{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--rose-light);
+  margin-bottom:20px;
+  display:block;
 }
-.launch-banner strong{color:var(--gold);font-weight:500;}
-.preco-de{font-size:14px;color:var(--creme30);text-decoration:line-through;margin-bottom:4px;}
-.preco-por{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--creme30);margin-bottom:8px;font-family:'Inter',sans-serif;}
-.preco-val{font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:600;color:var(--creme);line-height:1;}
-.preco-val span{font-size:32px;vertical-align:top;margin-top:16px;display:inline-block;color:var(--gold);}
-.preco-parcel{font-size:14px;color:var(--creme30);margin-top:6px;margin-bottom:36px;}
-.oferta-stack{
- text-align:left;border-top:1px solid rgba(255,255,255,.07);
- padding-top:28px;margin-bottom:8px;
+.oferta-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,4vw,38px);
+  font-weight:700;
+  color:#fff;
+  line-height:1.2;
+  margin-bottom:36px;
 }
-.oferta-stack-titulo{
- font-size:10px;letter-spacing:.2em;text-transform:uppercase;
- color:var(--gold);opacity:.7;margin-bottom:18px;font-family:'Inter',sans-serif;
+.oferta-title em{ font-style:italic; color:var(--rose-light); }
+.oferta-de{
+  font-size:14px;
+  color:rgba(253,248,244,0.3);
+  text-decoration:line-through;
+  margin-bottom:6px;
 }
-.oferta-items{list-style:none;text-align:left;margin-bottom:28px;}
-.oferta-items li{font-size:14px;color:var(--creme60);display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;line-height:1.6;}
-.oferta-items li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;}
-.oferta-total{
- font-size:12px;color:var(--creme30);text-align:right;
- border-top:1px solid rgba(255,255,255,.07);padding-top:16px;margin-bottom:28px;
- font-style:italic;
+.oferta-price{
+  font-family:'Playfair Display',serif;
+  font-size:76px;
+  font-weight:900;
+  color:#fff;
+  line-height:1;
+  margin-bottom:8px;
 }
-.ancoragem{
- margin:20px 0;padding:16px 20px;
- background:rgba(255,255,255,.03);border-left:2px solid rgba(201,168,76,.3);
- font-size:13px;color:var(--creme60);font-style:italic;text-align:left;line-height:1.7;
+.oferta-price sup{
+  font-size:28px;
+  vertical-align:top;
+  margin-top:16px;
+  display:inline-block;
+  color:var(--rose-light);
+  font-weight:400;
 }
-.microcopy{
- margin-top:24px;
- font-family:'Cormorant Garamond',serif;font-style:italic;
- font-size:18px;color:var(--creme60);line-height:1.55;
+.oferta-parcelado{
+  font-size:14px;
+  color:rgba(253,248,244,0.4);
+  margin-bottom:10px;
+}
+.oferta-ancora{
+  font-size:13px;
+  color:var(--gold-light);
+  margin-bottom:40px;
+  font-style:italic;
+}
+.oferta-items{
+  list-style:none;
+  text-align:left;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:32px;
+  margin-bottom:40px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.oferta-items li{
+  font-size:14px;
+  color:rgba(253,248,244,0.65);
+  display:flex;
+  gap:12px;
+  line-height:1.6;
+  align-items:flex-start;
+}
+.oferta-items li::before{
+  content:'✓';
+  color:var(--rose-light);
+  font-weight:700;
+  flex-shrink:0;
+}
+.btn-compra{
+  display:block;
+  width:100%;
+  background:var(--rose-deep);
+  color:#fff;
+  font-family:'Lato',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:22px 40px;
+  text-decoration:none;
+  border-radius:2px;
+  transition:all 0.25s;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 8px 32px rgba(139,46,53,0.35);
+}
+.btn-compra:hover{
+  background:var(--rose);
+  transform:translateY(-2px);
+  box-shadow:0 16px 48px rgba(139,46,53,0.5);
 }
 .garantia{
- display:flex;gap:16px;align-items:flex-start;
- background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
- padding:20px 24px;margin-top:24px;text-align:left;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:20px 24px;
+  margin-top:20px;
+  text-align:left;
 }
-.garantia-ico{font-size:26px;flex-shrink:0;}
-.garantia-txt h4{font-size:14px;color:var(--creme);margin-bottom:4px;font-family:'Inter',sans-serif;font-weight:600;}
-.garantia-txt p{font-size:13px;color:var(--creme30);line-height:1.65;font-weight:300;}
-
-/* ════════════════════════════════════════════
-  OS DOIS  claro com card escuro
-════════════════════════════════════════════ */
-.sec-dueto{background:var(--light);padding:80px 0;}
-.dueto-intro{text-align:center;margin-bottom:56px;}
-.dueto-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;font-weight:700;}
-.dueto-intro p{font-size:17px;color:var(--ink60);font-weight:300;max-width:540px;margin:0 auto;line-height:1.8;}
-.dueto-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;}
-.dueto-card{background:var(--dark2);padding:40px 36px;}
-.dueto-card img{
- width:100%;aspect-ratio:4/5;object-fit:cover;
- object-position:50% 12%;
- filter:brightness(.85) saturate(.8);
- margin-bottom:24px;
- display:block;
+.garantia-icon{ font-size:26px; flex-shrink:0; }
+.garantia strong{
+  display:block;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:4px;
 }
-.dueto-card .card-label{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);opacity:.8;margin-bottom:8px;display:block;}
-.dueto-card h3{font-size:22px;color:var(--creme);margin-bottom:12px;font-weight:600;}
-.dueto-card p{font-size:15px;color:var(--creme60);font-weight:300;line-height:1.85;}
-.dueto-card p strong{color:var(--creme);font-weight:400;}
-.sec-casal-foto{position:relative;overflow:hidden;margin-top:3px;}
-.sec-casal-foto img{width:100%;max-height:600px;object-fit:cover;object-position:50% 30%;filter:brightness(.92) saturate(.9);display:block;}
-.sec-casal-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px 24px;}
-.sec-casal-overlay p{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,36px);font-style:italic;color:var(--creme);text-align:center;max-width:520px;line-height:1.4;}
+.garantia p{ font-size:13px; color:rgba(253,248,244,0.4); line-height:1.6; }
 
-/* ════════════════════════════════════════════
-  FAQ  claro
-════════════════════════════════════════════ */
-.sec-faq{background:var(--light2);padding:96px 0;}
-.faq-intro{margin-bottom:48px;}
-.faq-intro h2{font-size:clamp(28px,4.5vw,48px);color:var(--ink);margin-bottom:14px;}
-.faq-lista{border-top:1px solid var(--light3);}
-.faq-item{border-bottom:1px solid var(--light3);}
+/* ── FAQ ── */
+.sec-faq{ background:var(--off-white); }
+.faq-list{ border-top:1px solid var(--border); margin-top:48px; }
+.faq-item{ border-bottom:1px solid var(--border); padding:28px 0; }
 .faq-q{
- width:100%;background:none;border:none;cursor:pointer;
- display:flex;justify-content:space-between;align-items:center;gap:16px;
- padding:24px 0;
- font-family:'Inter',sans-serif;font-size:17px;font-weight:500;color:var(--ink);
- text-align:left;transition:color .2s;line-height:1.5;
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--dark);
+  margin-bottom:12px;
 }
-.faq-q:hover{color:var(--rose);}
-.faq-q .ico{
- font-size:18px;color:var(--rose);flex-shrink:0;font-style:normal;
- font-family:'Inter',sans-serif;transition:transform .25s;
-}
-.faq-q.open .ico{transform:rotate(45deg);}
-.faq-a{
- display:none;padding:0 0 24px;
- font-size:16px;color:var(--ink60);line-height:1.85;font-weight:300;max-width:620px;
-}
-.faq-a.open{display:block;}
+.faq-a{ font-size:15px; line-height:1.8; color:var(--muted); }
 
-/* ════════════════════════════════════════════
-  FOOTER CTA  escuro
-════════════════════════════════════════════ */
-.sec-footer{background:var(--dark2);padding:80px 24px;text-align:center;border-top:1px solid rgba(201,168,76,.12);}
+/* ── FOOTER CTA ── */
+.sec-footer{
+  background:var(--rose-deep);
+  padding:80px 24px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.sec-footer::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 100%, rgba(0,0,0,0.3) 0%, transparent 60%);
+}
 .footer-quote{
- font-family:'Cormorant Garamond',serif;
- font-size:clamp(22px,4vw,38px);font-style:italic;
- color:var(--creme);line-height:1.45;max-width:580px;margin:0 auto 12px;
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,3.5vw,34px);
+  font-style:italic;
+  color:#fff;
+  max-width:620px;
+  margin:0 auto 16px;
+  line-height:1.45;
+  position:relative;
+  z-index:1;
 }
-.footer-autoria{font-size:12px;color:var(--creme30);letter-spacing:.14em;margin-bottom:40px;}
-.footer-handles{margin-top:20px;font-size:12px;color:var(--creme30);letter-spacing:.1em;}
+.footer-by{
+  font-size:13px;
+  color:rgba(255,255,255,0.5);
+  margin-bottom:40px;
+  position:relative;
+  z-index:1;
+  letter-spacing:1px;
+}
+.btn-footer{
+  display:inline-block;
+  background:#fff;
+  color:var(--rose-deep);
+  font-family:'Lato',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:20px 52px;
+  text-decoration:none;
+  border-radius:2px;
+  transition:all 0.25s;
+  position:relative;
+  z-index:1;
+}
+.btn-footer:hover{
+  background:var(--rose-pale);
+  transform:translateY(-2px);
+}
 
-/* ════════════════════════════════════════════
-  FRASES BAR  ticker
-════════════════════════════════════════════ */
-.frases-bar{
- background:var(--dark3);
- border-top:1px solid rgba(201,168,76,.12);
- border-bottom:1px solid rgba(201,168,76,.12);
- overflow:hidden;
- max-width:100vw;
- padding:14px 0;
- position:relative;
+/* ── REVEAL ── */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity 0.65s ease, transform 0.65s ease;
 }
-.frases-bar::before,.frases-bar::after{
- content:'';position:absolute;top:0;width:80px;height:100%;z-index:2;
-}
-.frases-bar::before{left:0;background:linear-gradient(to right,var(--dark3),transparent);}
-.frases-bar::after{right:0;background:linear-gradient(to left,var(--dark3),transparent);}
-.frases-track{
- display:inline-flex;gap:32px;white-space:nowrap;
- animation:ticker 38s linear infinite;
-}
-.frases-track span{
- font-size:13px;font-style:italic;color:var(--creme60);letter-spacing:.02em;
-}
-.frases-track .sep{color:var(--gold);font-style:normal;opacity:.5;}
-@keyframes ticker{
- 0%{transform:translateX(0);}
- 100%{transform:translateX(-50%);}
-}
+.reveal.visible{ opacity:1; transform:translateY(0); }
 
-/* ════════════════════════════════════════════
-  WHATSAPP FLUTUANTE
-════════════════════════════════════════════ */
-.wpp-float{
- position:fixed;bottom:24px;right:24px;z-index:999;
- background:#25D366;color:#fff;
- width:56px;height:56px;border-radius:50%;
- display:flex;align-items:center;justify-content:center;
- text-decoration:none;font-size:26px;
- box-shadow:0 4px 20px rgba(37,211,102,.4);
- transition:transform .2s,box-shadow .2s;
-}
-.wpp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.5);}
-
-/* ════════════════════════════════════════════
-  MOBILE
-════════════════════════════════════════════ */
-@media(max-width:700px){
- .viver-cols{grid-template-columns:1fr;gap:48px;}
- .dueto-grid{grid-template-columns:1fr;}
- .modulo{grid-template-columns:48px 1fr;}
- .modulo-num{font-size:26px;padding:28px 0;}
- .modulo-corpo{padding:24px 20px;}
- .bonus-row{grid-template-columns:40px 1fr;}
- .bonus-corpo{padding:24px 20px;}
- .oferta-box{padding:32px 20px;}
- .preco-val{font-size:60px;}
- .prova-item{padding:12px 20px;}
- .prova-sep{width:40px;height:1px;}
- .wrap-lg{padding:0 20px;}
- .depo-grid{grid-template-columns:1fr;}
- .hero-duo-caption strong{font-size:17px;}
- .oque-beneficios{grid-template-columns:1fr;}
- .devices-grid{grid-template-columns:1fr;}
- .narrativa-quote{padding:16px 20px;}
- .oferta-stack{overflow-x:hidden;}
- .oferta-items li{font-size:13px;}
- .oferta-total{font-size:12px;}
-}
 @media(max-width:480px){
- .dor-cards{grid-template-columns:1fr;}
- .hero-body{padding:0 20px;}
- .hero h1{font-size:clamp(32px,9vw,48px);}
- .prova-bar{flex-direction:column;}
- .prova-sep{width:40px;height:1px;}
- .sec-narrativa{padding:64px 0;}
- .id-item{padding:18px 20px;font-size:15px;}
- .dor-card{padding:28px 20px;}
- .oferta-box{padding:28px 16px;}
- .preco-val{font-size:52px;}
- .dueto-card{padding:28px 20px;}
- .dueto-card img{aspect-ratio:3/4;}
- .sec-casal-foto img{max-height:280px;}
- .sec-casal-overlay p{font-size:clamp(18px,5vw,26px);}
+  section{ padding:72px 20px; }
+  .hero{ padding:72px 20px 64px; }
+  .mod-num{ width:48px; min-width:48px; font-size:22px; }
+  .oferta-price{ font-size:56px; }
 }
 </style>
 </head>
 <body>
 
-
-
-<!-- ══ HERO  escuro ═══════════════════════ -->
-<section class="hero" id="topo">
- <div class="hero-body">
-  <div class="hero-tag">Saber Amar</div>
-  <h1>Se liberte da dependência emocional <em>e reconquiste a sua vida após a traição.</em></h1>
-  <p class="hero-sub">
-   Você vai reconstruir a sua autoestima, retomar o controle da sua vida <strong>e aprender a identificar se o arrependimento dele é real.</strong>
-  </p>
-  <a href="#oferta" class="btn-dark" style="max-width:480px;">Quero a minha liberdade emocional &nbsp;→</a>
-  <p class="hero-price"><strong>12x de R$30,72</strong></p>
-  <p class="btn-note">Acesso imediato · Garantia incondicional de 7 dias</p>
- </div>
- <div class="hero-duo">
-  <img src="thais-sobre.jpg" alt="Thais Ayumi">
-  <img src="cesar-foto.jpg" alt="César Augusto">
- </div>
- <div class="hero-duo-caption">
-  <strong>Thais Ayumi e César Augusto</strong>
-  <span>Casal de psicanalistas · Os dois lados da traição</span>
- </div>
-</section>
-
-<!-- ══ FRASES REAIS (ticker) ═══════════════ -->
-<div class="frases-bar">
- <div class="frases-track">
-  <span>"Não consigo confiar. Acho que sempre vai fazer algo ruim de novo."</span>
-  <span class="sep">·</span>
-  <span>"Estou com medo de ser tudo mentira de novo."</span>
-  <span class="sep">·</span>
-  <span>"Minha intuição grita aqui dentro que sim aconteceu."</span>
-  <span class="sep">·</span>
-  <span>"Queria tanto sair dessa dependência. Mas não consigo sair."</span>
-  <span class="sep">·</span>
-  <span>"Não sei mais se amo ou se tenho medo de ficar sozinha."</span>
-  <span class="sep">·</span>
-  <span>"Existe esperança?"</span>
-  <span class="sep">·</span>
-  <span>"Não consigo confiar. Acho que sempre vai fazer algo ruim de novo."</span>
-  <span class="sep">·</span>
-  <span>"Estou com medo de ser tudo mentira de novo."</span>
-  <span class="sep">·</span>
-  <span>"Minha intuição grita aqui dentro que sim aconteceu."</span>
-  <span class="sep">·</span>
-  <span>"Queria tanto sair dessa dependência. Mas não consigo sair."</span>
-  <span class="sep">·</span>
-  <span>"Não sei mais se amo ou se tenho medo de ficar sozinha."</span>
-  <span class="sep">·</span>
-  <span>"Existe esperança?"</span>
- </div>
+<!-- BAR -->
+<div class="bar">
+  <strong>Acesso imediato</strong> &middot; 12 meses de acesso &middot; Garantia incondicional de 7 dias &middot; Kiwify
 </div>
 
-<!-- ══ O QUE É  claro ════════════════════ -->
-<section class="sec-oque reveal">
- <div class="wrap">
-  <div class="oque-intro">
-   <h2>Em 5 semanas, você para de viver para ele.<br>E começa a viver para você.</h2>
-   <div class="divider-gold"></div>
-   <p>Um curso criado por dois psicanalistas. Construído para uma coisa só: você parar de sofrer e ter o controle da sua vida de volta.</p>
-  </div>
-  <div class="oque-beneficios">
-   <div class="oque-item">
-    <span class="oque-ico">✦</span>
-    <p>Reconstruir a autoestima que a traição destruiu, sem depender da reação dele para isso.</p>
-   </div>
-   <div class="oque-item">
-    <span class="oque-ico">✦</span>
-    <p>Parar de checar o celular dele às 2h da manhã e viver no medo do que vai encontrar.</p>
-   </div>
-   <div class="oque-item">
-    <span class="oque-ico">✦</span>
-    <p>Entender, pela voz de quem ouve esses homens, o que ele sente de verdade, para você ter clareza, não para salvar o casamento.</p>
-   </div>
-   <div class="oque-item">
-    <span class="oque-ico">✦</span>
-    <p>Tomar a decisão de ficar ou ir embora a partir de um lugar forte. Não do medo de ficar sozinha.</p>
-   </div>
-   <div class="oque-item">
-    <span class="oque-ico">✦</span>
-    <p>Nunca mais precisar da aprovação dele para se sentir bem consigo mesma.</p>
-   </div>
-   <div class="oque-item">
-    <span class="oque-ico">✦</span>
-    <p>Voltar a ser a mulher que você era antes de começar a se perder aqui dentro.</p>
-   </div>
-  </div>
-  <div class="oque-cta-wrap">
-   <a href="#oferta" class="btn-light" style="max-width:420px;">Quero começar agora &nbsp;→</a>
-   <p class="btn-note-ink">12x de R$30,72 · Acesso imediato</p>
-  </div>
- </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">César Augusto &amp; Thais Ayumi &middot; Psicanalistas</div>
+
+  <h1 class="hero-headline">
+    Quando você para de
+    <em>precisar dele,</em>
+    <span class="gold">ele passa a ter medo de te perder.</span>
+  </h1>
+
+  <div class="hero-divider"></div>
+
+  <p class="hero-sub">
+    O homem não tem medo de perder a mulher que depende dele.<br>
+    Ele tem medo de perder a mulher que <strong>não precisa dele para ser inteira.</strong><br><br>
+    Recupere seu brilho. Volte a ser desejada. E faça ele ter medo de te perder.
+  </p>
+
+  <a href="#oferta" class="btn-hero">Quero recuperar meu brilho</a>
+  <p class="hero-note">R$297 &middot; Acesso imediato &middot; Garantia de 7 dias</p>
 </section>
 
-<!-- ══ PARA QUEM  claro ════════════════════ -->
-<section class="sec-paraquem reveal">
- <div class="wrap">
-  <div class="paraquem-intro">
-   <span class="label-rose">Para quem é este curso</span>
-   <h2>Você não precisa ter decidido nada ainda.</h2>
-   <div class="divider-gold"></div>
+<!-- VSL -->
+<div class="vsl-wrap">
+  <div class="vsl-inner">
+    <div class="vsl-box">
+      <div class="vsl-play"></div>
+      <p class="vsl-caption">Assista antes de decidir</p>
+    </div>
   </div>
-  <ul class="paraquem-lista">
-   <li class="pq-item">
-    <span class="pq-check">✦</span>
-    <p>Você descobriu a traição há pouco tempo e ainda está <strong>em transe</strong>, sem saber o que fazer com o que sente.</p>
-   </li>
-   <li class="pq-item">
-    <span class="pq-check">✦</span>
-    <p>Você perdoou, tenta reconstruir, mas <strong>não consegue confiar mais</strong> e o toque dele ainda te dá pavor.</p>
-   </li>
-   <li class="pq-item">
-    <span class="pq-check">✦</span>
-    <p>Você quer ir embora mas não consegue. Tem filhos, dependência financeira, e <strong>se sente presa sem saída</strong>.</p>
-   </li>
-   <li class="pq-item">
-    <span class="pq-check">✦</span>
-    <p>Ele diz que mudou. E você ainda pensa: <strong>"e se for tudo performance?"</strong> Você não sabe distinguir arrependimento real de quem só tem medo de perder o conforto.</p>
-   </li>
-   <li class="pq-item">
-    <span class="pq-check">✦</span>
-    <p>O problema não foi outra mulher. Foi <strong>a pornografia</strong>. E você se sente sem valor de um jeito que ninguém ao redor entende.</p>
-   </li>
-   <li class="pq-item">
-    <span class="pq-check">✦</span>
-    <p>Você <strong>não sabe mais se ama ou se depende</strong>. E tem medo de que sejam a mesma coisa.</p>
-   </li>
-  </ul>
- </div>
+</div>
+
+<!-- VIRADA DE NARRATIVA -->
+<section class="sec-virada reveal">
+  <div class="virada-inner">
+    <div class="virada-before">
+      <span class="label">Ela dependente</span>
+      <p>Ela corre atrás. Checa o celular dele. Aceita migalhas. Tem medo de perdê-lo. Ele sabe que ela não vai a lugar nenhum — e não faz questão dela.</p>
+    </div>
+    <div class="virada-after">
+      <span class="label">Ela livre</span>
+      <p>Ela para de correr. Para de suplicar atenção. Volta a ser ela mesma — <strong>inteira, presente, magnética.</strong> E ele percebe, pela primeira vez, que pode perdê-la. É aí que tudo muda.</p>
+    </div>
+  </div>
 </section>
 
-<!-- ══ IDENTIFICAÇÃO  escuro ══════════════ -->
-<section class="sec-id reveal">
- <div class="wrap">
-  <div class="id-intro">
-   <span class="label-gold">Reconhece essa voz?</span>
-   <h2>Isso não é fraqueza.<br>É o que acontece quando você passou a acreditar que vale menos.</h2>
-  </div>
-  <ul class="id-lista">
-   <li class="id-item"><em>✦</em><span>Você perdoou. Mas o toque dele ainda te dá pavor. E não sabe se algum dia vai ser diferente.</span></li>
-   <li class="id-item"><em>✦</em><span>Ele pediu perdão. Diz que se arrependeu. E você ainda pensa:<em class="id-quote">"Estou com medo de ser tudo mentira de novo."</em></span></li>
-   <li class="id-item"><em>✦</em><span>Você funciona. Trabalha, cuida dos filhos, mantém tudo em pé. Mas por dentro:<em class="id-quote">"Sofro todos os dias. Não sei mais quem sou fora disso."</em></span></li>
-   <li class="id-item"><em>✦</em><span>Você conhece esse sentimento exatamente:<em class="id-quote">"Queria tanto sair dessa dependência. Mas não consigo sair."</em></span></li>
-   <li class="id-item"><em>✦</em><span>E tem pavor de que sejam a mesma coisa:<em class="id-quote">"Não sei mais se amo ou se tenho medo de ficar sozinha."</em></span></li>
-  </ul>
-  <p class="id-fechamento">Se qualquer uma dessas frases te parou, você não está exagerando. Você está exatamente onde precisa estar. E isso pode mudar.</p>
- </div>
-</section>
-
-<!-- ══ O QUE VAI VIVER  claro ════════════ -->
-<section class="sec-viver reveal">
- <div class="wrap-lg">
-  <div class="viver-intro">
-   <span class="label-rose">O que muda</span>
-   <h2>Você vai entrar de um jeito e sair de outro.</h2>
-   <div class="divider-gold"></div>
-  </div>
-  <div class="viver-cols">
-   <div class="viver-bloco">
-    <h3 class="deixa">Você hoje</h3>
-    <ul class="viver-lista">
-     <li><em class="x">✗</em> Depende da reação dele para se sentir bem ou mal</li>
-     <li><em class="x">✗</em> Checa o celular dele e imagina o pior</li>
-     <li><em class="x">✗</em> Decide a partir do medo de ficar sozinha</li>
-     <li><em class="x">✗</em> Não sabe distinguir arrependimento real de performance</li>
-     <li><em class="x">✗</em> Vive no ciclo de perdoar, desconfiar, sofrer, perdoar de novo</li>
-    </ul>
-   </div>
-   <div class="viver-bloco">
-    <h3>Você depois do Saber Amar</h3>
-    <ul class="viver-lista resultado">
-     <li><em>✦</em> Autoestima que não depende da reação dele para existir</li>
-     <li><em>✦</em> Clareza sobre o que você realmente quer, com ou sem ele</li>
-     <li><em>✦</em> Poder de decisão: ficar porque quer, sair com leveza, não com medo</li>
-     <li><em>✦</em> Sabe o que arrependimento real parece, e o que é só performance</li>
-     <li><em>✦</em> Uma vida que é sua, que não depende da escolha dele</li>
-    </ul>
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ══ DEPOIMENTOS  claro quente ══════════ -->
-<section class="sec-depo reveal">
- <div class="wrap">
-  <div class="depo-intro">
-   <span class="label-rose">Quem já passou por aqui</span>
-   <h2>Mulheres que pararam de se perguntar o que fizeram de errado.</h2>
-   <div class="divider-gold"></div>
-  </div>
-  <div class="depo-grid">
-   <div class="depo-card depo-print">
-    <img src="dep-1.jpg" alt="Depoimento real">
-   </div>
-   <div class="depo-card depo-print">
-    <img src="dep-2.jpg" alt="Depoimento real">
-   </div>
-   <div class="depo-card depo-print">
-    <img src="dep-3.jpg" alt="Depoimento real">
-   </div>
-  </div>
- </div>
-</section>
-
-<!-- ══ DOR  claro ═════════════════════════ -->
+<!-- DOR -->
 <section class="sec-dor reveal">
- <div class="wrap">
-  <div class="dor-intro">
-   <span class="label-rose">Você não está exagerando</span>
-   <h2>A dor que ninguém consegue explicar direito.</h2>
-   <div class="divider-gold"></div>
-  </div>
-  <div class="dor-cards">
-   <div class="dor-card">
-    <div class="frase">O perdão saiu da boca. O corpo não perdoou ainda.</div>
-    <div class="msg">"Perdoei, mas não confio mais. O fato dele mexer no celular me incomoda muito."</div>
-   </div>
-   <div class="dor-card">
-    <div class="frase">Ele diz que mudou. Mas a sua intuição não descansa.</div>
-    <div class="msg">"Minha intuição grita aqui dentro que sim aconteceu. Estou com medo de ser tudo mentira de novo."</div>
-   </div>
-   <div class="dor-card">
-    <div class="frase">Você quer ir. Mas não tem renda, não tem para onde. E ele sabe disso.</div>
-    <div class="msg">"Não tenho renda, me sinto presa. Preciso ir embora mas não sei: conta, filha, emprego que paga mal."</div>
-   </div>
-   <div class="dor-card">
-    <div class="frase">A traição não levou só a confiança nele. Levou a confiança em você mesma.</div>
-    <div class="msg">"Jamais passaria pela minha cabeça. Ainda estou em transe com isso."</div>
-   </div>
-   <div class="dor-card">
-    <div class="frase">Ele não te toca. Prefere a tela. E você se pergunta o que há de errado com você.</div>
-    <div class="msg">"Me sinto sem valor, sem importância. Fui trocada por pornografia. Cinco anos. Me sinto um lixo."</div>
-   </div>
-   <div class="dor-card">
-    <div class="frase">Você é sempre a louca. Ele pediu perdão. Se você não aceita, o problema é seu.</div>
-    <div class="msg">"Disse que tive alucinação de tanto pensar. Não aguento mais. Estou tão cansada."</div>
-   </div>
-  </div>
-  <p style="margin-top:48px;font-family:'Cormorant Garamond',serif;font-size:clamp(20px,3vw,28px);font-style:italic;color:var(--ink);line-height:1.45;text-align:center;max-width:560px;margin-left:auto;margin-right:auto;">O Saber Amar começa onde a dor foi instalada. E te devolve o que foi tirado de você.</p>
-  <div style="margin-top:40px;text-align:center;">
-   <a href="#oferta" class="btn-light" style="max-width:420px;">Quero começar a minha reconstrução &nbsp;→</a>
-   <p class="btn-note-ink" style="margin-top:10px;">12x de R$30,72 · Acesso imediato · Garantia de 7 dias</p>
-  </div>
- </div>
-</section>
-
-<!-- ══ MÉTODO / MÓDULOS  claro ═══════════ -->
-<section class="sec-metodo reveal" id="metodo">
- <div class="wrap">
-  <div class="metodo-intro">
-   <span class="label-rose">A sua jornada semana a semana</span>
-   <h2>Cinco módulos. Uma mulher que não se perde mais.</h2>
-   <div class="divider-gold"></div>
-   <p>Independente do que ele decidir. O caminho é seu.</p>
-  </div>
-
-  <div class="modulos">
-   <div class="modulo">
-    <div class="modulo-num">1</div>
-    <div class="modulo-corpo">
-     <p class="modulo-tag">Módulo 1 · Thais Ayumi</p>
-     <h3>Quebrar as inseguranças na raiz</h3>
-     <p>Onde começa o ciclo que você vive repetindo. O que te fez aceitar menos do que merecia. Por que você ficou quando devia ter ido, e o que isso revela sobre você, não sobre ele.</p>
-    </div>
-   </div>
-   <div class="modulo">
-    <div class="modulo-num">2</div>
-    <div class="modulo-corpo">
-     <p class="modulo-tag">Módulo 2 · Thais Ayumi</p>
-     <h3>Parar de precisar da validação dele para se sentir bem</h3>
-     <p>Autoestima que não depende da reação dele para existir. Autocuidado real. Segurança que vem de dentro, não de um gesto, um pedido de perdão, ou da presença dele.</p>
-    </div>
-   </div>
-   <div class="modulo">
-    <div class="modulo-num">3</div>
-    <div class="modulo-corpo">
-     <p class="modulo-tag">Módulo 3 · Thais Ayumi</p>
-     <h3>Sair da dependência. Começar a viver para você</h3>
-     <p>Parar de decidir pelo medo de ficar sozinha. Construir uma vida que seja sua, independente do que ele faça. Você não foi feita para existir em função de um relacionamento.</p>
-    </div>
-   </div>
-   <div class="modulo">
-    <div class="modulo-num">4</div>
-    <div class="modulo-corpo">
-     <p class="modulo-tag">Módulo 4 · César Augusto</p>
-     <h3>O que acontece na cabeça de um homem que traiu</h3>
-     <p>Não para que você entenda ele, mas para que você pare de se torturar com perguntas. César atende exclusivamente esses homens. Aqui você aprende a distinguir arrependimento real de performance, para ter clareza e tomar o seu poder de volta. <span style="display:inline-block;margin-top:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Acesso antecipado · incluído no seu plano</span></p>
-    </div>
-   </div>
-   <div class="modulo">
-    <div class="modulo-num">5</div>
-    <div class="modulo-corpo">
-     <p class="modulo-tag">Módulo 5 · César Augusto</p>
-     <h3>Ficar ou ir embora: uma decisão sua</h3>
-     <p>Avaliar o relacionamento com os olhos abertos. Decidir com clareza, não com culpa, não com pressão, não com medo. A resposta certa é a que vem de você, de um lugar forte. <span style="display:inline-block;margin-top:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.35);padding:7px 14px;">Acesso antecipado · incluído no seu plano</span></p>
-    </div>
-   </div>
-  </div>
-
-  <div class="bonus-row">
-   <div class="bonus-tag">Bônus</div>
-   <div class="bonus-corpo">
-    <h3>Glow Up: de dentro para fora</h3>
-    <p>Vídeos exclusivos com nutricionista, consultora de imagem e maquiadora. Porque reconstrução é também se olhar no espelho e reconhecer a mulher que você é, e gostar do que vê.</p>
-    <span class="badge-light">Incluído no acesso</span>
-   </div>
-  </div>
- </div>
-</section>
-
-
-<!-- ══ OFERTA  escuro ══════════════════════ -->
-<section class="sec-oferta reveal" id="oferta">
- <div class="wrap">
-  <div class="oferta-box">
-   <span class="oferta-eyebrow">Saber Amar · Acesso imediato</span>
-   <h2 class="oferta-h2">Você já sabe que<br><em>precisa disso.</em></h2>
-
-   <p style="font-size:15px;color:var(--creme60);font-weight:300;line-height:1.75;margin-bottom:28px;text-align:left;">
-    Se você chegou até aqui, a decisão já foi tomada lá dentro.<br>
-    O que falta é só dar o passo.
-   </p>
-
-   <div class="oferta-stack">
-    <p class="oferta-stack-titulo">O que você recebe</p>
-    <ul class="oferta-items">
-     <li><span style="flex:1;">Módulos 1, 2 e 3 com Thais Ayumi (autoestima, dependência, reconstrução)</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">R$591</span></li>
-     <li><span style="flex:1;">Módulos 4 e 5 com César Augusto (a cabeça dele + decisão nas suas mãos)</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">R$494</span></li>
-     <li><span style="flex:1;">Bônus Glow Up: nutricionista, imagem e maquiagem</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">R$147</span></li>
-     <li><span style="flex:1;">12 meses de acesso completo</span><span style="color:var(--creme30);white-space:nowrap;margin-left:12px;">incluso</span></li>
-    </ul>
-    <p class="oferta-total" style="font-size:15px;text-align:center;color:var(--creme60);border-top:1px solid rgba(255,255,255,.07);padding-top:16px;margin-bottom:28px;">
-     Valor total: <span style="text-decoration:line-through;color:var(--creme30);">R$1.232</span> &nbsp;→&nbsp; <strong style="color:var(--gold);">apenas R$297</strong>
+  <div class="container">
+    <span class="s-label">Você reconhece isso?</span>
+    <h2 class="s-title">O que acontece quando<br><em>você depende demais.</em></h2>
+    <p class="dor-intro">
+      Dependência emocional não é fraqueza. É o resultado de anos dando mais do que recebendo, aceitando menos do que merecia, <strong>e esquecendo quem você era antes de precisar tanto dele.</strong>
     </p>
-   </div>
-
-   <div class="ancoragem">
-    Uma sessão com a Thais ou com o César custa R$450. Aqui você tem os dois pelos próximos 12 meses. Por R$297, uma única vez.
-   </div>
-
-   <div style="text-align:center;margin:28px 0 8px;">
-    <p style="font-size:13px;color:var(--creme30);text-decoration:line-through;letter-spacing:.04em;margin-bottom:4px;">De R$397</p>
-    <p style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--creme30);margin-bottom:10px;">Por apenas</p>
-    <div class="preco-val"><span>R$</span>297</div>
-    <p style="font-size:14px;color:var(--creme30);margin-top:8px;">ou 12x de R$30,72 no cartão</p>
-   </div>
-
-   <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-dark" style="max-width:100%;">Quero a minha liberdade emocional &nbsp;→</a>
-   <p class="btn-note">Pagamento seguro · Acesso imediato · Kiwify</p>
-
-   <p class="microcopy">
-    Você já ficou tempo demais esperando sentir que estava pronta.<br>Essa espera não te protegeu de nada.
-   </p>
-
-   <div class="garantia">
-    <div class="garantia-ico">🛡️</div>
-    <div class="garantia-txt">
-     <h4>7 dias de garantia incondicional</h4>
-     <p>Se em 7 dias você não sentir que está no caminho certo, devolvemos 100% do seu investimento. Sem perguntas. Sem burocracia.</p>
+    <div class="dor-grid">
+      <div class="dor-item">
+        <p>Você faz tudo para agradá-lo. Se anula, se adapta, se apaga. E quanto mais você dá, <strong>menos ele valoriza.</strong></p>
+      </div>
+      <div class="dor-item">
+        <p>Ele sabe que você não vai a lugar nenhum. Então não tem medo de te machucar, não tem medo de te perder — <strong>e não faz questão de você.</strong></p>
+      </div>
+      <div class="dor-item">
+        <p>Você quer sair. Mas não consegue. Porque sem ele, <strong>você não sabe mais quem é.</strong> E isso te assusta mais do que ficar.</p>
+      </div>
+      <div class="dor-item">
+        <p>Você perdoou, voltou, tentou de novo. Mas no fundo sabe: <strong>enquanto você precisar tanto, ele nunca vai te tratar como merece.</strong></p>
+      </div>
+      <div class="dor-item">
+        <p>Você se olha no espelho e não se reconhece. A mulher confiante, desejável e inteira que você era <strong>foi ficando para trás.</strong></p>
+      </div>
+      <div class="dor-item">
+        <p>Você quer que ele volte a te olhar como olhava antes. Que volte a ter medo de te perder. <strong>Que faça questão de você.</strong></p>
+      </div>
     </div>
-   </div>
   </div>
- </div>
 </section>
 
-<!-- ══ OS DOIS  claro + cards escuros ═════ -->
-<section class="sec-dueto reveal">
- <div class="wrap-lg">
-  <div class="dueto-intro">
-   <span class="label-rose">Quem está do seu lado</span>
-   <h2>Ela ouve você.<br>Ele ouve ele.<br>Você recebe os dois lados.</h2>
-   <div class="divider-gold center"></div>
-   <p>Thais reconstrói o que foi destruído por dentro. César revela o que acontece do outro lado da porta. Para você ter clareza, poder e paz.</p>
+<!-- O QUE ELA REALMENTE QUER -->
+<section class="sec-transform reveal">
+  <div class="container-wide">
+    <span class="s-label">O que esse método entrega</span>
+    <h2 class="s-title" style="text-align:center;">Você não vai sair daqui<br><em>a mesma mulher.</em></h2>
+    <div class="transform-grid">
+      <div class="transform-card">
+        <div class="transform-num">01</div>
+        <h3 class="transform-title">Você para de correr atrás</h3>
+        <p class="transform-desc">Não como estratégia de manipulação — mas porque você vai entender, de dentro, por que não precisa mais. Isso muda tudo na dinâmica do relacionamento.</p>
+      </div>
+      <div class="transform-card">
+        <div class="transform-num">02</div>
+        <h3 class="transform-title">Você recupera o brilho e volta a ser desejada</h3>
+        <p class="transform-desc">A mulher segura de si, presente em si mesma, que não mendiga atenção — é a mulher mais desejável que existe. Você era essa mulher. Vai voltar a ser.</p>
+      </div>
+      <div class="transform-card">
+        <div class="transform-num">03</div>
+        <h3 class="transform-title">Ele começa a ter medo de te perder</h3>
+        <p class="transform-desc">Quando ele percebe que você não está mais na mão dele — que você tem vida, tem valor, tem presença própria — o medo de perder te aparece naturalmente.</p>
+      </div>
+      <div class="transform-card">
+        <div class="transform-num">04</div>
+        <h3 class="transform-title">Você decide com liberdade</h3>
+        <p class="transform-desc">Ficar ou ir embora vira uma escolha — não uma necessidade. Você escolhe de um lugar de força, não de desespero. Essa é a diferença que muda tudo.</p>
+      </div>
+    </div>
   </div>
-
-  <div class="sec-casal-foto" style="margin-bottom:3px;">
-   <img src="casal-hero.jpg" alt="César e Thais">
-  </div>
-
-  <div class="dueto-grid">
-   <div class="dueto-card">
-    <span class="card-label">Thais Ayumi · @thais_ayumi</span>
-    <h3>A psicanalista que te devolve quem você era antes de começar a se perder</h3>
-    <p>O que Thais viu se repetir em anos atendendo mulheres: mulheres brilhantes que foram ficando menores dentro de relacionamentos. <strong>O problema nunca está no outro. Está no que essa mulher passou a acreditar sobre si mesma.</strong> Ela é especialista nisso.</p>
-   </div>
-   <div class="dueto-card">
-    <span class="card-label">César Augusto · @cesaraugustoo_</span>
-    <h3>O psicanalista que atende exclusivamente homens que traem</h3>
-    <p>César ouve o que esses homens nunca dizem para as esposas. O arrependimento que é real, e o que é só medo de perder o conforto. <strong>Ele traz para este curso o que fica do outro lado de uma porta fechada.</strong> Para você ter clareza, não para salvar o casamento.</p>
-   </div>
-  </div>
- </div>
 </section>
 
-<!-- ══ FAQ  claro ═════════════════════════ -->
+<!-- VOZES REAIS -->
+<section class="sec-vozes reveal">
+  <div class="container-wide">
+    <span class="s-label">O que suas seguidoras dizem</span>
+    <h2 class="s-title">Elas já sentiram<br><em>exatamente isso.</em></h2>
+    <div class="vozes-grid">
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Queria tanto sair dessa dependência. Ele me disse que não depende de mim pra nada. Já eu dependo."</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Não consigo confiar. Acho que sempre vai fazer algo ruim de novo."</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Me sinto sem valor, baixa autoestima, sem importância."</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Me sinto de mãos atadas. Não aguento mais tantas brigas, tantas lembranças."</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Sou sempre a louca, egoísta, ignorante. Diz que pediu perdão. Se eu não aceito, o problema é meu."</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Como parar de ter dependência emocional no relacionamento para conseguir ir embora?"</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Ele não faz questão de mim. Mas não consigo sair."</p>
+      </div>
+      <div class="voz-card">
+        <p class="voz-handle">seguidora real</p>
+        <p class="voz-text">"Queria tanto sair dessa dependência. Mas não consigo sair."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section class="sec-diff reveal">
+  <div class="container">
+    <span class="s-label" style="color:var(--rose-light)">Por que esse método é diferente</span>
+    <h2 class="s-title s-title-white">Não é sobre se curar.<br><em>É sobre virar o jogo.</em></h2>
+
+    <p class="diff-text">
+      Todo curso de autoestima feminina te pede para trabalhar você mesma. Isso é certo — mas incompleto. Porque <strong>o que realmente muda a dinâmica do relacionamento não é a cura. É a transformação que ele percebe em você.</strong>
+    </p>
+    <p class="diff-text">
+      O homem que não teme perder uma mulher nunca vai tratá-la como merece. Mas quando ela para de precisar dele — quando volta a ser inteira, presente, segura — ele sente. E muda.
+    </p>
+    <p class="diff-text">
+      Esse método foi criado pelos dois lados: <strong>uma psicanalista que já foi você</strong> e sabe o caminho de dentro. E <strong>um psicanalista que atende os homens</strong> e sabe exatamente o que acontece na cabeça deles quando a mulher muda.
+    </p>
+
+    <div class="diff-quote">
+      "O homem não tem medo de perder a mulher dependente. Ele tem medo de perder a mulher que não precisa dele para ser inteira. Esse curso transforma você nessa mulher."
+    </div>
+
+    <div class="diff-cards">
+      <div class="diff-card">
+        <p class="diff-card-name">Thais Ayumi</p>
+        <p class="diff-card-role">Psicanalista &middot; Autoestima &amp; Dependência Emocional</p>
+        <p>Já foi a mulher dependente. Já se apagou dentro de relacionamentos. <strong>Fez o caminho de dentro e ensina porque conhece cada curva.</strong> Não é teoria. É experiência.</p>
+      </div>
+      <div class="diff-card">
+        <p class="diff-card-name">César Augusto</p>
+        <p class="diff-card-role">Psicanalista &middot; Especialista em Comportamento Masculino</p>
+        <p>Atende homens em relacionamentos há anos. <strong>Sabe o que acontece na cabeça dele quando ela muda.</strong> Traz neste curso a visão que você nunca conseguiu ter do outro lado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÓDULOS -->
+<section class="sec-mod reveal">
+  <div class="container">
+    <span class="s-label">O que você vai aprender</span>
+    <h2 class="s-title">Cinco módulos.<br><em>Uma mulher diferente.</em></h2>
+    <div class="mod-grid">
+
+      <div class="mod-item">
+        <div class="mod-num">1</div>
+        <div class="mod-body">
+          <p class="mod-tag">Thais Ayumi &middot; Módulo 1</p>
+          <h3 class="mod-title">Por que você foi ficando menor</h3>
+          <p class="mod-desc">Como a dependência emocional se instala sem você perceber. Por que você aceita o que aceita. O ponto exato onde você começou a se apagar — e como sair disso pela raiz.</p>
+        </div>
+      </div>
+
+      <div class="mod-item">
+        <div class="mod-num">2</div>
+        <div class="mod-body">
+          <p class="mod-tag">Thais Ayumi &middot; Módulo 2</p>
+          <h3 class="mod-title">Recupere seu brilho e volte a ser desejada</h3>
+          <p class="mod-desc">Como o excesso de necessidade afasta o que você quer. Como a mulher que recupera o brilho — que volta a ser inteira, presente e segura — se torna a mulher que ele não quer perder.</p>
+        </div>
+      </div>
+
+      <div class="mod-item">
+        <div class="mod-num">3</div>
+        <div class="mod-body">
+          <p class="mod-tag">Thais Ayumi &middot; Módulo 3</p>
+          <h3 class="mod-title">A mulher que ele não consegue ignorar</h3>
+          <p class="mod-desc">Reconstrução da autoestima e da presença. Como voltar a se sentir inteira, segura e desejável — sem precisar que ele confirme isso. Você para de se definir pelo relacionamento.</p>
+        </div>
+      </div>
+
+      <div class="mod-item">
+        <div class="mod-num">4</div>
+        <div class="mod-body">
+          <p class="mod-tag">César Augusto &middot; Módulo 4</p>
+          <h3 class="mod-title">O que acontece com ele quando você muda</h3>
+          <p class="mod-desc">Pela voz de quem ouve esses homens: o que passa na cabeça dele quando ela para de precisar. Por que o medo de perder aparece. O que de fato faz um homem valorizar uma mulher de verdade.</p>
+        </div>
+      </div>
+
+      <div class="mod-item">
+        <div class="mod-num">5</div>
+        <div class="mod-body">
+          <p class="mod-tag">César Augusto &middot; Módulo 5</p>
+          <h3 class="mod-title">Ficar ou ir embora — de um lugar de força</h3>
+          <p class="mod-desc">Quando você para de depender, a decisão de ficar ou sair vira uma escolha livre — não uma prisão. Como avaliar seu relacionamento com clareza e decidir sem culpa e sem medo.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section class="sec-bonus reveal">
+  <div class="container">
+    <span class="s-label" style="color:var(--gold)">Bônus incluído</span>
+    <h2 class="s-title s-title-white" style="margin-bottom:36px;">De dentro<br><em style="color:var(--gold-light)">para fora.</em></h2>
+    <div class="bonus-box">
+      <span class="bonus-badge">Bônus</span>
+      <div class="bonus-content">
+        <h3>Glow Up: a mulher que ele via e não via mais</h3>
+        <p>Autocuidado, beleza e estilo como ferramentas de reconexão com você mesma. Vídeos exclusivos com nutricionista, consultora de imagem e maquiadora. Porque se tornar magnética também passa pelo corpo — e por se olhar no espelho e reconhecer a mulher que você é.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTORES -->
+<section class="sec-ment reveal">
+  <div class="container-wide">
+    <span class="s-label" style="text-align:center; display:block; color:var(--rose-light)">Quem criou esse método</span>
+    <h2 class="s-title s-title-white" style="text-align:center;">Os dois lados<br><em>do mesmo problema.</em></h2>
+    <div class="ment-grid">
+      <div class="ment-card">
+        <h3 class="ment-name">Thais Ayumi</h3>
+        <p class="ment-role">Psicanalista &middot; Autoestima &amp; Dependência Emocional</p>
+        <p class="ment-bio">Antes de ajudar outras mulheres, precisou se ajudar. <strong>Viveu de dentro a dependência, a insegurança e relacionamentos que a apagaram.</strong> Fez o caminho. Hoje ensina ele — não como teoria, mas como alguém que conhece cada curva dessa estrada de dentro.</p>
+      </div>
+      <div class="ment-card">
+        <h3 class="ment-name">César Augusto</h3>
+        <p class="ment-role">Psicanalista &middot; Especialista em Comportamento Masculino</p>
+        <p class="ment-bio">Atende homens em relacionamentos há anos. Ouve o que eles nunca dizem para as esposas. <strong>Sabe o que acontece na cabeça dele quando ela muda — e traz isso para dentro deste curso.</strong> A visão que você nunca conseguiu ter do outro lado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="sec-oferta" id="oferta">
+  <div class="container reveal">
+    <div class="oferta-box">
+      <span class="oferta-label">Saber Amar &middot; Acesso imediato</span>
+      <h2 class="oferta-title">Comece hoje.<br><em>Sem medo.</em></h2>
+
+      <p class="oferta-de">De R$397,00</p>
+      <p class="oferta-price"><sup>R$</sup>297</p>
+      <p class="oferta-parcelado">ou 12x de R$30,72 no cartão</p>
+      <p class="oferta-ancora">Uma sessão com a Thais ou com o César custa R$450. Aqui você tem os dois por R$297.</p>
+
+      <ul class="oferta-items">
+        <li>5 módulos com Thais Ayumi e César Augusto</li>
+        <li>O que acontece com ele quando você para de precisar — pela voz de quem ouve esses homens</li>
+        <li>Como voltar a ser magnética e fazer ele ter medo de te perder</li>
+        <li>Decisão de ficar ou sair de um lugar de força, não de desespero</li>
+        <li>E-book Saber Amar + Checklist de implementação</li>
+        <li>Bônus Glow Up: nutricionista, consultora de imagem e maquiadora</li>
+        <li>12 meses de acesso completo na plataforma Kiwify</li>
+      </ul>
+
+      <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-compra">Quero recuperar meu brilho →</a>
+
+      <div class="garantia">
+        <span class="garantia-icon">🛡️</span>
+        <div>
+          <strong>7 dias de garantia incondicional</strong>
+          <p>Se em 7 dias você não sentir que está no caminho certo, devolvemos 100%. Sem perguntas. Sem burocracia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
 <section class="sec-faq reveal">
- <div class="wrap">
-  <div class="faq-intro">
-   <span class="label-rose">Dúvidas frequentes</span>
-   <h2>Perguntas que podem estar na sua cabeça.</h2>
-   <div class="divider-gold"></div>
+  <div class="container">
+    <span class="s-label">Dúvidas frequentes</span>
+    <h2 class="s-title">Perguntas<br><em>e respostas.</em></h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <p class="faq-q">Esse curso vai fazer ele mudar?</p>
+        <p class="faq-a">Não diretamente — e nenhum curso consegue mudar outra pessoa. O que o curso faz é mudar você. E quando você muda de verdade, a dinâmica do relacionamento muda junto. O módulo 4 do César explica exatamente o que acontece com ele quando você para de precisar tanto.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Funciona mesmo se eu ainda amo ele e não quero terminar?</p>
+        <p class="faq-a">Foi feito exatamente para isso. Você não precisa querer terminar para se inscrever. O método funciona para quem quer ficar e para quem quer sair — porque o trabalho é em você, não na decisão.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">E se ele não notar a mudança?</p>
+        <p class="faq-a">A transformação não é uma estratégia para ele. É para você. Quando você para de depender emocionalmente, você ganha — independente de como ele reage. Mas na maioria dos casos, ele percebe. O módulo 4 explica por quê.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Precisa ter sido traída para entrar?</p>
+        <p class="faq-a">Não. É para qualquer mulher que sente que perdeu a si mesma dentro de um relacionamento — traição, dependência emocional, relacionamento que a apaga, parceiro que não faz questão.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Posso fazer junto com o Reconstrução Masculina do meu marido?</p>
+        <p class="faq-a">Sim. Os dois cursos foram criados para se complementar. Ele trabalha o lado dele, você trabalha o seu. Funcionam juntos e funcionam separados.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Como funciona o acesso?</p>
+        <p class="faq-a">Aulas gravadas, no celular ou computador. Após o pagamento você recebe o acesso por e-mail e entra pelo app da Kiwify. 12 meses de acesso completo.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">As aulas do César já estão disponíveis?</p>
+        <p class="faq-a">Estão em gravação. Quem comprar agora recebe acesso automático assim que estiverem disponíveis — sem precisar fazer nada.</p>
+      </div>
+
+    </div>
   </div>
-  <div class="faq-lista">
-
-   <div class="faq-item">
-    <button class="faq-q open" onclick="faq(this)">
-     Esse curso é para mim se ainda não sei se fico ou saio?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a open">
-     <p>Foi feito exatamente para essa fase. O curso não te diz o que decidir, te devolve a clareza para decidir a partir de um lugar forte. Muitas mulheres entram sem saber o que querem. Ao final, sabem.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     O curso vai me dizer se fico ou saio?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Não. E isso é intencional. O Saber Amar não toma decisões por você, te devolve a capacidade de tomar as suas. Você vai sair com mais clareza sobre o que realmente quer, não com uma resposta que veio de fora.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Funciona mesmo para quem foi traída faz muito tempo?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Sim. O trauma não tem prazo de validade. O método trabalha na raiz, no que você passou a acreditar sobre si mesma —, não na data do evento.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Funciona se estou grávida ou temos filhos juntos?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Sim. Muitas mulheres que passaram pelo Saber Amar estavam nessa situação. Ter filhos ou estar grávida não muda a dor, e não muda o que você merece. O curso te ajuda a clarear o que você realmente quer, com tudo isso na mesa.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Ele já fez terapia mas não vejo mudança de verdade. Ainda faz sentido para mim?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Faz. O Saber Amar não é sobre o trabalho dele, é sobre o seu. Você aprende a enxergar com clareza se o que está vendo é mudança real ou performance. E independente da resposta, você sai mais inteira do que entrou.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     O problema é vício em pornografia, não traição. Ainda funciona?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Sim. Muitas mulheres chegam exatamente por isso. Ser preterida por uma tela destrói a autoestima da mesma forma que uma traição. O método trata a raiz: o que você passou a acreditar sobre si mesma. Isso não muda pela causa.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Posso fazer junto com o meu marido que está no Reconstrução Masculina?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Sim. O Reconstrução Masculina é para ele. O Saber Amar é para você. Foram criados para se complementar, mas funcionam de forma independente. Você não precisa que ele faça nada para começar.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     Qual o formato e como funciona o acesso?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>Aulas em vídeo, disponíveis no celular ou computador, com 12 meses de acesso. Após o pagamento, você recebe tudo por e-mail. Os módulos 4 e 5 do César estão em produção, quem entrar agora recebe automaticamente assim que ficarem disponíveis, sem precisar pagar de novo.</p>
-    </div>
-   </div>
-
-   <div class="faq-item">
-    <button class="faq-q" onclick="faq(this)">
-     E se eu não gostar?
-     <em class="ico">+</em>
-    </button>
-    <div class="faq-a">
-     <p>7 dias de garantia incondicional. Se não for para você, devolvemos 100%. Sem perguntas, sem burocracia.</p>
-    </div>
-   </div>
-
-  </div>
- </div>
 </section>
 
-<!-- ══ FOOTER CTA  escuro ══════════════════ -->
+<!-- FOOTER CTA -->
 <section class="sec-footer">
- <blockquote class="footer-quote">"Você não saiu daqui por fraqueza.<br>Você ficou porque aprendeu a acreditar que era o máximo que merecia.<br>Isso vai mudar."</blockquote>
- <p class="footer-autoria">Thais Ayumi e César Augusto</p>
- <a href="#oferta" class="btn-dark" style="max-width:420px;">Quero a minha liberdade emocional &nbsp;→</a>
- <p class="btn-note">Acesso imediato · 7 dias de garantia incondicional</p>
- <p class="footer-handles">@thais_ayumi &nbsp;·&nbsp; @cesaraugustoo_</p>
+  <p class="footer-quote">"Recupere seu brilho. Volte a ser desejada. E veja ele perceber que pode te perder."</p>
+  <p class="footer-by">César Augusto &amp; Thais Ayumi</p>
+  <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn-footer">Quero recuperar meu brilho →</a>
 </section>
-
 
 <script>
-// FAQ toggle
-function faq(btn) {
- const resp = btn.nextElementSibling;
- const isOpen = btn.classList.contains('open');
- document.querySelectorAll('.faq-q').forEach(b => {
-  b.classList.remove('open');
-  b.nextElementSibling.classList.remove('open');
- });
- if (!isOpen) { btn.classList.add('open'); resp.classList.add('open'); }
-}
-
-// Reveal on scroll
 const obs = new IntersectionObserver(entries => {
- entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.06 });
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
+
 </body>
 </html>
