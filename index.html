@@ -511,6 +511,79 @@ body {
   margin-bottom: 40px; position: relative; z-index: 1;
 }
 
+/* ── DESEJO / TRANSFORMAÇÃO ── */
+.sec-desejo { background: var(--white); }
+
+.desejo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+}
+
+.desejo-foto {
+  position: relative;
+  overflow: hidden;
+}
+
+.desejo-foto img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  display: block;
+  filter: brightness(.88) contrast(1.04);
+}
+
+.desejo-content {
+  padding: 80px 56px 80px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+}
+
+.desejo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 8px;
+}
+
+.desejo-list li {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.desejo-icon {
+  color: var(--wine-light);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  opacity: .7;
+}
+
+.desejo-list strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.desejo-list p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 760px) {
+  .desejo-grid { grid-template-columns: 1fr; }
+  .desejo-foto { height: 320px; }
+  .desejo-content { padding: 52px 20px; }
+}
+
 /* ── MOBILE ── */
 @media(max-width:480px){
   .sec { padding: 72px 20px; }
@@ -551,6 +624,56 @@ body {
     </p>
     <a href="#oferta" class="btn btn-wine">Quero recuperar meu brilho</a>
     <p class="hero-note">R$297 &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Garantia de 7 dias</p>
+  </div>
+</section>
+
+<!-- TRANSFORMAÇÃO / DESEJO -->
+<section class="sec-desejo reveal">
+  <div class="desejo-grid">
+    <div class="desejo-foto">
+      <img src="casal-hero.jpg" alt="César Augusto e Thaís Ayumi">
+    </div>
+    <div class="desejo-content">
+      <span class="eyebrow" style="color:var(--wine-light)">O que você vai viver</span>
+      <h2 class="s-title">Imagine acordar<br><em>sendo essa mulher.</em></h2>
+      <ul class="desejo-list">
+        <li>
+          <span class="desejo-icon">✦</span>
+          <div>
+            <strong>Ele volta a te olhar diferente.</strong>
+            <p>Como olhava quando tinha medo de te perder. Não por obrigação. Porque você voltou a ser a mulher que ele não quer imaginar perder.</p>
+          </div>
+        </li>
+        <li>
+          <span class="desejo-icon">✦</span>
+          <div>
+            <strong>Você volta a ser desejada de verdade.</strong>
+            <p>Não tolerada. Não aceita por comodidade. Desejada. Ele corre atrás, faz questão, escolhe você todos os dias.</p>
+          </div>
+        </li>
+        <li>
+          <span class="desejo-icon">✦</span>
+          <div>
+            <strong>Você se reconhece no espelho de novo.</strong>
+            <p>A mulher confiante, inteira e bonita que foi ficando para trás. Ela volta. E você para de precisar que ele confirme o que você já sabe sobre si mesma.</p>
+          </div>
+        </li>
+        <li>
+          <span class="desejo-icon">✦</span>
+          <div>
+            <strong>Você decide de um lugar de força.</strong>
+            <p>Ficar porque quer e porque merece. Ou ir embora porque se respeita. Sem culpa, sem medo, sem desespero.</p>
+          </div>
+        </li>
+        <li>
+          <span class="desejo-icon">✦</span>
+          <div>
+            <strong>Você para de aceitar menos do que merece.</strong>
+            <p>E começa a receber o amor que sempre quis. Não porque pediu. Porque você se tornou a mulher que inspira esse amor.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
