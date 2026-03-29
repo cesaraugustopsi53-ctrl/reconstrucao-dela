@@ -598,6 +598,93 @@ body {
   .ment-card { padding: 28px 24px; }
   .verdade-box { padding: 28px 24px; }
   .btn { padding: 16px 36px; font-size: 11px; }
+  .hero-duo { flex-direction: column; gap: 16px; }
+  .hero-duo-card { flex-direction: row; gap: 14px; text-align: left; }
+  .hero-duo-card img { width: 56px; height: 56px; }
+}
+
+/* ── DUO FOTOS ── */
+.hero-duo {
+  display: flex;
+  gap: 20px;
+  margin: 28px 0 8px;
+  justify-content: center;
+}
+.hero-duo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.hero-duo-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(107,31,42,.3);
+}
+.hero-duo-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.hero-duo-role {
+  font-size: 11px;
+  color: var(--ink-soft);
+  letter-spacing: .04em;
+}
+.hero-duo-casados {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--wine);
+  margin-top: 4px;
+  text-align: center;
+  letter-spacing: .03em;
+}
+
+/* ── DEPOIMENTOS PRINTS ── */
+.sec-depos { background: var(--cream); padding: 80px 0; }
+.depos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 960px;
+  margin: 32px auto 0;
+  padding: 0 24px;
+}
+.depo-print img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+  display: block;
+}
+@media(max-width:680px){
+  .depos-grid { grid-template-columns: 1fr; max-width: 400px; }
+}
+
+/* ── PREÇO PARCELADO DESTAQUE ── */
+.oferta-parcela-main {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--wine);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.oferta-parcela-main sup {
+  font-size: 22px;
+  vertical-align: super;
+}
+.oferta-parcela-sub {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.oferta-avista {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 20px;
 }
 </style>
 </head>
@@ -613,7 +700,7 @@ body {
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-inner">
-    <p class="hero-by">César Augusto &amp; Thaís Ayumi &nbsp;·&nbsp; Psicanalistas</p>
+    <p class="hero-by">Saber Amar</p>
     <h1 class="hero-h1">
       O plano completo para se curar, vencer a dependência emocional<br>
       <em>e voltar a ser uma mulher desejada e respeitada.</em>
@@ -622,8 +709,30 @@ body {
     <p class="hero-sub">
       Mesmo que hoje você se sinta presa, dependente ou com medo de <strong>nunca se curar de verdade.</strong>
     </p>
-    <a href="#oferta" class="btn btn-wine">Sim, eu quero me reconstruir</a>
-    <p class="hero-note">R$297 &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Garantia de 7 dias</p>
+    <div style="margin:32px 0;width:100%;max-width:560px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;box-shadow:0 8px 40px rgba(107,31,42,.25);">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sm7v1UfLkW4?rel=0&modestbranding=1" title="Saber Amar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block;"></iframe>
+    </div>
+    <a href="#oferta" class="btn btn-wine">Quero entrar para o Saber Amar</a>
+    <p class="hero-note">12x de R$30,72 &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Garantia de 7 dias</p>
+    <div class="hero-duo">
+      <div class="hero-duo-card">
+        <img src="thais-hero.jpg" alt="Thaís Ayumi" style="object-position:50% 15%">
+        <div>
+          <p class="hero-duo-name">Thaís Ayumi</p>
+          <p class="hero-duo-role">Psicanalista</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;padding-bottom:20px;">
+        <p class="hero-duo-casados">♥ casados</p>
+      </div>
+      <div class="hero-duo-card">
+        <img src="cesar-foto.jpg" alt="César Augusto" style="object-position:50% 10%">
+        <div>
+          <p class="hero-duo-name">César Augusto</p>
+          <p class="hero-duo-role">Psicanalista</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -742,24 +851,19 @@ body {
       pra ser amada.<br>
       Você nasceu pra ser <em>inteira.</em>"
     </p>
-    <a href="#oferta" class="btn btn-cream">Quero me reconstruir</a>
+    <a href="#oferta" class="btn btn-cream">Quero entrar para o Saber Amar</a>
   </div>
 </section>
 
-<!-- VOZES -->
-<section class="sec-vozes sec reveal">
+<!-- DEPOIMENTOS PRINTS -->
+<section class="sec-depos reveal">
   <div class="wrap-w">
-    <span class="eyebrow">Elas já enviaram isso para o César</span>
-    <h2 class="s-title">Se você já pensou<br>alguma dessas frases<em>…</em></h2>
-    <div class="vozes-grid">
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Queria tanto sair dessa dependência. Ele me disse que não depende de mim pra nada. Já eu dependo."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Me sinto sem valor, baixa autoestima, sem importância."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Ele não faz questão de mim. Mas não consigo sair."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Sou sempre a louca, egoísta, ignorante. Diz que pediu perdão. Se eu não aceito, o problema é meu."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Me sinto de mãos atadas. Não aguento mais."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Perdoei, mas não confio mais. Me odeio por não conseguir superar."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Não sei mais o que fazer. Estou cansada."</p></div>
-      <div class="voz"><p class="voz-handle">seguidora real</p><p class="voz-text">"Existe esperança?"</p></div>
+    <span class="eyebrow" style="text-align:center;display:block">Resultados reais</span>
+    <h2 class="s-title s-title-w" style="text-align:center">O que elas dizem<br><em>depois do curso.</em></h2>
+    <div class="depos-grid">
+      <div class="depo-print"><img src="dep-1.jpg" alt="Depoimento 1"></div>
+      <div class="depo-print"><img src="dep-2.jpg" alt="Depoimento 2"></div>
+      <div class="depo-print"><img src="dep-3.jpg" alt="Depoimento 3"></div>
     </div>
   </div>
 </section>
@@ -889,9 +993,9 @@ body {
     <div class="oferta-box">
       <span class="oferta-ey">Saber Amar · Acesso imediato</span>
       <h2 class="oferta-h">Recupere seu brilho.<br><em>Comece hoje.</em></h2>
-      <p class="oferta-de">De R$397,00</p>
-      <p class="oferta-price"><sup>R$</sup>297</p>
-      <p class="oferta-parcela">ou 12x de R$30,72 no cartão</p>
+      <p class="oferta-parcela-main"><sup>12x</sup> R$30,72</p>
+      <p class="oferta-parcela-sub">no cartão de crédito</p>
+      <p class="oferta-avista">ou R$297 à vista &nbsp;·&nbsp; <s style="color:var(--ink-soft);opacity:.6">De R$397</s></p>
       <p class="oferta-ancora">Uma sessão com a Thaís ou com o César custa R$450.<br>Aqui você tem os dois por R$297.</p>
       <hr class="oferta-sep">
       <ul class="oferta-items">
@@ -905,7 +1009,7 @@ body {
         <li>Bônus Glow Up: nutricionista, consultora de imagem e maquiadora</li>
         <li>12 meses de acesso completo na plataforma Kiwify</li>
       </ul>
-      <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-wine btn-full">Quero me reconstruir →</a>
+      <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-wine btn-full">Quero entrar para o Saber Amar →</a>
       <div class="garantia">
         <span class="g-icon">🛡️</span>
         <div>
@@ -956,7 +1060,7 @@ body {
   <div class="wrap" style="position:relative;z-index:1;text-align:center;">
     <p class="footer-q">"Cure-se primeiro.<br>Tudo o mais é consequência."</p>
     <p class="footer-by">César Augusto &amp; Thaís Ayumi</p>
-    <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-cream">Quero me reconstruir →</a>
+    <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-cream">Quero entrar para o Saber Amar →</a>
   </div>
 </section>
 
