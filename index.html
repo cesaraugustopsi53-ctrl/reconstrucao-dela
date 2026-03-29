@@ -125,27 +125,27 @@ body {
 }
 .hero-h1 {
   font-family: 'Cormorant', serif;
-  font-size: clamp(48px, 11vw, 96px);
+  font-size: clamp(30px, 5.5vw, 52px);
   font-weight: 600;
-  line-height: .97;
+  line-height: 1.1;
   color: var(--cream);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .hero-h1 em { font-style: italic; color: var(--wine-light); }
 .hero-rule {
   width: 36px; height: 1px;
   background: var(--wine-light);
-  margin: 36px auto; opacity: .5;
+  margin: 24px auto; opacity: .5;
 }
 .hero-sub {
-  font-size: clamp(15px, 2vw, 17px);
-  font-weight: 300;
-  line-height: 1.9;
-  color: rgba(245,237,227,.52);
+  font-size: clamp(17px, 2.8vw, 22px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: rgba(245,237,227,.78);
   max-width: 480px;
-  margin: 0 auto 20px;
+  margin: 0 auto 28px;
 }
-.hero-sub strong { color: var(--gold-light); font-weight: 500; }
+.hero-sub strong { color: var(--gold-light); font-weight: 600; }
 .hero-imperativo {
   font-family: 'Cormorant', serif;
   font-size: clamp(19px, 3.5vw, 28px);
@@ -605,43 +605,46 @@ body {
 
 /* ── DUO FOTOS ── */
 .hero-duo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin: 28px 0 8px;
-  justify-content: center;
+  margin: 32px auto 0;
+  max-width: 320px;
+  text-align: center;
 }
 .hero-duo-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  text-align: center;
 }
 .hero-duo-card img {
-  width: 72px;
-  height: 72px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(107,31,42,.3);
+  border: 2px solid rgba(245,237,227,.2);
+  filter: grayscale(10%) brightness(.88);
 }
 .hero-duo-name {
   font-size: 13px;
   font-weight: 600;
-  color: var(--ink);
+  color: rgba(245,237,227,.9);
   line-height: 1.3;
 }
 .hero-duo-role {
   font-size: 11px;
-  color: var(--ink-soft);
-  letter-spacing: .04em;
+  color: rgba(245,237,227,.45);
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 .hero-duo-casados {
+  grid-column: 1 / -1;
   font-size: 11px;
   font-style: italic;
-  color: var(--wine);
-  margin-top: 4px;
-  text-align: center;
-  letter-spacing: .03em;
+  color: var(--wine-light);
+  letter-spacing: .06em;
+  opacity: .8;
 }
 
 /* ── DEPOIMENTOS PRINTS ── */
@@ -717,21 +720,15 @@ body {
     <div class="hero-duo">
       <div class="hero-duo-card">
         <img src="thais-hero.jpg" alt="Thaís Ayumi" style="object-position:50% 15%">
-        <div>
-          <p class="hero-duo-name">Thaís Ayumi</p>
-          <p class="hero-duo-role">Psicanalista</p>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;padding-bottom:20px;">
-        <p class="hero-duo-casados">♥ casados</p>
+        <p class="hero-duo-name">Thaís Ayumi</p>
+        <p class="hero-duo-role">Psicanalista</p>
       </div>
       <div class="hero-duo-card">
         <img src="cesar-foto.jpg" alt="César Augusto" style="object-position:50% 10%">
-        <div>
-          <p class="hero-duo-name">César Augusto</p>
-          <p class="hero-duo-role">Psicanalista</p>
-        </div>
+        <p class="hero-duo-name">César Augusto</p>
+        <p class="hero-duo-role">Psicanalista</p>
       </div>
+      <p class="hero-duo-casados">♥ casados</p>
     </div>
   </div>
 </section>
@@ -750,35 +747,28 @@ body {
           <span class="desejo-icon">✦</span>
           <div>
             <strong>Cura emocional de verdade.</strong>
-            <p>Não enterrar a dor. Não fingir que está bem. Processar o que aconteceu e parar de carregar isso no lugar dela. Seja traição, seja anos se apagando.</p>
+            <p>Processar a dor — traição ou anos se apagando — e parar de carregar isso no lugar dela.</p>
           </div>
         </li>
         <li>
           <span class="desejo-icon">✦</span>
           <div>
             <strong>Vencer a dependência emocional.</strong>
-            <p>Parar de precisar da aprovação dele para se sentir inteira. Parar de ficar por medo. Descobrir quem você é fora desse relacionamento.</p>
+            <p>Parar de precisar da aprovação dele para se sentir inteira. Você existe fora desse relacionamento.</p>
           </div>
         </li>
         <li>
           <span class="desejo-icon">✦</span>
           <div>
             <strong>Autoestima reconstruída.</strong>
-            <p>A mulher confiante, presente e segura que foi ficando para trás. Ela volta. Não como resultado de ele te valorizar. Como resultado de você se valorizar primeiro.</p>
-          </div>
-        </li>
-        <li>
-          <span class="desejo-icon">✦</span>
-          <div>
-            <strong>O poder de escolha de volta.</strong>
-            <p>Ficar porque quer e porque merece, não porque tem medo. Ou ir embora porque se respeita. Você decide de um lugar de força, não de desespero.</p>
+            <p>Voltar a ser a mulher confiante e segura que foi ficando para trás.</p>
           </div>
         </li>
         <li>
           <span class="desejo-icon">✦</span>
           <div>
             <strong>Voltar a ser desejada e respeitada.</strong>
-            <p>Não como estratégia. Como consequência natural de quem você se torna. A mulher que se curou, que não depende e que sabe o que vale inspira um tipo de respeito que não se pede.</p>
+            <p>Não como estratégia. Como consequência de quem você se torna.</p>
           </div>
         </li>
       </ul>
@@ -792,7 +782,7 @@ body {
     <span class="eyebrow">Você reconhece isso?</span>
     <h2 class="s-title">Você foi ficando<br><em>menor aos poucos.</em></h2>
     <p class="dor-lead">
-      Não foi de uma vez. Foi cada vez que você cedeu demais, aceitou menos, colocou ele na frente de você mesma. <strong>Até o dia em que você se olhou no espelho e não se reconheceu mais.</strong>
+      Não foi de uma vez. Foi aos poucos. <strong>Até o dia em que você se olhou no espelho e não se reconheceu mais.</strong>
     </p>
     <ul class="dor-list">
       <li class="dor-item">
@@ -829,17 +819,11 @@ body {
     <span class="eyebrow">A verdade que ninguém te diz</span>
     <h2 class="s-title">Você não está presa<br>porque é fraca.<br><em>Você aprendeu a se apagar.</em></h2>
     <p class="verdade-p">
-      A dependência emocional não começa com ele. Começa com anos se colocando por último. Com confundir amor com necessidade. Com acreditar que seu valor depende de alguém te escolher.
-    </p>
-    <p class="verdade-p">
-      E quando vem uma traição por cima disso, a ferida vai fundo. Porque ela não atinge só o relacionamento. Ela atinge o que você ainda acreditava sobre si mesma.
+      A dependência não começa com ele. Começa com anos se colocando por último, confundindo amor com necessidade, acreditando que seu valor depende de alguém te escolher.
     </p>
     <div class="verdade-box">
       <p>Esse curso não trabalha a relação. Trabalha você. E quando você se cura, tudo ao redor responde diferente.</p>
     </div>
-    <p class="verdade-p">
-      Não como estratégia. Como consequência natural de uma mulher que <strong>voltou a ser inteira.</strong>
-    </p>
   </div>
 </section>
 
@@ -873,12 +857,6 @@ body {
   <div class="wrap">
     <span class="eyebrow" style="color:var(--wine-light)">Por que esse método funciona</span>
     <h2 class="s-title s-title-w">Os dois lados<br><em>do mesmo problema.</em></h2>
-    <p class="diff-p">
-      A Thaís viveu a dependência emocional de dentro. Fez o caminho de volta. Ensina cada passo não como teoria, mas como quem conhece essa estrada.
-    </p>
-    <p class="diff-p">
-      O César atende homens em relacionamentos há anos e ouve o que eles nunca dizem. <strong>Sabe exatamente o que acontece com ele quando ela para de depender e volta a ser inteira.</strong>
-    </p>
     <div class="diff-pull">
       "Cure-se primeiro. Tudo o mais, inclusive ele, é consequência disso."
     </div>
@@ -886,12 +864,12 @@ body {
       <div class="diff-card">
         <p class="diff-name">Thaís Ayumi</p>
         <p class="diff-role">Psicanalista · Autoestima &amp; Dependência Emocional</p>
-        <p>Já foi a mulher apagada. Já perdeu o brilho. <strong>Fez o caminho de volta e ensina cada passo. Não como teoria. Como quem viveu.</strong></p>
+        <p>Viveu a dependência emocional de dentro. <strong>Fez o caminho de volta e ensina cada passo — não como teoria, como quem viveu.</strong></p>
       </div>
       <div class="diff-card">
         <p class="diff-name">César Augusto</p>
         <p class="diff-role">Psicanalista · Especialista em Comportamento Masculino</p>
-        <p>Atende homens em relacionamentos há anos. <strong>Sabe o que ele sente quando ela muda. O que faz ele ter medo de perder.</strong> Traz isso para dentro do curso.</p>
+        <p>Atende homens há anos e ouve o que eles nunca dizem. <strong>Traz para o curso a visão de dentro do que acontece com ele quando ela muda.</strong></p>
       </div>
     </div>
   </div>
@@ -973,7 +951,7 @@ body {
         </div>
         <p class="ment-name">Thaís Ayumi</p>
         <p class="ment-role">Psicanalista · Autoestima &amp; Dependência Emocional</p>
-        <p class="ment-bio">Antes de ajudar outras mulheres, precisou se ajudar. <strong>Viveu a dependência, a insegurança e o apagamento dentro de relacionamentos.</strong> Fez o caminho de volta. Ensina cada passo. Não como teoria. Como quem conhece essa estrada de dentro.</p>
+        <p class="ment-bio">Viveu a dependência emocional de dentro. <strong>Fez o caminho de volta e criou o método.</strong> Não como teoria. Como quem conhece essa estrada.</p>
       </div>
       <div class="ment-card">
         <div class="ment-photo">
@@ -981,7 +959,7 @@ body {
         </div>
         <p class="ment-name">César Augusto</p>
         <p class="ment-role">Psicanalista · Especialista em Comportamento Masculino</p>
-        <p class="ment-bio">Atende homens em relacionamentos há anos. Ouve o que eles nunca dizem para as esposas. <strong>Sabe exatamente o que acontece com ele quando ela recupera o brilho.</strong> Traz isso para dentro deste curso.</p>
+        <p class="ment-bio">Atende homens em relacionamentos e ouve o que eles nunca dizem. <strong>Sabe o que acontece com ele quando ela para de depender. Traz isso para dentro do curso.</strong></p>
       </div>
     </div>
   </div>
