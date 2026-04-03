@@ -3,9 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saber Amar — César Augusto & Thais Ayumi</title>
+<title>Reconstrução Feminina — Thais Ayumi & César Augusto</title>
+<meta name="description" content="Um programa completo de cura emocional para mulheres que passaram por traição e querem se reconstruir — com clareza, com força, sem culpa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','702407242839062');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=702407242839062&ev=PageView&noscript=1"/></noscript>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VS98RGD9JY"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VS98RGD9JY');</script>
+
 <style>
 
 /* ── RESET ── */
@@ -30,9 +43,10 @@ body {
   --tinta-mid: #3D2318;
   --tinta-soft:#6B4535;
   --branco:    #FAF5EF;
+  --dourado:   #C9A84C;
 }
 
-/* ── TIPOGRAFIA BASE ── */
+/* ── TIPOGRAFIA ── */
 .t-display {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
@@ -45,13 +59,7 @@ body {
   font-style: italic;
   line-height: 1.0;
 }
-.t-body {
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 300;
-  line-height: 1.85;
-}
 .t-label {
-  font-family: 'DM Sans', sans-serif;
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 4px;
@@ -59,8 +67,9 @@ body {
 }
 
 /* ── LAYOUT ── */
-.col { max-width: 620px; margin: 0 auto; padding: 0 28px; }
-.col-wide { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+.col     { max-width: 620px; margin: 0 auto; padding: 0 28px; }
+.col-wide{ max-width: 900px; margin: 0 auto; padding: 0 28px; }
+.col-max { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
 
 /* ── REVEAL ── */
 .r {
@@ -72,89 +81,86 @@ body {
 .r.d1 { transition-delay: .1s; }
 .r.d2 { transition-delay: .2s; }
 .r.d3 { transition-delay: .3s; }
+.r.d4 { transition-delay: .4s; }
 
-/* ── TOPBAR ── */
+/* ─────────────────────────────────────
+   TOPBAR
+───────────────────────────────────── */
 .topbar {
   background: var(--tinta);
-  padding: 9px 28px;
+  padding: 10px 28px;
   text-align: center;
   font-size: 11px;
   font-weight: 300;
-  color: rgba(242,232,220,.45);
+  color: rgba(242,232,220,.5);
   letter-spacing: 1px;
+  position: relative;
+  z-index: 10;
 }
 .topbar strong { color: rgba(242,232,220,.85); font-weight: 500; }
 
-/* ══════════════════════════════
+/* ─────────────────────────────────────
    HERO
-══════════════════════════════ */
+───────────────────────────────────── */
 .hero {
   background: var(--creme);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 96px 28px 80px;
+  padding: 96px 28px 88px;
   position: relative;
   overflow: hidden;
 }
-
-/* linha decorativa vertical */
 .hero::before {
   content: '';
   position: absolute;
   top: 0; left: 28px;
   width: 1px; height: 100%;
   background: linear-gradient(to bottom, transparent, var(--creme-mid) 30%, var(--creme-mid) 70%, transparent);
-  opacity: .6;
+  opacity: .5;
 }
-
 .hero-by {
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--tinta-soft);
-  margin-bottom: 56px;
+  margin-bottom: 52px;
   padding-left: 20px;
 }
-
 .hero-h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(52px, 13vw, 110px);
+  font-size: clamp(48px, 12vw, 100px);
   font-weight: 400;
   line-height: .97;
   color: var(--tinta);
   letter-spacing: -0.02em;
   max-width: 700px;
 }
-
 .hero-h1 .it {
   font-style: italic;
   color: var(--vinho);
   display: block;
+  margin-top: 6px;
 }
-
 .hero-rule {
   width: 32px; height: 1px;
   background: var(--vinho);
-  margin: 48px 0;
+  margin: 44px 0;
   opacity: .5;
 }
-
 .hero-sub {
   font-size: 15px;
   font-weight: 300;
   line-height: 1.85;
   color: var(--tinta-soft);
-  max-width: 420px;
+  max-width: 440px;
   margin-bottom: 52px;
 }
-.hero-sub strong {
-  color: var(--tinta);
-  font-weight: 500;
-}
+.hero-sub strong { color: var(--tinta); font-weight: 500; }
 
+/* ── BOTÕES ── */
 .btn {
   display: inline-block;
   font-family: 'DM Sans', sans-serif;
@@ -163,35 +169,18 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 18px 44px;
+  padding: 20px 48px;
   border-radius: 0;
   transition: all .22s;
   cursor: pointer;
   border: none;
   -webkit-tap-highlight-color: transparent;
 }
-.btn-vinho {
-  background: var(--vinho);
-  color: var(--creme);
-}
-.btn-vinho:hover {
-  background: var(--vinho-mid);
-  transform: translateY(-1px);
-}
-.btn-creme {
-  background: var(--creme);
-  color: var(--vinho);
-  border: 1px solid var(--vinho);
-}
-.btn-creme:hover {
-  background: var(--branco);
-}
-.btn-full {
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 20px 24px;
-}
+.btn-vinho   { background: var(--vinho); color: var(--creme); }
+.btn-vinho:hover { background: var(--vinho-mid); transform: translateY(-1px); }
+.btn-creme   { background: transparent; color: var(--vinho); border: 1px solid rgba(92,26,36,.35); }
+.btn-creme:hover { background: var(--branco); }
+.btn-full    { display: block; width: 100%; text-align: center; padding: 22px 24px; }
 
 .hero-note {
   font-size: 11px;
@@ -201,35 +190,34 @@ body {
   letter-spacing: .5px;
 }
 
-/* ══════════════════════════════
+/* ─────────────────────────────────────
    FRASE CENTRAL
-══════════════════════════════ */
+───────────────────────────────────── */
 .sec-frase {
   background: var(--tinta);
   padding: 96px 28px;
 }
-
 .frase-text {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 5.5vw, 52px);
+  font-size: clamp(26px, 5vw, 50px);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--creme);
   max-width: 680px;
+  opacity: .9;
 }
 .frase-text em {
   font-style: italic;
   color: rgba(242,232,220,.45);
 }
 
-/* ══════════════════════════════
+/* ─────────────────────────────────────
    DOR
-══════════════════════════════ */
+───────────────────────────────────── */
 .sec-dor {
   background: var(--branco);
-  padding: 96px 28px;
+  padding: 104px 28px;
 }
-
 .dor-intro {
   font-size: 16px;
   font-weight: 300;
@@ -239,168 +227,285 @@ body {
   margin-bottom: 64px;
 }
 .dor-intro strong { color: var(--tinta); font-weight: 500; }
-
 .dor-items {
   list-style: none;
   border-top: 1px solid var(--creme-mid);
   max-width: 580px;
 }
-
 .dor-item {
-  padding: 22px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--creme-mid);
   display: grid;
-  grid-template-columns: 20px 1fr;
-  gap: 16px;
+  grid-template-columns: 24px 1fr;
+  gap: 18px;
   align-items: baseline;
 }
-
 .dor-n {
   font-family: 'Cormorant Garamond', serif;
   font-size: 13px;
-  font-weight: 400;
   color: var(--vinho);
   opacity: .5;
 }
-
 .dor-item p {
   font-size: 15px;
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--tinta-mid);
 }
-.dor-item p strong {
-  color: var(--tinta);
-  font-weight: 500;
-}
+.dor-item p strong { color: var(--tinta); font-weight: 500; }
 
-/* ══════════════════════════════
+/* ─────────────────────────────────────
    VERDADE
-══════════════════════════════ */
+───────────────────────────────────── */
 .sec-verdade {
   background: var(--creme-esc);
-  padding: 96px 28px;
+  padding: 104px 28px;
 }
-
 .verdade-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
   color: var(--vinho);
-  display: block;
-  margin-bottom: 40px;
+  display: block; margin-bottom: 40px;
 }
-
 .verdade-h {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(32px, 6vw, 56px);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--tinta);
-  max-width: 540px;
+  font-size: clamp(30px, 5.5vw, 54px);
+  font-weight: 400; line-height: 1.1;
+  color: var(--tinta); max-width: 560px;
   margin-bottom: 48px;
 }
 .verdade-h em { font-style: italic; color: var(--vinho); }
-
 .verdade-p {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.9;
-  color: var(--tinta-soft);
-  max-width: 520px;
-  margin-bottom: 20px;
+  font-size: 15px; font-weight: 300;
+  line-height: 1.9; color: var(--tinta-soft);
+  max-width: 520px; margin-bottom: 20px;
 }
 .verdade-p strong { color: var(--tinta); font-weight: 500; }
-
 .verdade-pull {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 3.5vw, 30px);
-  font-weight: 400;
-  font-style: italic;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 400; font-style: italic;
   color: var(--tinta);
   border-left: 1px solid var(--vinho);
-  padding: 24px 28px;
-  margin: 48px 0;
-  max-width: 540px;
-  line-height: 1.45;
+  padding: 28px 32px;
+  margin: 52px 0;
+  max-width: 560px;
+  line-height: 1.5;
   background: rgba(92,26,36,.04);
 }
+.verdade-assinatura {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+.verdade-assinatura img {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: .85;
+}
+.verdade-assinatura-nome {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--vinho); opacity: .7;
+}
 
-/* ══════════════════════════════
-   TRANSFORMAÇÃO
-══════════════════════════════ */
-.sec-transform {
+/* ─────────────────────────────────────
+   PARA QUEM É
+───────────────────────────────────── */
+.sec-quem {
   background: var(--vinho);
-  padding: 96px 28px;
+  padding: 104px 28px;
 }
+.quem-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(242,232,220,.45);
+  display: block; margin-bottom: 48px;
+}
+.quem-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5.5vw, 54px);
+  font-weight: 400; line-height: 1.1;
+  color: var(--creme); max-width: 580px;
+  margin-bottom: 52px;
+}
+.quem-h em { font-style: italic; color: rgba(242,232,220,.5); }
+.quem-items {
+  list-style: none;
+  border-top: 1px solid rgba(242,232,220,.1);
+  max-width: 540px;
+}
+.quem-item {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(242,232,220,.1);
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.quem-dash {
+  color: rgba(242,232,220,.3);
+  font-size: 14px; flex-shrink: 0;
+  margin-top: 2px;
+}
+.quem-item p {
+  font-size: 15px; font-weight: 300;
+  line-height: 1.75; color: rgba(242,232,220,.75);
+}
+.quem-item p strong { color: var(--creme); font-weight: 500; }
 
+/* ─────────────────────────────────────
+   TRANSFORMAÇÃO
+───────────────────────────────────── */
+.sec-transform {
+  background: var(--branco);
+  padding: 104px 28px;
+}
 .transform-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(242,232,220,.4);
-  display: block;
-  margin-bottom: 48px;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--vinho); display: block; margin-bottom: 40px;
 }
-
 .transform-h {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 6vw, 60px);
-  font-weight: 400;
-  line-height: 1.05;
-  color: var(--creme);
-  max-width: 560px;
+  font-size: clamp(32px, 5.5vw, 56px);
+  font-weight: 400; line-height: 1.05;
+  color: var(--tinta); max-width: 560px;
   margin-bottom: 64px;
 }
-.transform-h em { font-style: italic; color: rgba(242,232,220,.55); }
-
+.transform-h em { font-style: italic; color: var(--vinho); }
 .transform-items {
   list-style: none;
-  max-width: 540px;
-  border-top: 1px solid rgba(242,232,220,.12);
+  max-width: 560px;
+  border-top: 1px solid var(--creme-mid);
 }
-
 .transform-item {
-  padding: 24px 0;
-  border-bottom: 1px solid rgba(242,232,220,.12);
+  padding: 28px 0;
+  border-bottom: 1px solid var(--creme-mid);
 }
-
 .transform-item p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.7;
-  color: rgba(242,232,220,.75);
+  font-size: 15px; font-weight: 300;
+  line-height: 1.75; color: var(--tinta-mid);
 }
 .transform-item p strong {
-  color: var(--creme);
-  font-weight: 500;
-  display: block;
-  margin-bottom: 4px;
+  color: var(--tinta); font-weight: 500;
+  display: block; margin-bottom: 6px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 19px;
-  font-style: italic;
+  font-size: 20px; font-style: italic;
 }
 
-/* ══════════════════════════════
-   MENTORES
-══════════════════════════════ */
-.sec-ment {
+/* ─────────────────────────────────────
+   MÓDULOS
+───────────────────────────────────── */
+.sec-modulos {
+  background: var(--creme);
+  padding: 104px 28px;
+}
+.modulos-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--vinho); display: block; margin-bottom: 16px;
+}
+.modulos-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 400; line-height: 1.1;
+  color: var(--tinta); max-width: 560px;
+  margin-bottom: 72px;
+}
+.modulos-h em { font-style: italic; color: var(--vinho); }
+.modulos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--creme-mid);
+  max-width: 860px;
+}
+@media(max-width:640px){ .modulos-grid { grid-template-columns: 1fr; } }
+.modulo-card {
   background: var(--branco);
-  padding: 96px 28px;
+  padding: 40px 36px;
+}
+.modulo-card.destaque {
+  background: var(--tinta);
+}
+.modulo-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px; color: var(--vinho);
+  letter-spacing: 3px; text-transform: uppercase;
+  opacity: .6; display: block; margin-bottom: 8px;
+}
+.modulo-card.destaque .modulo-num { color: rgba(242,232,220,.4); }
+.modulo-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 400;
+  color: var(--tinta); line-height: 1.25;
+  margin-bottom: 6px;
+}
+.modulo-card.destaque .modulo-titulo { color: var(--creme); }
+.modulo-por {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--vinho); opacity: .7;
+  margin-bottom: 24px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--creme-mid);
+}
+.modulo-card.destaque .modulo-por {
+  color: rgba(242,232,220,.4);
+  border-bottom-color: rgba(242,232,220,.1);
+}
+.modulo-items {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.modulo-items li {
+  font-size: 13px; font-weight: 300;
+  line-height: 1.65; color: var(--tinta-soft);
+  display: flex; gap: 10px; align-items: flex-start;
+}
+.modulo-card.destaque .modulo-items li { color: rgba(242,232,220,.6); }
+.modulo-items li::before {
+  content: '—'; color: var(--vinho);
+  flex-shrink: 0; opacity: .5; margin-top: 1px;
+}
+.modulo-card.destaque .modulo-items li::before { color: rgba(242,232,220,.3); }
+
+.bonus-card {
+  background: var(--creme-esc);
+  padding: 40px 36px;
+  margin-top: 1px;
+  display: flex; gap: 32px; align-items: flex-start;
+  flex-wrap: wrap;
+}
+.bonus-tag {
+  font-size: 9px; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--vinho); background: rgba(92,26,36,.08);
+  padding: 5px 10px; display: inline-block;
+  margin-bottom: 12px;
+}
+.bonus-titulo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 400;
+  color: var(--tinta); margin-bottom: 8px;
+}
+.bonus-sub {
+  font-size: 12px; font-weight: 300;
+  color: var(--tinta-soft); line-height: 1.7;
+  max-width: 360px;
 }
 
+/* ─────────────────────────────────────
+   MENTORES
+───────────────────────────────────── */
+.sec-ment {
+  background: var(--creme-esc);
+  padding: 104px 28px;
+}
 .ment-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--vinho);
-  display: block;
-  margin-bottom: 56px;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--vinho); display: block; margin-bottom: 56px;
 }
-
 .ment-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -409,270 +514,56 @@ body {
   max-width: 820px;
 }
 @media(max-width:580px){ .ment-grid { grid-template-columns: 1fr; } }
-
 .ment-card {
   background: var(--branco);
   padding: 40px 36px;
 }
-
-/* placeholder foto */
 .ment-foto {
-  width: 64px; height: 64px;
+  width: 72px; height: 72px;
   border-radius: 50%;
-  background: var(--creme-esc);
-  margin-bottom: 24px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 24px;
 }
-.ment-foto img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
-.ment-foto-ph {
-  font-size: 10px;
-  color: var(--tinta-soft);
-  opacity: .4;
-  text-align: center;
-  line-height: 1.4;
-}
-
+.ment-foto img { width: 100%; height: 100%; object-fit: cover; }
 .ment-nome {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 26px;
-  font-weight: 400;
-  color: var(--tinta);
-  margin-bottom: 4px;
+  font-size: 26px; font-weight: 400;
+  color: var(--tinta); margin-bottom: 4px;
 }
 .ment-role {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--vinho);
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  font-size: 9px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--vinho); opacity: .7;
+  margin-bottom: 20px; padding-bottom: 20px;
   border-bottom: 1px solid var(--creme-mid);
 }
 .ment-bio {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.85;
-  color: var(--tinta-soft);
+  font-size: 14px; font-weight: 300;
+  line-height: 1.85; color: var(--tinta-soft);
 }
 .ment-bio strong { color: var(--tinta); font-weight: 500; }
 
-/* ══════════════════════════════
-   OFERTA
-══════════════════════════════ */
-.sec-oferta {
-  background: var(--creme);
-  padding: 96px 28px;
-}
-
-.oferta-wrap {
-  max-width: 520px;
-}
-
-.oferta-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--vinho);
-  display: block;
-  margin-bottom: 32px;
-}
-
-.oferta-h {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(36px, 6vw, 56px);
-  font-weight: 400;
-  line-height: 1.05;
-  color: var(--tinta);
-  margin-bottom: 56px;
-}
-.oferta-h em { font-style: italic; color: var(--vinho); }
-
-.oferta-price-wrap {
-  margin-bottom: 8px;
-}
-.oferta-de {
-  font-size: 12px;
-  color: var(--tinta-soft);
-  text-decoration: line-through;
-  opacity: .45;
-  margin-bottom: 4px;
-}
-.oferta-price {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 80px;
-  font-weight: 300;
-  color: var(--tinta);
-  line-height: 1;
-}
-.oferta-price sup {
-  font-size: 28px;
-  vertical-align: top;
-  margin-top: 16px;
-  display: inline-block;
-  font-weight: 300;
-  color: var(--vinho);
-}
-.oferta-parcela {
-  font-size: 13px;
-  color: var(--tinta-soft);
-  margin-bottom: 8px;
-}
-.oferta-ancora {
-  font-size: 13px;
-  font-style: italic;
-  color: var(--tinta-soft);
-  opacity: .7;
-  margin-bottom: 48px;
-}
-
-.oferta-sep {
-  border: none;
-  border-top: 1px solid var(--creme-mid);
-  margin-bottom: 32px;
-}
-
-.oferta-items {
-  list-style: none;
-  margin-bottom: 44px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.oferta-items li {
-  font-size: 14px;
-  font-weight: 300;
-  color: var(--tinta-mid);
-  display: flex;
-  gap: 14px;
-  line-height: 1.6;
-  align-items: flex-start;
-}
-.oferta-items li::before {
-  content: '—';
-  color: var(--vinho);
-  flex-shrink: 0;
-  opacity: .6;
-}
-
-.garantia {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 20px 0;
-  border-top: 1px solid var(--creme-mid);
-  margin-top: 20px;
-}
-.g-icon { font-size: 20px; flex-shrink: 0; opacity: .7; }
-.g-title {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--tinta);
-  margin-bottom: 3px;
-}
-.g-text { font-size: 12px; font-weight: 300; color: var(--tinta-soft); line-height: 1.6; }
-
-/* ══════════════════════════════
-   FAQ
-══════════════════════════════ */
-.sec-faq {
-  background: var(--creme-esc);
-  padding: 96px 28px;
-}
-
-.faq-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--vinho);
-  display: block;
-  margin-bottom: 48px;
-}
-
-.faq-list {
-  border-top: 1px solid var(--creme-mid);
-  max-width: 560px;
-}
-.faq-item { border-bottom: 1px solid var(--creme-mid); padding: 26px 0; }
-.faq-q {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--tinta);
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
-.faq-a {
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--tinta-soft);
-}
-
-/* ══════════════════════════════
-   FOOTER
-══════════════════════════════ */
-.sec-footer {
-  background: var(--tinta);
-  padding: 88px 28px;
-}
-
-.footer-q {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 5.5vw, 52px);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--creme);
-  max-width: 580px;
-  line-height: 1.25;
-  margin-bottom: 14px;
-  opacity: .9;
-}
-.footer-by {
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  color: rgba(242,232,220,.3);
-  margin-bottom: 48px;
-}
-
-/* ══════════════════════════════
+/* ─────────────────────────────────────
    DEPOIMENTOS
-══════════════════════════════ */
+───────────────────────────────────── */
 .sec-depos {
   background: var(--tinta);
-  padding: 96px 28px;
+  padding: 104px 28px;
 }
 .depos-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: rgba(242,232,220,.4);
-  display: block;
-  margin-bottom: 12px;
-  text-align: center;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(242,232,220,.35);
+  display: block; margin-bottom: 12px; text-align: center;
 }
 .depos-h {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 5vw, 46px);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--creme);
-  text-align: center;
-  margin-bottom: 56px;
-  opacity: .9;
+  font-size: clamp(26px, 4.5vw, 44px);
+  font-weight: 400; font-style: italic;
+  color: var(--creme); text-align: center;
+  margin-bottom: 60px; opacity: .9;
 }
-.depos-h em { font-style: normal; color: rgba(242,232,220,.45); }
+.depos-h em { font-style: normal; color: rgba(242,232,220,.4); }
 .depos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -682,35 +573,226 @@ body {
 }
 .depos-grid img {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0,0,0,.3);
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0,0,0,.35);
   display: block;
 }
-@media(max-width:600px){
-  .depos-grid { grid-template-columns: 1fr; max-width: 400px; }
+@media(max-width:600px){ .depos-grid { grid-template-columns: 1fr; max-width: 380px; } }
+
+/* ─────────────────────────────────────
+   OFERTA
+───────────────────────────────────── */
+.sec-oferta {
+  background: var(--creme);
+  padding: 104px 28px;
+}
+.oferta-wrap { max-width: 520px; }
+.oferta-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--vinho); display: block; margin-bottom: 32px;
+}
+.oferta-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 6vw, 56px);
+  font-weight: 400; line-height: 1.05;
+  color: var(--tinta); margin-bottom: 52px;
+}
+.oferta-h em { font-style: italic; color: var(--vinho); }
+.oferta-de {
+  font-size: 12px; color: var(--tinta-soft);
+  text-decoration: line-through; opacity: .4; margin-bottom: 4px;
+}
+.oferta-parcela-destaque {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 10vw, 86px);
+  font-weight: 300; color: var(--tinta); line-height: 1;
+  display: flex; align-items: flex-start; gap: 6px;
+}
+.oferta-parcela-destaque sup {
+  font-size: 22px; vertical-align: top;
+  margin-top: 18px; display: inline-block;
+  font-weight: 300; color: var(--vinho);
+}
+.oferta-parcela-texto {
+  font-size: 14px; color: var(--tinta-soft);
+  margin-bottom: 4px; font-weight: 300;
+}
+.oferta-avista {
+  font-size: 13px; color: var(--tinta-soft);
+  opacity: .65; margin-bottom: 6px;
+}
+.oferta-ancora {
+  font-size: 13px; font-style: italic;
+  color: var(--tinta-soft); opacity: .6;
+  margin-bottom: 48px; margin-top: 4px;
+}
+.oferta-sep { border: none; border-top: 1px solid var(--creme-mid); margin-bottom: 32px; }
+.oferta-items {
+  list-style: none; margin-bottom: 44px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.oferta-items li {
+  font-size: 14px; font-weight: 300;
+  color: var(--tinta-mid); display: flex;
+  gap: 14px; line-height: 1.65; align-items: flex-start;
+}
+.oferta-items li::before {
+  content: '—'; color: var(--vinho);
+  flex-shrink: 0; opacity: .5;
+}
+.garantia {
+  display: flex; gap: 16px;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-top: 1px solid var(--creme-mid);
+  margin-top: 12px;
+}
+.g-icon { font-size: 22px; flex-shrink: 0; opacity: .65; }
+.g-title {
+  display: block; font-size: 13px;
+  font-weight: 500; color: var(--tinta); margin-bottom: 4px;
+}
+.g-text {
+  font-size: 12px; font-weight: 300;
+  color: var(--tinta-soft); line-height: 1.65;
+}
+.g-voz {
+  font-size: 12px; font-weight: 300;
+  color: var(--vinho); opacity: .7;
+  margin-top: 6px; font-style: italic;
 }
 
-/* ══════════════════════════════
-   MOBILE
-══════════════════════════════ */
+/* ─────────────────────────────────────
+   FAQ
+───────────────────────────────────── */
+.sec-faq {
+  background: var(--branco);
+  padding: 104px 28px;
+}
+.faq-label {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: var(--vinho); display: block; margin-bottom: 48px;
+}
+.faq-list {
+  border-top: 1px solid var(--creme-mid);
+  max-width: 580px;
+}
+.faq-item { border-bottom: 1px solid var(--creme-mid); padding: 28px 0; }
+.faq-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px; font-weight: 400;
+  color: var(--tinta); margin-bottom: 12px; line-height: 1.3;
+}
+.faq-a {
+  font-size: 14px; font-weight: 300;
+  line-height: 1.85; color: var(--tinta-soft);
+}
+
+/* ─────────────────────────────────────
+   FOOTER CTA
+───────────────────────────────────── */
+.sec-footer {
+  background: var(--tinta);
+  padding: 96px 28px 120px;
+}
+.footer-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 4.5vw, 44px);
+  font-weight: 400; font-style: italic;
+  color: var(--creme); max-width: 620px;
+  line-height: 1.35; margin-bottom: 8px; opacity: .88;
+}
+.footer-by {
+  font-size: 11px; font-weight: 300;
+  letter-spacing: 2px; color: rgba(242,232,220,.28);
+  margin-bottom: 52px;
+}
+
+/* ─────────────────────────────────────
+   STICKY BAR
+───────────────────────────────────── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--tinta);
+  padding: 14px 24px;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  z-index: 99;
+  box-shadow: 0 -4px 24px rgba(0,0,0,.25);
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
+}
+.sticky-bar.visible { transform: translateY(0); }
+.sticky-info { display: flex; flex-direction: column; gap: 2px; }
+.sticky-nome {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(242,232,220,.4);
+}
+.sticky-preco {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; color: var(--creme);
+}
+.sticky-btn {
+  background: var(--vinho);
+  color: var(--creme);
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 28px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.sticky-btn:hover { background: var(--vinho-mid); }
 @media(max-width:480px){
-  .hero { padding: 88px 20px 72px; }
+  .sticky-bar { padding: 12px 16px; gap: 10px; }
+  .sticky-preco { font-size: 17px; }
+  .sticky-btn { padding: 12px 18px; font-size: 9px; letter-spacing: 2px; }
+}
+
+/* ─────────────────────────────────────
+   MOBILE
+───────────────────────────────────── */
+@media(max-width:480px){
+  .hero { padding: 88px 20px 80px; }
   .hero::before { left: 20px; }
   .hero-by { padding-left: 0; }
-  .sec-frase,
-  .sec-dor,
-  .sec-verdade,
-  .sec-transform,
-  .sec-ment,
-  .sec-oferta,
-  .sec-faq,
-  .sec-footer { padding: 80px 20px; }
-  .col, .col-wide { padding: 0; }
+  .sec-frase,.sec-dor,.sec-verdade,.sec-quem,
+  .sec-transform,.sec-modulos,.sec-ment,
+  .sec-depos,.sec-oferta,.sec-faq,.sec-footer {
+    padding-left: 20px; padding-right: 20px;
+    padding-top: 80px; padding-bottom: 80px;
+  }
+  .col,.col-wide { padding: 0; }
   .ment-card { padding: 32px 24px; }
-  .btn { padding: 17px 36px; font-size: 10px; letter-spacing: 2.5px; }
-  .oferta-price { font-size: 64px; }
-  .verdade-pull { padding: 20px 22px; }
+  .modulo-card { padding: 32px 24px; }
+  .btn { padding: 18px 36px; font-size: 10px; letter-spacing: 2.5px; }
+  .oferta-parcela-destaque { font-size: clamp(44px, 14vw, 70px); }
+  .bonus-card { flex-direction: column; gap: 16px; }
 }
+
+/* ─────────────────────────────────────
+   WHATSAPP BTN
+───────────────────────────────────── */
+.wa-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 76px;
+  width: 50px; height: 50px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,.2);
+  z-index: 98;
+  transition: transform .2s;
+}
+.wa-btn:hover { transform: scale(1.08); }
+.wa-btn svg { width: 26px; height: 26px; }
+
 </style>
 </head>
 <body>
@@ -720,109 +802,175 @@ body {
   <strong>Acesso imediato</strong> &nbsp;·&nbsp; Todos os módulos gravados &nbsp;·&nbsp; 12 meses &nbsp;·&nbsp; Garantia de 7 dias
 </div>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
 <section class="hero">
   <div class="col">
 
-    <p class="hero-by r">César Augusto &amp; Thais Ayumi &nbsp;·&nbsp; Psicanalistas</p>
+    <p class="hero-by r">Thais Ayumi &amp; César Augusto &nbsp;·&nbsp; Psicanalistas</p>
 
     <h1 class="hero-h1 r d1">
-      Você se apagou<br>
-      dentro desse<br>
-      relacionamento.
-      <span class="it">Esse curso te<br>devolve a<br>você mesma.</span>
+      Você não perdeu<br>
+      só a confiança<br>
+      nele.
+      <span class="it">Você perdeu a<br>confiança<br>em você.</span>
     </h1>
 
     <div class="hero-rule r d2"></div>
 
     <p class="hero-sub r d2">
-      Cura emocional. Fim da dependência.<br>
-      <strong>O poder de escolha de volta.</strong><br>
-      O caminho começa em você — não nele.
+      Um programa criado por Thais Ayumi — psicanalista especializada
+      em dependência emocional — com a participação de César Augusto,
+      que vai te explicar, pela primeira vez,
+      <strong>o que realmente aconteceu dentro da cabeça do seu marido.</strong>
     </p>
 
     <div class="r d3">
-      <a href="#oferta" class="btn btn-vinho">Quero me curar</a>
+      <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-vinho" onclick="fbq('track','InitiateCheckout')">
+        Quero me reconstruir
+      </a>
       <p class="hero-note">R$297 &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; 7 dias de garantia</p>
     </div>
 
   </div>
 </section>
 
-<!-- FRASE CENTRAL -->
+<!-- ═══════════════════════════════════
+     FRASE CENTRAL
+═══════════════════════════════════ -->
 <section class="sec-frase r">
   <div class="col">
     <p class="frase-text">
-      Pare de tentar mudar ele.<br>
-      Mude você.<br>
-      <em>E veja tudo mudar.</em>
+      A traição não diz quem você é.<br>
+      Diz onde você vai escolher<br>
+      <em>ir daqui pra frente.</em>
     </p>
   </div>
 </section>
 
-<!-- DOR -->
+<!-- ═══════════════════════════════════
+     DOR
+═══════════════════════════════════ -->
 <section class="sec-dor r">
   <div class="col">
-    <p class="verdade-label">Você reconhece isso?</p>
+    <p class="verdade-label" style="font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--vinho);display:block;margin-bottom:36px;">Você se reconhece aqui?</p>
     <p class="dor-intro">
-      Não foi de uma vez. Foi cada vez que você cedeu demais, aceitou menos, colocou ele na frente de você mesma. <strong>Até o dia em que você se olhou no espelho e não se reconheceu mais.</strong>
+      Tem momentos em que você não sabe se o que mais dói é o que ele fez
+      — ou o que você começou a pensar sobre si mesma depois.
+      <strong>Você não está exagerando. O que você está sentindo tem nome.</strong>
     </p>
     <ul class="dor-items">
       <li class="dor-item">
         <span class="dor-n">01</span>
-        <p>Você chora. Ele pede desculpa. Passa uma semana. <strong>E começa tudo de novo.</strong></p>
+        <p>Você fica relendo conversas, procurando o momento exato em que deveria ter percebido — <strong>como se a culpa fosse sua por não ter visto antes.</strong></p>
       </li>
       <li class="dor-item">
         <span class="dor-n">02</span>
-        <p>Você depende da aprovação dele para se sentir bem — <strong>e odeia depender assim.</strong></p>
+        <p>Você sente que perdeu o chão: a vida que tinha fazia sentido. <strong>Agora não sabe mais quem você é fora desse relacionamento.</strong></p>
       </li>
       <li class="dor-item">
         <span class="dor-n">03</span>
-        <p>Você quer sair mas não consegue. Sem ele, <strong>você não sabe mais quem é.</strong></p>
+        <p>Uma parte de você quer ir embora — mas outra parte tem medo de que, <strong>sem ele, você não consiga.</strong></p>
       </li>
       <li class="dor-item">
         <span class="dor-n">04</span>
-        <p>Você é a louca, a exagerada, a que não sabe perdoar. <strong>E começa a acreditar.</strong></p>
+        <p>Você se pega fazendo comparações com a outra, tentando entender <strong>o que ela tinha que você não tem.</strong></p>
       </li>
       <li class="dor-item">
         <span class="dor-n">05</span>
-        <p>A mulher confiante e inteira que você era <strong>foi ficando para trás.</strong></p>
+        <p>Você oscila entre raiva e saudade no mesmo dia, às vezes na mesma hora — <strong>e isso te faz sentir que está enlouquecendo.</strong></p>
+      </li>
+      <li class="dor-item">
+        <span class="dor-n">06</span>
+        <p>Você continua no relacionamento — ou saiu dele — mas <strong>a ferida ainda está aberta.</strong> E ninguém ao redor sabe exatamente o que dizer.</p>
+      </li>
+      <li class="dor-item">
+        <span class="dor-n">07</span>
+        <p>Você quer se reconstruir, mas não sabe por onde começar — porque <strong>tudo que você tentou até agora parece insuficiente.</strong></p>
       </li>
     </ul>
   </div>
 </section>
 
-<!-- VERDADE -->
+<!-- ═══════════════════════════════════
+     VERDADE
+═══════════════════════════════════ -->
 <section class="sec-verdade r">
   <div class="col">
     <span class="verdade-label">A verdade que ninguém te diz</span>
     <h2 class="verdade-h">
-      Chorar não muda.<br>
-      Implorar não muda.<br>
-      <em>Só uma coisa muda.</em>
+      Você não vai se curar<br>
+      tentando entender<br>
+      <em>por que ele traiu.</em>
     </h2>
     <p class="verdade-p">
-      Ele pede desculpa, fica dois dias mais atencioso — e volta tudo ao normal. Não é porque ele não te ama. É porque ele sabe que é <strong>jogo ganho.</strong> Sabe que você não vai embora.
+      A traição não acontece porque você não foi boa o suficiente.
+      Ela acontece por razões que existem dentro do homem — razões que têm nome,
+      que têm estrutura, que têm explicação. Você não causou isso.
+      E entender isso não é absolver ele. <strong>É se libertar de um peso que nunca foi seu para carregar.</strong>
     </p>
     <p class="verdade-p">
-      E enquanto ele não vê o risco real de te perder, não existe motivo para mudar.
+      O que a traição deixa para trás é uma crise de identidade silenciosa.
+      Você passa a questionar sua intuição, seu valor, sua capacidade de amar e ser amada.
+      Essa ferida — se não for tratada com cuidado — faz você tomar decisões
+      <strong>a partir do medo, não da clareza.</strong>
     </p>
+
     <div class="verdade-pull">
-      O homem só muda quando percebe que pode te perder de verdade. Não como teatro. Como fato.
+      "Meu trabalho não é te dizer se você deve ficar ou ir embora.
+      É te devolver a você mesma — para que qualquer decisão que você tome,
+      venha de um lugar de força, não de desespero."
+      <div class="verdade-assinatura">
+        <img src="thais-sobre.jpg" alt="Thais Ayumi">
+        <span class="verdade-assinatura-nome">Thais Ayumi · Psicanalista</span>
+      </div>
     </div>
-    <p class="verdade-p">
-      E a única mulher que cria esse risco real é a mulher que <strong>parou de se apagar.</strong> Que voltou a ser inteira. Que se respeita o suficiente para não aceitar menos do que merece.
-    </p>
-    <p class="verdade-p">
-      Não como estratégia. Como realidade.
-    </p>
   </div>
 </section>
 
-<!-- TRANSFORMAÇÃO -->
+<!-- ═══════════════════════════════════
+     PARA QUEM É
+═══════════════════════════════════ -->
+<section class="sec-quem r">
+  <div class="col">
+    <span class="quem-label">Para quem é esse programa</span>
+    <h2 class="quem-h">
+      Este curso é para você<br>
+      <em>se você se reconheceu</em><br>
+      em alguma coisa acima.
+    </h2>
+    <ul class="quem-items">
+      <li class="quem-item">
+        <span class="quem-dash">—</span>
+        <p>Você está casada ou foi casada com um homem que traiu, e ainda não processou emocionalmente o que aconteceu — <strong>independente de quanto tempo faz.</strong></p>
+      </li>
+      <li class="quem-item">
+        <span class="quem-dash">—</span>
+        <p>Você percebe que sua autoestima, sua identidade ou sua capacidade de confiar em alguém <strong>foram afetadas por essa experiência.</strong></p>
+      </li>
+      <li class="quem-item">
+        <span class="quem-dash">—</span>
+        <p>Você quer entender, de verdade, o que passa na cabeça de um homem que trai — <strong>sem romantizar e sem demonizar.</strong></p>
+      </li>
+      <li class="quem-item">
+        <span class="quem-dash">—</span>
+        <p>Você quer ter clareza para decidir sobre seu relacionamento <strong>a partir de um lugar seguro</strong>, não de culpa, medo ou dependência.</p>
+      </li>
+      <li class="quem-item">
+        <span class="quem-dash">—</span>
+        <p>Você está pronta para um processo real de reconstrução — não de fingir que está bem, mas de <strong>realmente voltar a ser quem você é.</strong></p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TRANSFORMAÇÃO
+═══════════════════════════════════ -->
 <section class="sec-transform r">
   <div class="col">
-    <span class="transform-label">O que esse curso entrega</span>
+    <span class="transform-label">O que muda quando você passa pelo programa</span>
     <h2 class="transform-h">
       Você não vai sair<br>
       daqui <em>a mesma.</em>
@@ -830,68 +978,163 @@ body {
     <ul class="transform-items">
       <li class="transform-item">
         <p>
-          <strong>Cura emocional de verdade.</strong>
-          Não enterrar a dor. Não fingir que está bem. Processar o que aconteceu e parar de carregar isso no lugar dela.
+          <strong>Entende a origem da sua dor.</strong>
+          Não só o que aconteceu — mas por que afetou partes tão profundas de você,
+          e como isso tem a ver com sua história, não com seu valor.
         </p>
       </li>
       <li class="transform-item">
         <p>
-          <strong>Fim da dependência emocional.</strong>
-          Parar de precisar da aprovação dele para se sentir inteira. Parar de ficar por medo. Descobrir quem você é fora desse relacionamento.
+          <strong>Rompe o ciclo da dependência emocional.</strong>
+          Reconhece os padrões que te mantêm presa, com ou sem ele,
+          e cria uma relação diferente consigo mesma.
         </p>
       </li>
       <li class="transform-item">
         <p>
-          <strong>Autoestima reconstruída.</strong>
-          A mulher confiante, presente e segura que foi ficando para trás. Ela volta — não como resultado de ele te valorizar, mas de você se valorizar primeiro.
+          <strong>Tem a visão de dentro da mente masculina.</strong>
+          Compreende os mecanismos que levam um homem a trair — sem precisar de respostas
+          que ele provavelmente nunca vai conseguir te dar.
         </p>
       </li>
       <li class="transform-item">
         <p>
-          <strong>O poder de escolha de volta.</strong>
-          Ficar porque quer e porque merece — não porque tem medo. Ou ir embora porque se respeita. Você decide de um lugar de força, não de desespero.
+          <strong>Decide com clareza.</strong>
+          Ficar ou ir embora — mas a partir de um lugar de força.
+          Sem culpa, sem medo, sem pressão de ninguém.
         </p>
       </li>
       <li class="transform-item">
         <p>
-          <strong>Voltar a ser desejada e respeitada.</strong>
-          Quando você se torna inteira de novo, a dinâmica muda. Com ele — ou sem ele.
+          <strong>Recupera sua identidade.</strong>
+          Não a mulher que era antes da traição — uma versão mais inteira, mais consciente
+          e mais sua do que qualquer versão anterior.
         </p>
       </li>
     </ul>
   </div>
 </section>
 
-<!-- MENTORES -->
+<!-- ═══════════════════════════════════
+     MÓDULOS
+═══════════════════════════════════ -->
+<section class="sec-modulos r">
+  <div class="col-wide">
+    <span class="modulos-label">O que você vai aprender</span>
+    <h2 class="modulos-h">
+      Quatro módulos.<br>
+      <em>Uma jornada completa</em><br>
+      de dentro pra fora.
+    </h2>
+
+    <div class="modulos-grid">
+
+      <div class="modulo-card">
+        <span class="modulo-num">Módulo 01</span>
+        <p class="modulo-titulo">Cura Emocional Pós-Traição</p>
+        <p class="modulo-por">Com Thais Ayumi</p>
+        <ul class="modulo-items">
+          <li>Por que a dor da traição é diferente de qualquer outra dor relacional — e por que "superar logo" não é uma opção real</li>
+          <li>Como processar o luto sem precisar anular o que você sentiu</li>
+          <li>As emoções que estão te travando e como atravessá-las com técnica, não só com força de vontade</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <span class="modulo-num">Módulo 02</span>
+        <p class="modulo-titulo">Liberdade e Dependência Emocional</p>
+        <p class="modulo-por">Com Thais Ayumi</p>
+        <ul class="modulo-items">
+          <li>Reconheça os padrões de dependência que existiam antes da traição — e que ela apenas tornou visíveis</li>
+          <li>A diferença entre amar e precisar, e o que isso tem a ver com sua autoestima de base</li>
+          <li>Autonomia emocional real: a capacidade de estar bem consigo mesma, independente do que ele decida</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card destaque">
+        <span class="modulo-num">Módulo 03</span>
+        <p class="modulo-titulo">Dentro da Mente Masculina</p>
+        <p class="modulo-por">Com César Augusto</p>
+        <ul class="modulo-items">
+          <li>O que realmente acontece antes, durante e depois de uma traição — na perspectiva de quem atende esses homens</li>
+          <li>Separe o que é sobre você do que é sobre ele — e sobre a estrutura emocional da maioria dos homens que chegam a esse ponto</li>
+          <li>Tire as dúvidas que ninguém responde: por que ele fez isso se me amava? o que ele sentiu? isso vai acontecer de novo?</li>
+        </ul>
+      </div>
+
+      <div class="modulo-card">
+        <span class="modulo-num">Módulo 04</span>
+        <p class="modulo-titulo">Ficar ou Ir com Dignidade</p>
+        <p class="modulo-por">Com Thais Ayumi</p>
+        <ul class="modulo-items">
+          <li>Os critérios reais para avaliar se um relacionamento tem base para ser reconstruído — ou se a decisão mais saudável é partir</li>
+          <li>Como ter essa conversa com ele, com sua família e com você mesma sem se perder no processo</li>
+          <li>Um plano concreto para o próximo capítulo da sua vida, qualquer que seja ele</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="bonus-card r">
+      <div>
+        <span class="bonus-tag">Bônus</span>
+        <p class="bonus-titulo">Glow Up — Corpo, Presença e Identidade</p>
+        <p class="bonus-sub">Porque a reconstrução também acontece no corpo e na forma como você se apresenta ao mundo. Nutrição funcional, autocuidado, make e consultoria de estilo pessoal.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     MENTORES
+═══════════════════════════════════ -->
 <section class="sec-ment r">
   <div class="col-wide">
-    <span class="ment-label">Quem criou esse método</span>
+    <span class="ment-label">Quem criou esse programa</span>
     <div class="ment-grid">
+
       <div class="ment-card">
         <div class="ment-foto">
           <img src="thais-sobre.jpg" alt="Thais Ayumi">
         </div>
         <p class="ment-nome">Thais Ayumi</p>
-        <p class="ment-role">Psicanalista · Autoestima &amp; Dependência Emocional</p>
-        <p class="ment-bio">Antes de ajudar outras mulheres, precisou se ajudar. <strong>Viveu a dependência, a insegurança e o apagamento dentro de relacionamentos.</strong> Fez o caminho de volta. Ensina cada passo — não como teoria, mas como quem conhece essa estrada de dentro.</p>
+        <p class="ment-role">Psicanalista · Dependência Emocional &amp; Autoestima Feminina</p>
+        <p class="ment-bio">
+          Antes de ajudar outras mulheres, precisou se ajudar.
+          <strong>Viveu a dependência, a insegurança e o apagamento dentro de relacionamentos.</strong>
+          Fez o caminho de volta. Ensina cada passo — não como teoria,
+          mas como quem conhece essa estrada de dentro.
+          Tem mais de 200 mulheres acompanhadas em processos de reconstrução emocional.
+        </p>
       </div>
+
       <div class="ment-card">
         <div class="ment-foto">
           <img src="cesar-foto.jpg" alt="César Augusto">
         </div>
         <p class="ment-nome">César Augusto</p>
         <p class="ment-role">Psicanalista · Especialista em Comportamento Masculino</p>
-        <p class="ment-bio">Atende homens em relacionamentos há anos. Ouve o que eles nunca dizem para as esposas. <strong>Sabe exatamente o que acontece com ele quando ela para de se apagar.</strong> Traz isso para dentro deste curso.</p>
+        <p class="ment-bio">
+          Atende homens em relacionamentos há anos.
+          <strong>Ouve o que eles nunca dizem para as esposas.</strong>
+          Sabe, pela experiência clínica, o que passa na mente de um homem antes,
+          durante e depois de uma traição. Traz esse olhar para dentro deste curso —
+          não para justificar, mas para dar a você as respostas que ele nunca conseguiu te dar.
+        </p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
+<!-- ═══════════════════════════════════
+     DEPOIMENTOS
+═══════════════════════════════════ -->
 <section class="sec-depos r">
   <div class="col-wide">
     <span class="depos-label">Resultados reais</span>
-    <h2 class="depos-h">O que elas dizem<br><em>depois do curso.</em></h2>
+    <h2 class="depos-h">O que elas dizem<br><em>depois do programa.</em></h2>
     <div class="depos-grid">
       <img src="dep-1.jpg" alt="Depoimento 1">
       <img src="dep-2.jpg" alt="Depoimento 2">
@@ -900,106 +1143,181 @@ body {
   </div>
 </section>
 
-<!-- OFERTA -->
+<!-- ═══════════════════════════════════
+     OFERTA
+═══════════════════════════════════ -->
 <section class="sec-oferta r" id="oferta">
   <div class="col">
     <div class="oferta-wrap">
-      <span class="oferta-label">Saber Amar · Acesso imediato</span>
+      <span class="oferta-label">Reconstrução Feminina &nbsp;·&nbsp; Acesso imediato</span>
       <h2 class="oferta-h">
-        Volte a ser<br>
-        <em>você mesma.</em>
+        Tudo que você precisa<br>
+        para atravessar isso<br>
+        <em>com clareza.</em>
       </h2>
 
-      <p class="oferta-de">De R$397,00</p>
-      <div class="oferta-price-wrap">
-        <p class="oferta-price"><sup>R$</sup>297</p>
+      <p class="oferta-de">De R$597,00</p>
+      <div class="oferta-parcela-destaque">
+        <span>12x</span>
+        <span style="display:flex;align-items:flex-start"><sup>R$</sup>30<span style="font-size:0.55em;align-self:flex-end;margin-bottom:8px">,72</span></span>
       </div>
-      <p class="oferta-parcela">ou 12x de R$30,72 no cartão</p>
-      <p class="oferta-ancora">Uma sessão com a Thais ou com o César custa R$450.<br>Aqui você tem os dois por R$297.</p>
+      <p class="oferta-parcela-texto">no cartão de crédito sem juros</p>
+      <p class="oferta-avista">ou R$297 à vista</p>
+      <p class="oferta-ancora">Uma sessão de terapia presencial custa R$450.<br>Aqui você tem o programa completo por menos do que uma única sessão.</p>
 
       <hr class="oferta-sep">
 
       <ul class="oferta-items">
-        <li>Todos os módulos gravados — acesso imediato e completo</li>
-        <li>Thais Ayumi: cura emocional, dependência e autoestima</li>
-        <li>César Augusto: o que acontece com ele quando você muda</li>
-        <li>Como decidir ficar ou ir embora de um lugar de força</li>
-        <li>E-book + Checklist de implementação módulo a módulo</li>
-        <li>Bônus Glow Up: nutricionista, consultora de imagem e maquiadora</li>
-        <li>12 meses de acesso completo na plataforma Kiwify</li>
+        <li>Módulo 1 — Cura Emocional Pós-Traição (Thais Ayumi)</li>
+        <li>Módulo 2 — Liberdade e Dependência Emocional (Thais Ayumi)</li>
+        <li>Módulo 3 — Dentro da Mente Masculina (César Augusto)</li>
+        <li>Módulo 4 — Ficar ou Ir com Dignidade (Thais Ayumi)</li>
+        <li>Bônus Glow Up — nutrição, make e estilo pessoal</li>
+        <li>12 meses de acesso completo no app Kiwify, no seu ritmo</li>
       </ul>
 
-      <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-vinho btn-full">
-        Quero me curar
+      <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-vinho btn-full" onclick="fbq('track','InitiateCheckout')">
+        Quero começar minha reconstrução
       </a>
+      <p style="font-size:11px;color:var(--tinta-soft);opacity:.45;text-align:center;margin-top:12px;letter-spacing:.3px;">
+        Acesso imediato após a confirmação &nbsp;·&nbsp; Garantia de 7 dias
+      </p>
 
       <div class="garantia">
         <span class="g-icon">🛡️</span>
         <div>
-          <strong class="g-title">7 dias de garantia incondicional</strong>
-          <p class="g-text">Se em 7 dias você não sentir que está no caminho certo, devolvemos 100%. Sem perguntas.</p>
+          <strong class="g-title">Garantia incondicional de 7 dias</strong>
+          <p class="g-text">Se você entrar, assistir às primeiras aulas e sentir que esse curso não é para você — basta enviar uma mensagem em até 7 dias e devolvemos 100% do seu investimento.</p>
+          <p class="g-voz">Sem formulário complicado. Sem justificativa. Minha palavra. — Thais Ayumi</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ═══════════════════════════════════
+     FAQ
+═══════════════════════════════════ -->
 <section class="sec-faq r">
   <div class="col">
     <span class="faq-label">Dúvidas</span>
     <div class="faq-list">
 
       <div class="faq-item">
-        <p class="faq-q">Isso vai fazer ele mudar?</p>
-        <p class="faq-a">O curso trabalha você — não ele. Mas quando você para de se apagar, a dinâmica muda. O módulo do César explica exatamente o que acontece com ele quando isso acontece.</p>
+        <p class="faq-q">Eu ainda amo ele. Isso significa que sou fraca?</p>
+        <p class="faq-a">Não. Significa que você é humana. Amar alguém que te machucou não é fraqueza — é uma das experiências mais complexas e confusas que existem. Este programa não vai te pedir para parar de amar. Vai te ajudar a entender o que esse amor significa e o que você quer fazer com ele a partir de agora.</p>
       </div>
 
       <div class="faq-item">
-        <p class="faq-q">E se eu ainda amo ele e não quero terminar?</p>
-        <p class="faq-a">Foi feito exatamente para isso. Curar-se não significa sair do relacionamento — significa voltar a ser a mulher que ele queria tanto. O que você faz com isso é sua escolha.</p>
+        <p class="faq-q">E se eu não souber ainda se quero ficar ou ir embora?</p>
+        <p class="faq-a">Então você está exatamente no lugar certo para começar. O programa não pressupõe nenhuma decisão. Foi construído para te dar clareza — independente do caminho que você vai escolher. Você não precisa saber a resposta antes de entrar. Vai encontrar clareza dentro do processo.</p>
       </div>
 
       <div class="faq-item">
-        <p class="faq-q">Funciona se a gente está tentando se reconstruir depois de uma traição?</p>
-        <p class="faq-a">Sim. E é justamente nesse momento que faz mais diferença. A armadilha depois da traição é ficar ainda mais dependente, com medo de perder. Esse curso reverte exatamente isso.</p>
+        <p class="faq-q">Faz um tempo que aconteceu. Ainda vale a pena?</p>
+        <p class="faq-a">Sim. A traição deixa marcas que, se não forem trabalhadas, continuam ativas anos depois — nas escolhas, nas relações futuras, na autoestima. Não importa se aconteceu há dois meses ou há dois anos. O que importa é que a ferida ainda está aberta para você. E é isso que vamos tratar.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-q">Preciso que meu marido participe também?</p>
+        <p class="faq-a">Não. Este programa é inteiramente sobre você. Sobre sua cura, sua clareza e sua reconstrução — independente do que ele decide fazer. Você não precisa da participação, da permissão ou da mudança dele para começar a se reconstruir.</p>
       </div>
 
       <div class="faq-item">
         <p class="faq-q">Posso fazer junto com o Reconstrução Masculina do meu marido?</p>
-        <p class="faq-a">Sim. Os dois cursos foram criados para se complementar. Ele trabalha o lado dele. Você trabalha o seu.</p>
+        <p class="faq-a">Sim. Os dois programas foram criados para se complementar. Ele trabalha o lado dele. Você trabalha o seu. A jornada de cada um é independente — mas quando os dois acontecem ao mesmo tempo, os resultados se potencializam.</p>
       </div>
 
       <div class="faq-item">
         <p class="faq-q">Como funciona o acesso?</p>
-        <p class="faq-a">Todos os módulos já estão gravados. Após o pagamento você recebe o acesso por e-mail e entra pelo app da Kiwify. 12 meses de acesso completo, no seu ritmo.</p>
+        <p class="faq-a">Todos os módulos já estão gravados. Após o pagamento você recebe o acesso por e-mail e entra pelo app da Kiwify — disponível no celular, tablet ou computador. 12 meses de acesso completo, no seu ritmo.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ═══════════════════════════════════
+     FOOTER CTA
+═══════════════════════════════════ -->
 <section class="sec-footer r">
   <div class="col">
     <p class="footer-q">
-      "Volte a ser a mulher que você nunca deveria ter deixado de ser."
+      "Toda mulher que passou por uma traição carrega uma pergunta que ninguém responde direito: o que isso diz sobre mim? A resposta não é de consolo. É de verdade: não diz nada sobre quem você é. Diz tudo sobre o que você ainda vai escolher se tornar."
     </p>
-    <p class="footer-by">César Augusto &amp; Thais Ayumi</p>
-    <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-creme">Quero me curar</a>
+    <p class="footer-by">Thais Ayumi &nbsp;·&nbsp; Psicanalista</p>
+    <a href="https://pay.kiwify.com.br/zgcuZyD" class="btn btn-creme" onclick="fbq('track','InitiateCheckout')">
+      Quero começar minha reconstrução
+    </a>
+    <p style="font-size:10px;color:rgba(242,232,220,.2);margin-top:56px;letter-spacing:1px;">
+      © Thais Ayumi &amp; César Augusto · Todos os direitos reservados
+    </p>
   </div>
 </section>
 
+<!-- ═══════════════════════════════════
+     STICKY BAR
+═══════════════════════════════════ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-info">
+    <span class="sticky-nome">Reconstrução Feminina</span>
+    <span class="sticky-preco">12x R$30,72 <span style="font-size:13px;opacity:.5;font-family:'DM Sans',sans-serif;">ou R$297 à vista</span></span>
+  </div>
+  <a href="https://pay.kiwify.com.br/zgcuZyD" class="sticky-btn" onclick="fbq('track','InitiateCheckout')">
+    Quero me reconstruir
+  </a>
+</div>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/5511999999999" class="wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
 <script>
+/* Reveal on scroll */
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('on');
-      io.unobserve(e.target);
-    }
+    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
   });
-}, { threshold: 0.06 });
+}, { threshold: 0.05 });
 document.querySelectorAll('.r').forEach(el => io.observe(el));
+
+/* Sticky bar */
+const bar = document.getElementById('stickyBar');
+let shown = false;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (!shown && y > window.innerHeight * 0.6) {
+    bar.classList.add('visible'); shown = true;
+  }
+  /* Esconde sobre a seção de oferta */
+  const oferta = document.getElementById('oferta');
+  if (oferta) {
+    const rect = oferta.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      bar.classList.remove('visible');
+    } else if (shown) {
+      bar.classList.add('visible');
+    }
+  }
+}, { passive: true });
+
+/* FAQ accordion */
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.style.cursor = 'pointer';
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const ans = item.querySelector('.faq-a');
+    const open = ans.style.display === 'none';
+    document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+    ans.style.display = open ? 'block' : 'none';
+  });
+});
+/* Inicializa todas as respostas abertas (sem accordion no início) */
+document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'block');
 </script>
+
 </body>
 </html>
